@@ -66,15 +66,28 @@ _Goal: Pay down technical debt safely._
 
 ---
 
+### 🚑 Phase 5: Production & Maintenance
+
+_Goal: Keep the lights on and the users happy._
+
+1.  **Debugging & Performance**: When things break in prod, use **[`nextjs-production-debugger`](nextjs-production-debugger/SKILL.md)**.
+    - _SSR vs CSR_: Identify if the bug is server-side or client-side.
+    - _Hydration_: Fix text mismatch errors.
+    - _Performance_: Audit waterfalls and bundle size.
+
+---
+
 ## 📚 Skill Index
 
-| Skill                                                             | Focus Area | When to use                                                |
-| :---------------------------------------------------------------- | :--------- | :--------------------------------------------------------- |
-| **[`ui-ux-pro-max`](ui-ux-pro-max/)**                             | Aesthetics | Creating premium, animated, high-end interfaces            |
-| **[`frontend-dev-guidelines`](frontend-dev-guidelines/)**         | Standards  | Code organization, naming conventions, directory structure |
-| **[`nextjs-best-practices`](nextjs-best-practices/)**             | Framework  | Building scalable Next.js apps (App Router, SSR)           |
-| **[`react-frontend-patterns`](react-frontend-patterns/)**         | Logic      | Hooks, composition, performance optimization               |
-| **[`react-exam-copilot`](react-exam-copilot/)**                   | Challenges | Senior React exams, coding challenges, interview prep      |
-| **[`tailwind-patterns`](tailwind-patterns/)**                     | Styling    | Best practices for Utility-First CSS                       |
-| **[`redux-migration-rtk-zustand`](redux-migration-rtk-zustand/)** | State      | Modernizing global state management                        |
-| **[`react-migration-16-to-19`](react-migration-16-to-19/)**       | Legacy     | Upgrading old React codebases                              |
+| Skill                                                             | Focus      | Goal                        | When to use                        |
+| :---------------------------------------------------------------- | :--------- | :-------------------------- | :--------------------------------- |
+| **[`ui-ux-pro-max`](ui-ux-pro-max/)**                             | Aesthetics | Creating premium interfaces | Polishing UI for wow factor        |
+| **[`frontend-dev-guidelines`](frontend-dev-guidelines/)**         | Standards  | Consistency across team     | Starting new project/onboarding    |
+| **[`nextjs-best-practices`](nextjs-best-practices/)**             | Framework  | Scalable architecture       | Building new App Router apps       |
+| **[`nextjs-production-debugger`](nextjs-production-debugger/)**   | Fixes      | Production stability        | Debugging SSR/CSR bugs or slowness |
+| **[`react-frontend-patterns`](react-frontend-patterns/)**         | Logic      | Reusable hooks/patterns     | Writing complex component logic    |
+| **[`react-exam-copilot`](react-exam-copilot/)**                   | Training   | Passing tech interviews     | Preparing for coding challenges    |
+| **[`tailwind-patterns`](tailwind-patterns/)**                     | Styling    | Maintainable CSS            | Refactoring messy tailwind classes |
+| **[`redux-migration-rtk-zustand`](redux-migration-rtk-zustand/)** | State      | Modern state management     | Moving away from legacy Redux      |
+| **[`react-migration-16-to-19`](react-migration-16-to-19/)**       | Legacy     | Paying technical debt       | Upgrading old codebases            |
+| **[`react-ui-patterns`](react-ui-patterns/)**                     | Components | Accessible primitives       | Building/using component library   |

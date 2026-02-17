@@ -105,6 +105,7 @@ If you are looking for a specific skill, here is the complete index by domain.
 - **[`react-migration-16-to-19`](frontend-ui/react-migration-16-to-19)**: Upgrade guides.
 - **[`redux-migration-rtk-zustand`](frontend-ui/redux-migration-rtk-zustand)**: Modern state management.
 - **[`nextjs-best-practices`](frontend-ui/nextjs-best-practices)**: App Router & SSR.
+- **[`nextjs-production-debugger`](frontend-ui/nextjs-production-debugger)**: Advanced debugging (SSR, Hydration, Caching).
 - **[`tailwind-patterns`](frontend-ui/tailwind-patterns)**: Utility-first CSS at scale.
 - **[`ui-ux-pro-max`](frontend-ui/ui-ux-pro-max)**: Advanced aesthetics & animation.
 
