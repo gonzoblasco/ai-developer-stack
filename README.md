@@ -59,6 +59,14 @@ _From Manual Labor to Robots._
 - **Low-Code:** Orchestrating workflows with n8n.
 - **Browser:** Resilient scraping and automation.
 
+### 🏗️ [Product Building Playbook](product-building/README.md)
+
+_From First Prompt to MVP in Production._
+
+- **Stack:** Lovable Cloud + Supabase + Edge Functions.
+- **Workflow:** Design System → Features → Deploy.
+- **Philosophy:** Product first, incremental iteration.
+
 ---
 
 ## 📂 Full Capability Map
@@ -114,6 +122,10 @@ If you are looking for a specific skill, here is the complete index by domain.
 - **[`browser-automation-expert`](tools-automation/browser-automation-expert)**: Resilient scraping.
 - **[`n8n-workflow-builder`](tools-automation/n8n-workflow-builder)**: Workflow automation.
 - **[`pdf-official`](tools-automation/pdf-official)**: PDF generation tools.
+
+### 🏗️ Product Building
+
+- **[`lovable-saas-builder`](product-building/lovable-saas-builder)**: Construir SaaS B2B con Lovable Cloud + Supabase.
 
 ### 📏 Languages & Standards
 

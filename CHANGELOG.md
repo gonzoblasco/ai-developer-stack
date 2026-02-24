@@ -6,6 +6,23 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ---
 
+## [1.2.0] - 2026-02-24
+
+### Added
+
+- Nueva categoría **`product-building`** — skills orientadas al ciclo completo de vida de un producto usando plataformas low-code/no-code + AI
+- `lovable-saas-builder` skill — Workflow completo para construir SaaS B2B con Lovable Cloud + Supabase
+  - Prompts estructurados para Design System, Auth, CRUD, Edge Functions e integraciones de pago
+  - Patrones de Edge Functions reutilizables (OAuth, webhooks, AI, pagos)
+  - Guía de deployment y go-live checklist
+  - Basado en patrones extraídos del proyecto SoporteML
+
+### Changed
+
+- `README.md`: agregada sección "Product Building Playbook" y entrada en el Capability Map
+
+---
+
 ## [1.1.0] - 2026-02-06
 
 ### Added
