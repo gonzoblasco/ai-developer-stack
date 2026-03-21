@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-init_skill.py - Inicializa estructura de nueva skill para Antigravity
+init_skill.py - Inicializa estructura de nueva skill para Antigravity (SUPER CREADOR Edition)
 
 Uso:
     python init_skill.py <nombre-skill> --path <directorio>
@@ -27,7 +27,6 @@ def get_default_skills_path() -> Path:
         return agent_path
     
     # 3. Default fallback (for creation) -> Antigravity if we can create it, else local
-    # We encourage Antigravity structure
     return antigravity_path
 
 
@@ -81,24 +80,22 @@ def create_skill_structure(name: str, path: str, skill_type: str = "domain"):
     )
 
     # Crear artifacts placeholders
-    (skill_dir / "task.md").write_text("# Task: " + name + "\n\n- [ ] Initial Analysis\n", encoding="utf-8")
+    (skill_dir / "task.md").write_text("# Task: " + name + "\n\n- [/] 1. Entender el Problema (Ejemplos)\n- [ ] 2. Planificar Recursos\n- [x] 3. Inicializar (init_skill.py)\n- [ ] 4. RED Phase (Baseline)\n- [ ] 5. GREEN Phase (Implementar)\n- [ ] 6. REFACTOR & Verify\n", encoding="utf-8")
     (skill_dir / "implementation_plan.md").write_text("# Plan: " + name + "\n", encoding="utf-8")
     
     print(f"""
 ✅ Skill '{name}' creada exitosamente en {skill_dir}
 
-Estructura:
-{name}/
-├── SKILL.md          ← Editar con contenido
-├── references/       ← Documentación extendida
-├── scripts/          ← Código ejecutable
-├── templates/        ← Plantillas reutilizables
-└── examples/         ← Ejemplos prácticos
+Estructura (Niveles de Progressive Disclosure):
+1. Metadata (Trigger) -> SKILL.md Frontmatter
+2. Core Workflow     -> SKILL.md
+3. Resources         -> references/, scripts/, templates/
 
-Próximos pasos:
-1. Editar SKILL.md con tu contenido
-2. Ejecutar baseline: python validate_skill.py {name} --baseline
-3. Iterar hasta pasar tests
+Próximos pasos (Flujo 6 Pasos):
+1. [x] Inicializado. 
+2. [ ] RED Phase: Ejecuta escenario de fallo SIN el skill -> python validate_skill.py {name} --baseline
+3. [ ] GREEN Phase: Edita SKILL.md contrarrestando excusas.
+4. [ ] REFACTOR: Valida estructura y TDD -> python validate_skill.py {name} --validate
 
 Tipo seleccionado: {skill_type}
 """)
@@ -108,54 +105,43 @@ def get_domain_template(name: str) -> str:
     """Template para skill de tipo Domain (técnica)."""
     return f'''---
 name: {name}
-description: Use cuando [SITUACIÓN ESPECÍFICA]. Keywords: [lista de keywords].
+description: Use cuando [SITUACIÓN ESPECÍFICA]. Trigger: ["keywords", "acciones"].
 ---
 
 # {name.replace("-", " ").title()}
 
 ## Overview
 
-[Qué es y principio core en 1-2 oraciones]
+[Qué es y principio core en 1-2 oraciones. Recuerda: Antigravity ya es inteligente.]
 
-## When to Use
+## Degrees of Freedom
 
-- [Síntoma 1]
-- [Síntoma 2]
-- [Contexto específico]
-
-**Cuándo NO usar:**
-- [Caso que no aplica]
-
-## Quick Start
-
-```python
-# Ejemplo mínimo funcional
-```
+- **Nivel seleccionado**: [Baja|Media|Alta] Libertad.
+- **Razón**: [Por qué este nivel de especificidad es necesario].
 
 ## Patterns
 
-### Patrón Principal
+### Patrón Principal (Media Libertad)
 
 **Antes:**
 ```python
-# Código problemático
+# Código problemático o ineficiente
 ```
 
 **Después:**
 ```python
-# Código mejorado
+# Código siguiendo el patrón recomendado
 ```
 
-## Common Mistakes
+## Common Mistakes & Rationalizations
 
-| Error | Fix |
-|-------|-----|
-| [Error común 1] | [Solución] |
-| [Error común 2] | [Solución] |
+| Excusa / Error | Realidad / Fix |
+|----------------|----------------|
+| "[Excusa común]" | [Contra-medida imperativa] |
 
 ## References
 
-- [reference-name.md](references/reference-name.md) - Documentación extendida
+- [reference-name.md](references/reference-name.md) - Documentación extendida (Nivel 3)
 '''
 
 
@@ -163,12 +149,12 @@ def get_guardrail_template(name: str) -> str:
     """Template para skill de tipo Guardrail (disciplina)."""
     return f'''---
 name: {name}
-description: Use cuando [SITUACIÓN QUE REQUIERE DISCIPLINA]. Keywords: [lista].
+description: Use cuando [SITUACIÓN QUE REQUIERE DISCIPLINA]. Trigger: ["fallo", "error", "disciplina"].
 ---
 
 # {name.replace("-", " ").title()}
 
-## The Iron Law
+## The Iron Law (Baja Libertad)
 
 ```
 [REGLA PRINCIPAL EN MAYÚSCULAS]
@@ -176,34 +162,18 @@ description: Use cuando [SITUACIÓN QUE REQUIERE DISCIPLINA]. Keywords: [lista].
 
 Aplica a [contextos]. Sin excepciones.
 
-## Process
-
-1. [Paso 1]
-2. [Paso 2]
-3. [Paso 3]
-
-## Red Flags - STOP
-
-- [Señal de violación 1]
-- [Señal de violación 2]
-- "Es diferente porque..."
-
-**Todos significan:** [Acción correctiva]
-
 ## Rationalizations Table
 
-| Excusa | Realidad |
-|--------|----------|
-| "[Excusa común 1]" | [Por qué es incorrecta] |
-| "[Excusa común 2]" | [Por qué es incorrecta] |
+| Excusa del Agente | Realidad |
+|-------------------|----------|
+| "Es un caso simple..." | No existe caso simple para esto. |
+| "Tengo prisa..." | La prisa no justifica violar el guardrail. |
 
-## Sin Excepciones
+## Process
 
-- No para "casos simples"
-- No para "urgencias"
-- No para "esta vez"
-
-**[Regla] significa [regla]. Siempre.**
+1. [Paso 1 - RED]
+2. [Paso 2 - GREEN]
+3. [Paso 3 - REFACTOR]
 '''
 
 
@@ -211,59 +181,26 @@ def get_reference_template(name: str) -> str:
     """Template para skill de tipo Reference (documentación)."""
     return f'''---
 name: {name}
-description: Use cuando trabajes con [TECNOLOGÍA/API]. Keywords: [comandos, librerías].
+description: Use cuando trabajes con [TECNOLOGÍA/API]. Trigger: ["librería", "modulo", "api"].
 ---
 
 # {name.replace("-", " ").title()}
 
-## Overview
+## Quick Reference (Alta Libertad)
 
-[Qué cubre esta referencia]
+| Operación | Código / Comando |
+|-----------|------------------|
+| [Operación] | `código` |
 
-## Quick Reference
-
-| Operación | Código |
-|-----------|--------|
-| [Operación 1] | `código` |
-| [Operación 2] | `código` |
-
-## API Reference
-
-### Función Principal
-
-```python
-def funcion(param1, param2):
-    """
-    Descripción.
-    
-    Args:
-        param1: Descripción
-        param2: Descripción
-    
-    Returns:
-        Resultado
-    """
-```
-
-## Examples
-
-### Caso de Uso Común
-
-```python
-# Ejemplo completo
-```
-
-## Troubleshooting
-
-| Problema | Solución |
-|----------|----------|
-| [Error común] | [Fix] |
+## Progressive Disclosure
+Para detalles extensos, consulta específicamente:
+- [api-docs.md](references/api-docs.md)
 '''
 
 
 def interactive_mode():
     """Modo interactivo para crear skill."""
-    print("\\n🚀 Creador de Skills - Modo Interactivo\\n")
+    print("\\n🚀 Creador de Skills - Modo Interactivo (SUPER CREADOR)\\n")
     
     # Nombre
     name = input("1. Nombre de la skill (kebab-case, ej: mi-skill): ").strip()
@@ -278,9 +215,9 @@ def interactive_mode():
     
     # Tipo
     print("\\n2. Tipo de skill:")
-    print("   1) domain    - Guía técnica (patrones, how-to)")
-    print("   2) guardrail - Reglas de disciplina (TDD, verification)")
-    print("   3) reference - Documentación/API")
+    print("   1) domain    - Guía técnica (patrones, how-to) [Media Libertad]")
+    print("   2) guardrail - Reglas de disciplina (TDD, verification) [Baja Libertad]")
+    print("   3) reference - Documentación/API [Alta Libertad]")
     
     type_input = input("Selecciona (1/2/3) [1]: ").strip() or "1"
     type_map = {"1": "domain", "2": "guardrail", "3": "reference"}
@@ -308,7 +245,7 @@ def interactive_mode():
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Inicializa estructura de nueva skill para Antigravity"
+        description="Inicializa estructura de nueva skill para Antigravity (SUPER CREADOR)"
     )
     parser.add_argument(
         "name", 

@@ -40,6 +40,9 @@ _Goal: Handle complex file formats._
 1.  **Document Generation**: Use **[`pdf-official`](pdf-official/SKILL.md)**.
     - _Use Case_: generating invoices, reports, or contracts programmatically.
 
+1.  **Documentation Expert**: Use **[`documentation-expert`](documentation-expert/SKILL.md)**.
+    - _Use Case_: Creating and maintaining README, CHANGELOG, and AGENTS files for humans and AI.
+
 ---
 
 ## 📚 Skill Index
@@ -50,3 +53,4 @@ _Goal: Handle complex file formats._
 | **[`browser-automation-expert`](browser-automation-expert/)** | Scraping   | Automating web interactions, testing, scraping data |
 | **[`meli-n8n-crm-logger`](meli-n8n-crm-logger/)**             | E-commerce | Specific recipe for MercadoLibre CRM logging        |
 | **[`pdf-official`](pdf-official/)**                           | Documents  | generating and manipulating PDF files               |
+| **[`documentation-expert`](documentation-expert/)**           | Docs Assist| Automating README, CHANGELOG, and AGENTS.md         |

@@ -1,78 +1,61 @@
 ---
 name: meta-skill-antigravity
-description: Use cuando necesites crear, editar o validar skills para Antigravity. Keywords: crear skill, validar skill, TDD documentación, nueva skill, meta-skill.
+description: Use cuando necesites crear, editar o validar skills. Trigger: "crear skill", "nueva funcionalidad", "reglas de diseño".
 ---
 
-# Meta Skill Creator - Antigravity Edition
+# Meta Skill Creator - SUPER CREADOR Edition
 
 ## Overview
 
-**Crear skills ES Test-Driven Development aplicado a documentación.**
-
-Este skill sintetiza el enfoque oficial para crear skills robustos y mantenibles en Antigravity.
+**Crear skills es Test-Driven Development aplicado a la inteligencia artificial.** Este skill fusiona la disciplina TDD de Antigravity con principios de eficiencia de prompts avanzados.
 
 > [!IMPORTANT]
-> **Rutas Antigravity**: Los scripts de este skill detectan automáticamente tu entorno. Por defecto usan `~/.gemini/antigravity/skills/`.
+> **El contexto es un bien público.** No lo malgastes. Antigravity ya es inteligente; solo dale el contexto que *no* tiene (conocimiento de dominio, workflows específicos, guardrails).
 
 ---
 
-## Quick Example (30 seg)
+## Core Principles
 
-```bash
-# 1. Crear estructura básica
-python scripts/init_skill.py hello-world
+### 1. Progressive Disclosure (3 Niveles)
+1. **Metadata**: Trigger en la `description` (~100 tokens).
+2. **SKILL.md**: El core del workflow (< 500 líneas).
+3. **Bundled Resources**: Detalles en `references/`, `scripts/` o `templates/` (On demand).
 
-# 2. Ejecutar baseline (ver cómo falla sin el skill)
-python scripts/validate_skill.py hello-world --baseline
+### 2. Degrees of Freedom
+Ajusta la especificidad según la fragilidad de la tarea:
+- **Alta Libertad** (Instrucciones de texto): Múltiples caminos válidos.
+- **Media Libertad** (Pseudo-código/Scripts con parámetros): Patrón preferido con variaciones.
+- **Baja Libertad** (Scripts específicos, cero parámetros): Tareas frágiles y críticas.
 
-# 3. Iterar editando SKILL.md hasta pasar el test
-python scripts/validate_skill.py hello-world --test
-```
-
-[Ver ejemplo completo paso a paso](examples/creating-hello-world-skill.md)
+### 3. The Iron Law (TDD)
+**NO SKILL WITHOUT FAILING TEST FIRST.**
+Si no puedes probar que el agente falla sin el skill (Rationalization), tal vez no necesitas el skill.
 
 ---
 
-## 5 Pasos para un Skill Increíble
+## Skill Creation Process (6 Pasos)
 
-### 1. Entender el Problema
+### 1. Entender el Problema (Concrete Examples)
+Gather examples. ¿Qué funcionalidad falta? ¿Cuándo falla el agente?
 
-Antes de escribir, define claramente:
+### 2. Planificar Recursos Reutilizables
+¿Qué irá en `scripts/` (automatización), `templates/` (boilerplate) o `references/` (docs)?
 
-- **Trigger**: ¿Cuándo EXACTAMENTE debe activarse?
-- **Keywords**: ¿Qué palabras usa el usuario cuando tiene este problema?
-- **Tipo**: ¿Es guía técnica (Domain) o regla de disciplina (Guardrail)?
-
-### 2. Inicializar
-
+### 3. Inicializar (init_skill.py)
 ```bash
-python scripts/init_skill.py <nombre-kebab-case>
+python scripts/init_skill.py <nombre-skill> --type [domain|guardrail|reference]
 ```
 
-Esto crea `SKILL.md`, directorios y templates necesarios.
+### 4. RED Phase: Baseline Test
+Ejecuta el escenario de fallo (Pressure Scenario) SIN el skill activo. Documenta las **excusas** del agente.
 
-### 3. RED: Baseline (Critical)
+### 5. GREEN Phase: Implementar & Contra-medidas
+Edita el `SKILL.md`. Ataca específicamente las racionalizaciones del baseline.
+- **Bulletproofing**: Usa tablas de "Excusa vs Realidad".
+- **Imperativo**: "Borrar significa borrar".
 
-**LA LEY DE HIERRO**: No skill without failing test first.
-
-1. Desactiva el skill (o no lo crees aún en `.agent/skills` o repo oficial).
-2. Presenta al agente el problema que el skill debe resolver (Pressure Scenario).
-3. Documenta: ¿Qué hizo mal? ¿Qué excusas (racionalizaciones) dio?
-4. Guarda esto en `task.md` o `implementation_plan.md` del skill.
-
-### 4. GREEN: Implementar Mínimo
-
-Edita `SKILL.md` para contrarrestar _específicamente_ las fallas del baseline.
-
-- Si el agente dijo "es muy simple para testear", añade una regla explícita: "Nunca es demasiado simple".
-- Si inventó una librería, añade documentación de referencia correcta.
-
-### 5. REFACTOR & Verify
-
-Vuelve a ejecutar el escenario (Test).
-
-- ¿Siguió las instrucciones? -> ✅ Deploy.
-- ¿Encontró una nueva excusa? -> Añade contra-medida y repite.
+### 6. REFACTOR & Verify
+Ejecuta con el skill. ¿Pasó? ¿Nuevas excusas? Itera.
 
 ---
 
@@ -81,90 +64,33 @@ Vuelve a ejecutar el escenario (Test).
 ```
 skill-name/
 ├── SKILL.md              # Core (requerido, < 500 líneas)
-├── task.md               # Tracking de creación (copiar del brain)
-├── implementation_plan.md # Plan TDD (copiar del brain)
-├── walkthrough.md        # Registro final (copiar del brain)
-├── references/           # Documentación extendida
+├── references/           # Documentación extendida (Nivel 3)
 ├── scripts/              # Código ejecutable
 ├── templates/            # Plantillas reutilizables
-└── examples/             # Ejemplos prácticos paso a paso
+└── examples/             # Ejemplos prácticos / Casos TDD
 ```
-
-### SKILL.md Frontmatter Ideal
-
-```yaml
----
-name: mi-skill
-description: Use cuando [SITUACIÓN ESPECÍFICA]. Keywords: [palabra1, palabra2].
----
-```
-
-> [!TIP]
-> **Description = Trigger, NO Resumen**.
-> ❌ "Use para crear APIs con FastAPI siguiendo patrones..."
-> ✅ "Use cuando crees APIs con FastAPI. Keywords: api, rest, endpoint."
-
----
-
-## Core Principles
-
-### 1. Progressive Disclosure
-
-No abrumes al contexto.
-
-- **Nivel 1 (Always on)**: `description` y keywords.
-- **Nivel 2 (Activated)**: `SKILL.md` (< 500 líneas).
-- **Nivel 3 (On demand)**: Archivos en `references/` (ilimitado).
-
-### 2. Claude Search Optimization (CSO)
-
-Antigravity decide qué skill cargar basándose EXCLUSIVAMENTE en la `description`.
-
-- Sé específico sobre el CUÁNDO.
-- Incluye nombres de errores, tecnologías y acciones clave.
-
-### 3. Bulletproofing (Disciplina)
-
-Si el skill es para evitar errores humanos (ej. TDD, Debugging):
-
-- Anticipa las excusas ("racionalizaciones").
-- Usa tablas de "Excusa vs Realidad".
-- Sé imperativo y absoluto ("Borrar significa borrar").
 
 ---
 
 ## Scripts y Herramientas
 
-Todos los scripts soportan autodetección de rutas (`~/.gemini/antigravity/skills` o `.agent/skills`).
-
 ```bash
-# Inicializar
+# Inicializar con estructura estándar
 python scripts/init_skill.py <nombre>
 
-# Validar estructura y reglas
+# Validar reglas (Lines < 500, Frontmatter, Degrees of Freedom)
 python scripts/validate_skill.py <nombre> --validate
 
-# Guías de Testing
+# Guías de Testing TDD
 python scripts/validate_skill.py <nombre> --baseline
 python scripts/validate_skill.py <nombre> --test
 ```
 
 ---
 
-## Referencias
+## Referencias Avanzadas
 
-- [Testing Methodology TDD](references/testing-methodology.md)
-- [Rutas y Entornos](references/antigravity-paths.md)
-- [Tipos de Skill (Guardrail vs Domain)](references/skill-types.md)
-- [CSO Optimization](references/cso-optimization.md)
-
----
-
-## The Iron Law
-
-```
-NO SKILL WITHOUT FAILING TEST FIRST
-```
-
-Aplica a skills NUEVAS y EDICIONES importantes.
-Si no puedes probar que falla sin el skill, tal vez no necesitas el skill.
+- [Degrees of Freedom](references/degrees-of-freedom.md) - Cómo guiar sin asfixiar.
+- [Context Efficiency](references/context-efficiency.md) - Maximización del context window.
+- [Testing Methodology TDD](references/testing-methodology.md) - Red/Green/Refactor en docs.
+- [CSO Optimization](references/cso-optimization.md) - Optimizando el disparador (description).

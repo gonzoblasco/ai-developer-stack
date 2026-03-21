@@ -114,6 +114,10 @@ class SkillValidator:
         # Verificar secciones recomendadas
         recommended_sections = ["## Overview"]
         
+        # Degrees of Freedom is mandatory for Domain and Guardrail
+        if "degrees of freedom" not in content.lower():
+            self.warnings.append("Sección recomendada faltante: ## Degrees of Freedom")
+            
         for section in recommended_sections:
             if section.lower() not in content.lower():
                 self.warnings.append(f"Sección recomendada faltante: {section}")
@@ -130,6 +134,10 @@ class SkillValidator:
         
         if line_count > 500:
             self.warnings.append(f"SKILL.md tiene {line_count} líneas (recomendado < 500)")
+        
+        # Check for conciseness
+        if line_count < 50:
+             self.warnings.append(f"SKILL.md es muy corto ({line_count} líneas). ¿Se te olvidó el contenido?")
             
     def report(self):
         """Imprime reporte de validación."""
