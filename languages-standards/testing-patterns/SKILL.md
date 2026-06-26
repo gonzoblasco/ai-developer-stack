@@ -1,79 +1,113 @@
 ---
 name: testing-patterns
-description: Jest testing patterns, factory functions, mocking strategies, and TDD workflow. Use when writing unit tests, creating test factories, or following TDD red-green-refactor cycle.
+description: Vitest testing patterns, factory functions, mocking strategies, and TDD workflow. Use when writing unit tests, creating test factories, or following TDD cycles.
+risk: safe
+source: community
+date_added: "2026-06-26"
 ---
 
-# Testing Patterns and Utilities
+# Testing Patterns and Utilities (Vitest)
 
-## Testing Philosophy
+> **Learn to test behaviors, not implementations. Default to Vitest for modern projects.**
 
-- **Test-Driven Development (TDD):** Write failing test FIRST -> Implement minimal code -> Refactor.
-- **Behavior-Driven:** Test behavior (what it does), not implementation (how it works). Focus on user-observable outcomes.
-- **Factory Pattern:** Always use factories for data/props to keep tests DRY and resilient to schema changes.
+---
 
-## Test Utilities
+## 🧠 Testing Philosophy
 
-### Custom Render Function
+- **Test-Driven Development (TDD)**: Write a failing test FIRST ➔ Implement minimal code to pass ➔ Refactor.
+- **Behavior-Driven Testing**: Test what the module/component *does* (user-observable outcomes) rather than *how* it does it. Avoid testing private methods or internal state directly.
+- **Factory Pattern**: Use factory functions to generate mock data or component props. This keeps tests DRY and prevents them from breaking when database schemas or API shapes change.
 
-Wrap components with required providers (Theme, Auth, etc.) in a custom render function.
+---
 
-- [View Example: Custom Render](examples/render-utils.tsx)
+## 🧪 Mocking Patterns in Vitest
 
-```typescript
-// Usage
-renderWithTheme(<MyComponent />);
-```
+### Mocking Modules & Third-Party Libraries
 
-## Factory Pattern
-
-### Component Props & Data Factories
-
-Create flexible factory functions that provide sensible defaults but allow overrides. This prevents brittle tests that break when a new required field is added.
-
-- [View Example: Factories](examples/factories.ts)
+Use `vi.mock()` to isolate the unit under test. Retrieve mock functions using `vi.mocked()` to obtain proper TypeScript types.
 
 ```typescript
-// Usage
-const user = getMockUser({ role: "admin" });
-const props = getMockMyComponentProps({ title: "Custom" });
+import { vi, describe, it, expect, beforeEach } from 'vitest';
+import { analytics } from './utils/analytics';
+import { processPayment } from './paymentService';
+
+// Mock the module
+vi.mock('./utils/analytics', () => ({
+  analytics: {
+    trackEvent: vi.fn(),
+  },
+}));
+
+describe('processPayment', () => {
+  beforeEach(() => {
+    vi.clearAllMocks();
+  });
+
+  it('tracks an analytics event on successful payment', async () => {
+    await processPayment({ amount: 100 });
+    
+    // Type-safe verification of the mock call
+    expect(vi.mocked(analytics.trackEvent)).toHaveBeenCalledWith('payment_success', { amount: 100 });
+  });
+});
 ```
 
-## Mocking Patterns
-
-### Mocking Modules & Hooks
-
-Use `jest.mock` to isolate the unit under test. Use `jest.requireMock` to access the mock in your test for assertions or setup.
-
-- [View Example: Mocking Modules & Hooks](examples/mocking.ts)
+### Mocking Globals & Environment Variables
 
 ```typescript
-// Usage
-const mockLogEvent = jest.requireMock("utils/analytics").Analytics.logEvent;
-expect(mockLogEvent).toHaveBeenCalled();
+// Mocking global fetch
+const mockFetch = vi.fn().mockResolvedValue({
+  json: async () => ({ id: '123' }),
+});
+vi.stubGlobal('fetch', mockFetch);
+
+// Mocking environment variables
+vi.stubEnv('DATABASE_URL', 'postgresql://localhost:5432/test');
 ```
 
-## Test Structure & Queries
+---
 
-Organize tests with `describe` blocks. Use `beforeEach` to clear mocks.
+## 🏭 Factory Pattern (Keeping Tests Resilient)
 
-- **Query Priority:** `getByText/Role` (user visible) > `getByTestId` (implementation detail).
-- **Async:** Use `waitFor` for async updates.
-- **User Interaction:** Use `fireEvent` to simulate user actions.
+Avoid writing inline object literals for complex models in every test. Implement factories with override capabilities:
 
-- [View Example: User Interaction Test](examples/user-interaction.test.tsx)
+```typescript
+// factories/user.ts
+export interface User {
+  id: string;
+  name: string;
+  role: 'admin' | 'user';
+  email: string;
+}
 
-## Best Practices
+export function createUserMock(overrides: Partial<User> = {}): User {
+  return {
+    id: 'user-default-uuid',
+    name: 'Jane Doe',
+    role: 'user',
+    email: 'jane@example.com',
+    ...overrides,
+  };
+}
 
-1.  **Always use factory functions** for props and data.
-2.  **Test behavior, not implementation**.
-3.  **Use descriptive test names**.
-4.  **Keep tests focused** - one behavior per test.
+// In your test file:
+const adminUser = createUserMock({ role: 'admin' });
+```
 
-> [!WARNING]
-> Avoid common anti-patterns like testing mock calls instead of side effects.
-> [Read more: Anti-Patterns](references/anti-patterns.md)
+---
 
-## Integration with Other Skills
+## 🚫 Common Anti-Patterns
 
-- **react-ui-patterns**: Test all UI states (loading, error, empty, success).
-- **systematic-debugging**: Write a test that reproduces the bug before fixing it.
+| ❌ Avoid | ✅ Do |
+|----------|-------|
+| Mocking internal methods of the class under test | Test through the public interface/endpoints only |
+| Retaining mock state between tests | Run `vi.clearAllMocks()` or `vi.restoreAllMocks()` in `beforeEach` |
+| Long-running e2e tests for simple logic | Use fast unit tests; reserve e2e (Playwright) for critical user flows |
+| Hardcoding database IDs in tests | Generate dynamic IDs or use factories |
+
+---
+
+## Limitations
+- Use this skill only when the task clearly matches the scope described above.
+- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
+- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.

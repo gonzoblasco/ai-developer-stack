@@ -21,8 +21,7 @@ graph TD
 
 _Goal: Define behavior, boundaries, and reasoning style._
 
-1.  **Architect the Prompt**: Don't guess. Use **[`chatgpt-project-architect`](chatgpt-project-architect/SKILL.md)** to structure your System Instructions.
-    - _Key Output_: A structured Markdown file with `<Role>`, `<Constraints>`, and `<Output Format>`.
+1.  **Architect the Prompt**: Don't guess. Use **[`prompt-mastery`](prompt-mastery/SKILL.md)** to structure your System Instructions.
     - _Critical_: Apply "Anti-Injection" patterns from day one.
 
 2.  **Optimize Reasoning**: If the agent needs to solve complex problems, apply **[`prompt-mastery`](prompt-mastery/SKILL.md)** techniques.
@@ -47,7 +46,7 @@ _Goal: Ground the agent in reality and your specific data._
     - _Critical_: Implement **Semantic Chunking** and **Hybrid Search** (Keywords + Embeddings).
     - _Mandatory_: Always use a Reranker step.
 
-2.  **Architecture Choice**: Choose the right structure using **[`llm-app-patterns`](llm-app-patterns/SKILL.md)**.
+2.  **Architecture Choice**: Choose the right structure using **[`ai-agents-architect`](ai-agents-architect/SKILL.md)**.
     - _ReAct_: For tasks requiring reasoning loops.
     - _Plan-Execute_: For complex, multi-step goals.
 
@@ -55,7 +54,7 @@ _Goal: Ground the agent in reality and your specific data._
 
 _Goal: Deploy without sleepless nights._
 
-1.  **Enforce Limits**: Use **[`autonomous-agent-expert`](autonomous-agent-expert/SKILL.md)** patterns.
+1.  **Enforce Limits**: Use **[`ai-agents-architect`](ai-agents-architect/SKILL.md)** patterns.
     - Implement **Permission Levels** (Auto vs. Ask User).
     - Set strict `max_iterations` loops to prevent infinite spending.
 
@@ -65,13 +64,12 @@ _Goal: Deploy without sleepless nights._
 
 ## 📚 Skill Index
 
-| Skill                                                         | Focus Area         | When to use                                             |
-| :------------------------------------------------------------ | :----------------- | :------------------------------------------------------ |
-| **[`prompt-mastery`](prompt-mastery/)**                       | Prompt Engineering | Optimizing prompts, Chain-of-Thought, templates         |
-| **[`chatgpt-project-architect`](chatgpt-project-architect/)** | System Prompts     | Creating "Project Instructions" for specific assistants |
-| **[`agent-tool-builder`](agent-tool-builder/)**               | Tools & Functions  | Designing JSON schemas for function calling             |
-| **[`autonomous-agent-expert`](autonomous-agent-expert/)**     | Agent Reliability  | Building loops, safety checks, and permission systems   |
-| **[`rag-expert`](rag-expert/)**                               | Knowledge/RAG      | Building retrieval pipelines, chunking, reranking       |
-| **[`mcp-builder`](mcp-builder/)**                             | Connectivity       | Creating MCP servers for external tools                 |
-| **[`llm-app-patterns`](llm-app-patterns/)**                   | Architecture       | High-level patterns (ReAct vs Chains vs RAG)            |
-| **[`meta-skill-antigravity`](meta-skill-antigravity/)**       | Methodology        | Creating and validating new skills                      |
+| Skill | Focus Area | When to use |
+| :--- | :--- | :--- |
+| **[`prompt-mastery`](prompt-mastery/)** | Prompt Engineering | Optimizing prompts, Chain-of-Thought, templates |
+| **[`agent-tool-builder`](agent-tool-builder/)** | Tools & Functions | Designing JSON schemas for function calling |
+| **[`ai-agents-architect`](ai-agents-architect/)** | Agent Reliability | Building loops, memory systems, safety checks, and multi-agent orchestration |
+| **[`rag-expert`](rag-expert/)** | Knowledge/RAG | Building retrieval pipelines, chunking, reranking |
+| **[`mcp-builder`](mcp-builder/)** | Connectivity | Creating MCP servers for external tools |
+| **[`meta-skill-antigravity`](meta-skill-antigravity/)** | Methodology | Creating and validating new skills |
+| **[`elon-musk`](elon-musk/)** | Simulation | Persona simulation for strategic decision-making |

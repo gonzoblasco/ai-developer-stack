@@ -6,6 +6,28 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ---
 
+## [1.3.0] - 2026-06-26
+
+### Added
+- `tools-automation/linear-expert` — Adapted from Claude-specific scripts to a generic REST/GraphQL workflow.
+- `tools-automation/docs-architect` — Deep technical manuals compilation from codebase analysis.
+- `languages-standards/nodejs-best-practices` — Layered architecture, runtime selection, and async principles for Node.js.
+- `ai-agents/ai-agents-architect` — Master loops, memory architectures, and multi-agent coordination.
+- `strategy-architecture/architecture` — System design and ADR templates.
+- `strategy-architecture/architecture-patterns` — Hexagonal, Clean, and DDD patterns.
+
+### Changed
+- `languages-standards/testing-patterns` — Migrated completely from Jest to **Vitest** mocking and assertions.
+- Updated all folder-level playbooks (`README.md` files) and the root `README.md`.
+
+### Removed / Deprecated
+- `backend-infra/backend-expert` — Consolidated into `nodejs-best-practices` and `database-design`.
+- `strategy-architecture/planning-expert` — Deprecated in favor of Antigravity's native planning mode (`task.md` / `implementation_plan.md`).
+- `product-building/writing-plans` — Deprecated/deleted in favor of `plan-writing`.
+- Removed temporary/legacy/test skills: `add-about-page`, `add-health-endpoint`, `react-exam-copilot`, and `react-frontend-patterns`.
+
+---
+
 ## [1.2.0] - 2026-02-24
 
 ### Added

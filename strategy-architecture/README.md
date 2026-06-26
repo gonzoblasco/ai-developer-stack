@@ -34,17 +34,19 @@ _Goal: Validate the idea and define value._
 
 _Goal: Design a system that survives success._
 
-1.  **System Design**: Use **[`senior-architect`](senior-architect/SKILL.md)**.
+1.  **System Design**: Use **[`senior-architect`](senior-architect/SKILL.md)** or the general **[`architecture`](architecture/SKILL.md)** framework.
     - _Deliverables_: C4 Diagrams, ERDs, Tech Stack Decision Records (ADRs).
     - _Mindset_: Analyze trade-offs. "Microservices" is not always the answer.
+
+2.  **Select Patterns**: Apply **[`architecture-patterns`](architecture-patterns/SKILL.md)** for Clean/Hexagonal Architecture and Domain-Driven Design rules.
+
+3.  **Multi-Tenancy**: Use **[`saas-multi-tenant`](saas-multi-tenant/SKILL.md)** to isolate customer databases.
 
 ### 📅 Phase 3: Planning & Roadmap (The "When")
 
 _Goal: Create a realistic path to delivery._
 
-1.  **Break it Down**: Use **[`planning-expert`](planning-expert/SKILL.md)**.
-    - _Technique_: Work backwards from the release date.
-    - _Estimation_: Use T-Shirt sizing for broad strokes, precise hours for the next sprint only.
+1.  **Break it Down**: Use **[`plan-writing`](../product-building/plan-writing/SKILL.md)** for code-level roadmaps or follow the **Antigravity native planning mode** (`implementation_plan.md` / `task.md`).
 
 ### 🔄 Phase 4: Execution & Improvement (The "How")
 
@@ -57,12 +59,14 @@ _Goal: Better every day._
 
 ## 📚 Skill Index
 
-| Skill                                       | Focus Area    | When to use                                       |
-| :------------------------------------------ | :------------ | :------------------------------------------------ |
+| Skill | Focus Area | When to use |
+| :--- | :--- | :--- |
 | **[`senior-architect`](senior-architect/)** | System Design | High-level decisions, tradeoff analysis, diagrams |
-| **[`planning-expert`](planning-expert/)**   | Management    | Roadmapping, estimation, task breakdown           |
-| **[`brainstorming`](brainstorming/)**       | Creativity    | Unblocking problems, generating feature ideas     |
-| **[`app-builder`](app-builder/)**           | MVP           | End-to-end guide for building new apps            |
-| **[`pricing-strategy`](pricing-strategy/)** | Business      | Determining monetization models                   |
-| **[`marketing-ideas`](marketing-ideas/)**   | Growth        | Go-to-market strategies                           |
-| **[`kaizen`](kaizen/)**                     | Process       | Improving team workflows and personal efficiency  |
+| **[`architecture`](architecture/)** | Decisions | Documenting system design decisions using ADRs |
+| **[`architecture-patterns`](architecture-patterns/)** | Patterns | Hexagonal, Clean, and DDD patterns |
+| **[`saas-multi-tenant`](saas-multi-tenant/)** | Multi-Tenancy | Database isolation and tenant schemas |
+| **[`brainstorming`](brainstorming/)** | Creativity | Unblocking problems, generating feature ideas |
+| **[`app-builder`](app-builder/)** | MVP | End-to-end guide for building new apps |
+| **[`pricing-strategy`](pricing-strategy/)** | Business | Determining monetization models |
+| **[`marketing-ideas`](marketing-ideas/)** | Growth | Go-to-market strategies |
+| **[`kaizen`](kaizen/)** | Process | Improving team workflows and personal efficiency |

@@ -25,9 +25,9 @@ _Goal: Define how the system communicates and organizes logic._
     - _Standard_: REST vs GraphQL? Versioning strategy?
     - _Constraint_: Always define error envelope formats first.
 
-2.  **Choose the Framework**:
-    - **General**: Use **[`backend-expert`](backend-expert/SKILL.md)** for language-agnostic patterns (Layered Architecture, SOLID).
-    - **Node.js**: Use **[`nestjs-expert`](nestjs-expert/SKILL.md)** for structured, modular applications. Enforce Dependency Injection and strictly separate Controllers from Services.
+2.  **Choose the Framework & Standards**:
+    - **General/Node.js**: Use **[`nodejs-best-practices`](../languages-standards/nodejs-best-practices/SKILL.md)** for runtime, framework selection (Hono/Fastify/Express), and layered architecture standards.
+    - **Enterprise**: Use **[`nestjs-expert`](nestjs-expert/SKILL.md)** for structured, modular applications. Enforce Dependency Injection and strictly separate Controllers from Services.
 
 ### 💾 Phase 2: Data & Persistence
 
@@ -36,6 +36,7 @@ _Goal: Store data reliably and efficiently._
 1.  **Design the Schema**: Use **[`database-design`](database-design/SKILL.md)** before running `CREATE TABLE`.
     - _Normalization_: 3NF by default, denormalize only for read-heavy hotspots.
     - _Keys_: UUIDs vs Integers? Foreign Key constraints are mandatory.
+    - _ORM**: Use **[`prisma-expert`](prisma-expert/SKILL.md)** for Prisma specific migrations, relationships, and queries.
 
 2.  **Optimize the Engine**: If using PostgreSQL (recommended), apply **[`postgres-best-practices`](postgres-best-practices/SKILL.md)**.
     - _Performance_: Indexing strategies (B-Tree, GIN for JSONB).
@@ -60,12 +61,12 @@ _Goal: Run anywhere, consistently._
 
 ## 📚 Skill Index
 
-| Skill                                                     | Focus Area         | When to use                                                 |
-| :-------------------------------------------------------- | :----------------- | :---------------------------------------------------------- |
-| **[`api-patterns`](api-patterns/)**                       | API Design         | Defining REST/GraphQL contracts, versioning, error handling |
-| **[`backend-expert`](backend-expert/)**                   | Architecture       | General best practices, SOLID, Clean Architecture           |
-| **[`nestjs-expert`](nestjs-expert/)**                     | Node.js Framework  | Building scalable applications with NestJS                  |
-| **[`database-design`](database-design/)**                 | Data Modeling      | Schema design, normalization, ERD diagrams                  |
-| **[`postgres-best-practices`](postgres-best-practices/)** | Database Specifics | Tuning, indexing, and advanced PostgreSQL features          |
-| **[`mercadolibre-api`](mercadolibre-api/)**               | Integration        | Connecting with MercadoLibre APIs (MELI)                    |
-| **[`docker-expert`](docker-expert/)**                     | DevOps             | Containerization, Dockerfiles, docker-compose               |
+| Skill | Focus Area | When to use |
+| :--- | :--- | :--- |
+| **[`api-patterns`](api-patterns/)** | API Design | Defining REST/GraphQL contracts, versioning, error handling |
+| **[`nestjs-expert`](nestjs-expert/)** | Node.js Framework | Building scalable applications with NestJS |
+| **[`prisma-expert`](prisma-expert/)** | ORM | Working with Prisma, database modeling, migrations, and queries |
+| **[`database-design`](database-design/)** | Data Modeling | Schema design, database selection, and normalization |
+| **[`postgres-best-practices`](postgres-best-practices/)** | Database Specifics | Tuning, indexing, and advanced PostgreSQL/Supabase features |
+| **[`mercadolibre-api`](mercadolibre-api/)** | Integration | Connecting with MercadoLibre APIs (MELI) |
+| **[`docker-expert`](docker-expert/)** | DevOps | Containerization, Dockerfiles, docker-compose |

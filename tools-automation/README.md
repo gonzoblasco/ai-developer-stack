@@ -24,33 +24,42 @@ _Goal: Connect APIs quickly without maintaining servers._
     - _Best For_: Webhooks, connecting SaaS (Slack -> Sheets), Cron jobs.
     - _Example_: **[`meli-n8n-crm-logger`](meli-n8n-crm-logger/SKILL.md)** shows how to log high-volume e-commerce data without writing a backend.
 
-### 🕸️ Level 2: Browser Automation (The Heavy Lifting)
+2.  **API Management**: Use **[`linear-expert`](linear-expert/SKILL.md)** to script task synchronization between codebase commits and Linear boards via GraphQL.
 
-_Goal: Interact with websites that don't have APIs._
+### 🕸️ Level 2: Browser & Review Automation (The Heavy Lifting)
+
+_Goal: Interact with websites that don't have APIs, or automate reviews._
 
 1.  **Scraping & Control**: Use **[`browser-automation-expert`](browser-automation-expert/SKILL.md)**.
     - _Principle_: Resiliency > Speed.
     - _Technique_: Always use explicit waits (`waitForSelector`). Never rely on fixed `sleep()`.
-    - _Anti-Detection_: Use realistic user-agent rotation and human-like delays.
 
-### 📄 Level 3: Specialized Utilities
+2.  **QA & E2E Testing**: Reference **[`e2e-testing-patterns`](e2e-testing-patterns/SKILL.md)** for Playwright structures.
 
-_Goal: Handle complex file formats._
+3.  **Human Code Review**: Use **[`vibers-code-review`](vibers-code-review/SKILL.md)** to request human PR feedback and compliance checks.
 
-1.  **Document Generation**: Use **[`pdf-official`](pdf-official/SKILL.md)**.
-    - _Use Case_: generating invoices, reports, or contracts programmatically.
+### 📄 Level 3: Specialized Utilities & Docs
 
-1.  **Documentation Expert**: Use **[`documentation-expert`](documentation-expert/SKILL.md)**.
-    - _Use Case_: Creating and maintaining README, CHANGELOG, and AGENTS files for humans and AI.
+_Goal: Handle complex file formats and maintain document architecture._
+
+1.  **Document Generation**: Use **[`pdf-official`](pdf-official/SKILL.md)** for PDF invoicing or reporting.
+
+2.  **Documentation Architecture**: Use **[`docs-architect`](docs-architect/SKILL.md)** for compiling massive codebase technical reference manuals.
+
+3.  **Repository Hygiene**: Use **[`documentation-expert`](documentation-expert/SKILL.md)** to generate project README, CHANGELOG, and AGENTS.md files.
 
 ---
 
 ## 📚 Skill Index
 
-| Skill                                                         | Focus Area | When to use                                         |
-| :------------------------------------------------------------ | :--------- | :-------------------------------------------------- |
-| **[`n8n-workflow-builder`](n8n-workflow-builder/)**           | Low-Code   | Connecting APIs, event-driven workflows, cron jobs  |
-| **[`browser-automation-expert`](browser-automation-expert/)** | Scraping   | Automating web interactions, testing, scraping data |
-| **[`meli-n8n-crm-logger`](meli-n8n-crm-logger/)**             | E-commerce | Specific recipe for MercadoLibre CRM logging        |
-| **[`pdf-official`](pdf-official/)**                           | Documents  | generating and manipulating PDF files               |
-| **[`documentation-expert`](documentation-expert/)**           | Docs Assist| Automating README, CHANGELOG, and AGENTS.md         |
+| Skill | Focus Area | When to use |
+| :--- | :--- | :--- |
+| **[`n8n-workflow-builder`](n8n-workflow-builder/)** | Low-Code | Connecting APIs, event-driven workflows, cron jobs |
+| **[`browser-automation-expert`](browser-automation-expert/)** | Scraping | Automating web interactions, testing, scraping data |
+| **[`meli-n8n-crm-logger`](meli-n8n-crm-logger/)** | E-commerce | Specific recipe for MercadoLibre CRM logging |
+| **[`linear-expert`](linear-expert/)** | API Sync | Scripting issues, tasks, and roadmaps in Linear |
+| **[`vibers-code-review`](vibers-code-review/)** | Code Review | Standard workflow for human spec-based PR reviews |
+| **[`e2e-testing-patterns`](e2e-testing-patterns/)** | E2E Testing | Designing Playwright test suites |
+| **[`pdf-official`](pdf-official/)** | Documents | Generating and manipulating PDF files |
+| **[`docs-architect`](docs-architect/)** | Architecture Docs | Compiling deep codebase reference manuals |
+| **[`documentation-expert`](documentation-expert/)** | Repo Hygiene | Automating README, CHANGELOG, and AGENTS.md |
