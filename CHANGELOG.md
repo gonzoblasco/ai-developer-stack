@@ -27,6 +27,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - `frontend-ui/accesslint-audit` — Find and fix WCAG 2.2 accessibility issues using live DOM CDP or static HTML string audits.
 - `frontend-ui/web-design-guidelines` — Code compliance verification against Vercel's Web Interface Guidelines.
 - `frontend-ui/web-artifacts-builder` — Bundling self-contained React/Tailwind/shadcn UIs as interactive documentation pages for Antigravity.
+- `frontend-ui/ui-ux-designer` — User research methodologies, wireframing, design systems (atomic design), and design tokens for cross-platform layouts.
 - `product-building/vibecode-production-qa-validator` — 13-phase QA launch-readiness validator for fullstack Next.js applications covering SEO, Auth, and performance.
 - `tools-automation/analyze-project` — Forensic root cause analyzer for Antigravity sessions to classify scope deltas, rework patterns, and hotspots.
 - `ai-agents/prompt-engineer` — Transmute raw prompts into structured prompt frameworks (RTF, RISEN, Chain of Thought, etc.) to optimize AI output.

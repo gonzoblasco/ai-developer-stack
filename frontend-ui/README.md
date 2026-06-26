@@ -54,11 +54,13 @@ _Goal: Turn users into fans._
     - _Aesthetics_: Glassmorphism, modern gradients, and "breathing room" (whitespace).
     - _Mindset_: "If it looks basic, you failed."
 
-3.  **Spatial & Motion Design**: Apply **[`antigravity-design-expert`](antigravity-design-expert/SKILL.md)** for weightless, 3D spatial, and glassmorphism-based interfaces using GSAP and 3D transforms.
+3.  **Core UI/UX Strategy & Tokens**: Apply **[`ui-ux-designer`](ui-ux-designer/SKILL.md)** for user research, wireframing, design systems (atomic design, variables), and token-based naming conventions.
 
-4.  **Magic & Micro-interactions**: Use **[`design-spells`](design-spells/SKILL.md)** to inject delightful animations, easter eggs, and clever interactive design patterns that add personality.
+4.  **Spatial & Motion Design**: Apply **[`antigravity-design-expert`](antigravity-design-expert/SKILL.md)** for weightless, 3D spatial, and glassmorphism-based interfaces using GSAP and 3D transforms.
 
-5.  **Interactive Documentation**: Use **[`web-artifacts-builder`](web-artifacts-builder/SKILL.md)** to build self-contained React-based interactive dashboards and documentation pages that feed Antigravity.
+5.  **Magic & Micro-interactions**: Use **[`design-spells`](design-spells/SKILL.md)** to inject delightful animations, easter eggs, and clever interactive design patterns that add personality.
+
+6.  **Interactive Documentation**: Use **[`web-artifacts-builder`](web-artifacts-builder/SKILL.md)** to build self-contained React-based interactive dashboards and documentation pages that feed Antigravity.
 
 ### 🔄 Phase 4: Optimization, Debugging & Migrations
 
@@ -84,6 +86,7 @@ _Goal: Pay down technical debt and debug production safely._
 | :--- | :--- | :--- | :--- |
 | **[`design-it`](design-it/)** | Visuals | Routing design to 48 opinions | Selecting specific premium layout aesthetics |
 | **[`ui-ux-pro-max`](ui-ux-pro-max/)** | Aesthetics | Creating premium interfaces | Polishing UI for wow factor |
+| **[`ui-ux-designer`](ui-ux-designer/)** | Strategy/UX | User research & design tokens | High-level system design guidelines and cross-platform UX strategy |
 | **[`antigravity-design-expert`](antigravity-design-expert/)** | Spatial & Motion | Weightless 3D & glassmorphism | Immersive landing pages, dashboards, and GSAP motion |
 | **[`design-spells`](design-spells/)** | Spells/UX | Micro-interactions & Easter eggs | Polishing completed components to add wow factor and magic |
 | **[`frontend-dev-guidelines`](frontend-dev-guidelines/)** | Standards | Consistency across team | Starting new project/onboarding |

@@ -149,6 +149,7 @@ If you are looking for a specific skill, here is the complete index by domain.
 - **[`ui-review-nextjs-tailwind`](frontend-ui/ui-review-nextjs-tailwind)**: Code & design audits.
 - **[`web-design-guidelines`](frontend-ui/web-design-guidelines)**: Compliance check against Vercel Web Interface Guidelines.
 - **[`ui-ux-pro-max`](frontend-ui/ui-ux-pro-max)**: UI/UX design intelligence and style matching.
+- **[`ui-ux-designer`](frontend-ui/ui-ux-designer)**: User research, systematic wireframing, and cross-platform UX strategy.
 - **[`antigravity-design-expert`](frontend-ui/antigravity-design-expert)**: Weightless 3D spatial transforms and GSAP animations.
 - **[`design-spells`](frontend-ui/design-spells)**: Curated micro-interactions, Easter eggs, and visual magic.
 - **[`tailwind-patterns`](frontend-ui/tailwind-patterns)**: Utility-first CSS at scale.
