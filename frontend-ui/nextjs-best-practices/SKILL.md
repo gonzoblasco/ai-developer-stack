@@ -1,74 +1,213 @@
 ---
 name: nextjs-best-practices
-description: Use when building or refactoring Next.js App Router applications. Keywords: nextjs, app router, server components, rsc, next.js.
-allowed-tools: Read, Write, Edit, Glob, Grep
+description: "Next.js App Router principles. Server Components, data fetching, routing patterns."
+risk: unknown
+source: community
+date_added: "2026-02-27"
 ---
 
-# Next.js Best Practices (App Router)
+# Next.js Best Practices
 
-> **Golden Rule**: Server Components by default. Client Components only at the leaves.
+> Principles for Next.js App Router development.
 
-## 1. The Iron Rules (Guardrails)
+---
 
-| IF you think...                                    | THEN remember...                                                        |
-| -------------------------------------------------- | ----------------------------------------------------------------------- |
-| "It's just a small component, I'll make it client" | **STOP.** Performance death by thousand cuts. Keep it server.           |
-| "I need `useState` for data fetching"              | **WRONG.** Fetch in Server Component. Pass data as props.               |
-| "I can't access `window` in Server Component"      | Correct. Move that specific logic to a Client Component leaf.           |
-| "I'll wrap the whole app in a Context Provider"    | **AVOID.** Wrap only children who need it. Don't de-opt the whole tree. |
+## 1. Server vs Client Components
 
-## 2. Server vs Client Decision Tree
+### Decision Tree
 
-1.  **Does it need interactivity?** (onClick, onChange, hooks)
-    - YES -> [Client Component](templates/client-component.tsx)
-2.  **Does it need to fetch data directly?** (DB, API)
-    - YES -> [Server Component](templates/server-component.tsx)
-3.  **Does it assume it's on the browser?** (localStorage, window)
-    - YES -> [Client Component](templates/client-component.tsx)
+```
+Does it need...?
+│
+├── useState, useEffect, event handlers
+│   └── Client Component ('use client')
+│
+├── Direct data fetching, no interactivity
+│   └── Server Component (default)
+│
+└── Both? 
+    └── Split: Server parent + Client child
+```
 
-**By Default:** Server Component.
-**Opt-in:** Add `'use client'` at the VERY TOP of the file.
+### By Default
 
-## 3. Data Fetching & Caching
+| Type | Use |
+|------|-----|
+| **Server** | Data fetching, layout, static content |
+| **Client** | Forms, buttons, interactive UI |
 
-- **Static (Default)**: `fetch('URL')`. Built once, cached forever.
-- **Dynamic**: `fetch('URL', { cache: 'no-store' })`. Fetched on every request.
-- **Revalidated**: `fetch('URL', { next: { revalidate: 60 } })`. Cached for 60s.
+---
 
-## 4. Project Structure (Standard)
+## 2. Data Fetching Patterns
 
-```text
+### Fetch Strategy
+
+| Pattern | Use |
+|---------|-----|
+| **Default** | Static (cached at build) |
+| **Revalidate** | ISR (time-based refresh) |
+| **No-store** | Dynamic (every request) |
+
+### Data Flow
+
+| Source | Pattern |
+|--------|---------|
+| Database | Server Component fetch |
+| API | fetch with caching |
+| User input | Client state + server action |
+
+---
+
+## 3. Routing Principles
+
+### File Conventions
+
+| File | Purpose |
+|------|---------|
+| `page.tsx` | Route UI |
+| `layout.tsx` | Shared layout |
+| `loading.tsx` | Loading state |
+| `error.tsx` | Error boundary |
+| `not-found.tsx` | 404 page |
+
+### Route Organization
+
+| Pattern | Use |
+|---------|-----|
+| Route groups `(name)` | Organize without URL |
+| Parallel routes `@slot` | Multiple same-level pages |
+| Intercepting `(.)` | Modal overlays |
+
+---
+
+## 4. API Routes
+
+### Route Handlers
+
+| Method | Use |
+|--------|-----|
+| GET | Read data |
+| POST | Create data |
+| PUT/PATCH | Update data |
+| DELETE | Remove data |
+
+### Best Practices
+
+- Validate input with Zod
+- Return proper status codes
+- Handle errors gracefully
+- Use Edge runtime when possible
+
+---
+
+## 5. Performance Principles
+
+### Image Optimization
+
+- Use next/image component
+- Set priority for above-fold
+- Provide blur placeholder
+- Use responsive sizes
+
+### Bundle Optimization
+
+- Dynamic imports for heavy components
+- Route-based code splitting (automatic)
+- Analyze with bundle analyzer
+
+---
+
+## 6. Metadata
+
+### Static vs Dynamic
+
+| Type | Use |
+|------|-----|
+| Static export | Fixed metadata |
+| generateMetadata | Dynamic per-route |
+
+### Essential Tags
+
+- title (50-60 chars)
+- description (150-160 chars)
+- Open Graph images
+- Canonical URL
+
+---
+
+## 7. Caching Strategy
+
+### Cache Layers
+
+| Layer | Control |
+|-------|---------|
+| Request | fetch options |
+| Data | revalidate/tags |
+| Full route | route config |
+
+### Revalidation
+
+| Method | Use |
+|--------|-----|
+| Time-based | `revalidate: 60` |
+| On-demand | `revalidatePath/Tag` |
+| No cache | `no-store` |
+
+---
+
+## 8. Server Actions
+
+### Use Cases
+
+- Form submissions
+- Data mutations
+- Revalidation triggers
+
+### Best Practices
+
+- Mark with 'use server'
+- Validate all inputs
+- Return typed responses
+- Handle errors
+
+---
+
+## 9. Anti-Patterns
+
+| ❌ Don't | ✅ Do |
+|----------|-------|
+| 'use client' everywhere | Server by default |
+| Fetch in client components | Fetch in server |
+| Skip loading states | Use loading.tsx |
+| Ignore error boundaries | Use error.tsx |
+| Large client bundles | Dynamic imports |
+
+---
+
+## 10. Project Structure
+
+```
 app/
-├── (marketing)/      # Route Group (doesn't affect URL)
+├── (marketing)/     # Route group
 │   └── page.tsx
 ├── (dashboard)/
-│   ├── layout.tsx    # Shared UI for dashboard
+│   ├── layout.tsx   # Dashboard layout
 │   └── page.tsx
-├── api/              # API Routes
-│   └── route.ts      # [Route Handler Template](templates/route_handler.ts)
-└── components/       # Colocated components
+├── api/
+│   └── [resource]/
+│       └── route.ts
+└── components/
+    └── ui/
 ```
 
-## 5. Metadata
+---
 
-**Never** hardcode `<head>`. Use the Metadata API.
+> **Remember:** Server Components are the default for a reason. Start there, add client only when needed.
 
-```typescript
-export const metadata = {
-  title: "My Page",
-  description: "Page description",
-};
-```
+## When to Use
+This skill is applicable to execute the workflow or actions described in the overview.
 
-## 6. Anti-Patterns to Spot
-
-- ❌ `useEffect` to fetch data on component mount (Use Server Component).
-- ❌ importing server-only code (DB) into Client Components.
-- ❌ deep prop drilling (Use RSC composition or deep Context only if necessary).
-- ❌ huge `page.tsx` files (Break it down).
-
-## 7. Templates
-
-- [Server Component boilerplate](templates/server-component.tsx)
-- [Client Component boilerplate](templates/client-component.tsx)
-- [Route Handler boilerplate](templates/route_handler.ts)
+## Limitations
+- Use this skill only when the task clearly matches the scope described above.
+- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
+- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.

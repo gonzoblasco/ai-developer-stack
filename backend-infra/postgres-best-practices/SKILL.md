@@ -1,63 +1,63 @@
 ---
-name: supabase-postgres-best-practices
-description: Use when writing, reviewing, or optimizing Postgres queries, schema designs, or database configurations. Keywords: postgres performance, optimize query, slow query, database schema, index strategy, RLS performance, supabase best practices, connection pooling.
-license: MIT
-metadata:
-  author: supabase
-  version: "2.0.0"
+name: postgres-best-practices
+description: "Postgres performance optimization and best practices from Supabase. Use this skill when writing, reviewing, or optimizing Postgres queries, schema designs, or database configurations."
+risk: safe
+source: community
+date_added: "2026-02-27"
 ---
 
 # Supabase Postgres Best Practices
 
-**"The database is the bottleneck."** Prevent this cliché by applying these optimization rules.
+Comprehensive performance optimization guide for Postgres, maintained by Supabase. Contains rules across 8 categories, prioritized by impact to guide automated query optimization and schema design.
 
-This skill provides prioritized guidelines and **automated tools** to audit and optimize Postgres databases, specifically for Supabase environments.
-
-## Quick Start (Automation)
-
-Use the included scripts to instantly audit schemas and performance stats.
-
-```bash
-# 1. Audit a schema file for missing indexes, bad types, etc.
-python scripts/audit_schema.py path/to/schema.sql
-
-# 2. Check live performance metrics (run in SQL editor)
-# See: scripts/pg_stat_check.sql
-```
-
-## When to Apply
-
-- **Designing Schema**: "I'm creating a `users` table, what types should I use?" -> Uses `scripts/audit_schema.py`.
-- **Slow Queries**: "Why is this JOIN slow?" -> Check Indexing (Category 1).
-- **Production Issues**: "We're running out of connections." -> Check Connection Management (Category 2).
-- **Security Check**: "Is my RLS secure and fast?" -> Check Security (Category 3).
+## When to Use
+Reference these guidelines when:
+- Writing SQL queries or designing schemas
+- Implementing indexes or query optimization
+- Reviewing database performance issues
+- Configuring connection pooling or scaling
+- Optimizing for Postgres-specific features
+- Working with Row-Level Security (RLS)
 
 ## Rule Categories by Priority
 
-| Priority | Category                 | Impact      | Prefix      |
-| -------- | ------------------------ | ----------- | ----------- |
-| 1        | Query Performance        | CRITICAL    | `query-`    |
-| 2        | Connection Management    | CRITICAL    | `conn-`     |
-| 3        | Security & RLS           | CRITICAL    | `security-` |
-| 4        | Schema Design            | HIGH        | `schema-`   |
-| 5        | Concurrency & Locking    | MEDIUM-HIGH | `lock-`     |
-| 6        | Data Access Patterns     | MEDIUM      | `data-`     |
-| 7        | Monitoring & Diagnostics | LOW-MEDIUM  | `monitor-`  |
-| 8        | Advanced Features        | LOW         | `advanced-` |
+| Priority | Category | Impact | Prefix |
+|----------|----------|--------|--------|
+| 1 | Query Performance | CRITICAL | `query-` |
+| 2 | Connection Management | CRITICAL | `conn-` |
+| 3 | Security & RLS | CRITICAL | `security-` |
+| 4 | Schema Design | HIGH | `schema-` |
+| 5 | Concurrency & Locking | MEDIUM-HIGH | `lock-` |
+| 6 | Data Access Patterns | MEDIUM | `data-` |
+| 7 | Monitoring & Diagnostics | LOW-MEDIUM | `monitor-` |
+| 8 | Advanced Features | LOW | `advanced-` |
 
-## Reference Guide
+## How to Use
 
-Detailed rules are located in `references/`:
+Read individual rule files for detailed explanations and SQL examples:
 
-- **Queries**: `references/query-missing-indexes.md`, `references/query-index-types.md`...
-- **Schema**: `references/schema-data-types.md`, `references/schema-primary-keys.md`...
-- **Full Guide**: `references/AGENTS.md` (Compiled version)
+```
+rules/query-missing-indexes.md
+rules/schema-partial-indexes.md
+rules/_sections.md
+```
 
-## Common "Excuses" & Reality
+Each rule file contains:
+- Brief explanation of why it matters
+- Incorrect SQL example with explanation
+- Correct SQL example with explanation
+- Optional EXPLAIN output or metrics
+- Additional context and references
+- Supabase-specific notes (when applicable)
 
-| Agent Rationalization                    | Reality                            | Refutation                                                                                         |
-| ---------------------------------------- | ---------------------------------- | -------------------------------------------------------------------------------------------------- |
-| "I'll add indexes later when it's slow." | Indexes on FKs are mandatory.      | "No. Missing FK indexes cause immediate locking issues on deletes. Add them now."                  |
-| "VARCHAR(255) is standard."              | In Postgres, `TEXT` is better.     | "TEXT has no performance penalty and no arbitrary limits. Use TEXT."                               |
-| "I'm using serial for IDs."              | `IDENTITY` is the modern standard. | "Use `GENERATED ALWAYS AS IDENTITY`. It's the SQL standard replacement for serial."                |
-| "RLS is slow, I'll allow all."           | Insecure.                          | "RLS is fast if you index the columns used in the policy. Never disable security for performance." |
+## Full Compiled Document
+
+For the complete guide with all rules expanded: `AGENTS.md`
+
+### When to Use
+This skill is applicable to execute the workflow or actions described in the overview.
+
+## Limitations
+- Use this skill only when the task clearly matches the scope described above.
+- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
+- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.
