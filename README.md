@@ -137,14 +137,17 @@ If you are looking for a specific skill, here is the complete index by domain.
 ### 🎨 Frontend & UI/UX
 
 - **[`frontend-dev-guidelines`](frontend-ui/frontend-dev-guidelines)**: Scalable frontend code.
+- **[`senior-frontend`](frontend-ui/senior-frontend)**: Scaffolding, component generation, bundle analysis, and patterns (React/Next.js).
 - **[`frontend-developer`](frontend-ui/frontend-developer)**: React component structures.
+
 - **[`accessibility-audit`](frontend-ui/accessibility-audit)**: WCAG compliance, keyboard testing, and screen reader compatibility.
 - **[`ui-a11y`](frontend-ui/ui-a11y)**: StyleSeed components accessibility audit and autofixes.
 - **[`wcag-audit-patterns`](frontend-ui/wcag-audit-patterns)**: WCAG 2.2 auditing guide and actionable remediation checklists.
 - **[`accesslint-audit`](frontend-ui/accesslint-audit)**: Automated WCAG 2.2 audit and autofix loops.
 - **[`react-patterns`](frontend-ui/react-patterns)**: Hooks & composition (React 19).
 - **[`react-best-practices`](frontend-ui/react-best-practices)**: Performance optimization guide for React/Next.js (waterfalls, bundle sizes).
-- **[`react-ui-patterns`](frontend-ui/react-ui-patterns)**: Layout structures.
+- **[`react-ui-patterns`](frontend-ui/react-ui-patterns)**: Loading states, error handling, empty states, and button load triggers.
+
 
 - **[`dashboard-design`](frontend-ui/dashboard-design)**: Analytics-focused layouts, data visualization, and modular overview screens.
 - **[`material-design`](frontend-ui/material-design)**: Material Design 3 guidelines for Web, Android/Jetpack Compose, iOS/SwiftUI, Flutter, and React Native.

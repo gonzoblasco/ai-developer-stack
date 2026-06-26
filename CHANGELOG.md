@@ -35,6 +35,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - `frontend-ui/material-design` — Material Design 3 implementation guides across Web (CSS), iOS (SwiftUI), Android (Jetpack Compose), Flutter, and React Native.
 - `frontend-ui/react-best-practices` — Vercel-maintained React and Next.js performance guide covering waterfalls, bundle size, caching, and rendering.
 - `frontend-ui/react-state-management` — Guide to modern React state management patterns covering local state, server state, and global stores (Zustand, RTK, Jotai).
+- `frontend-ui/senior-frontend` — Scaffolding, component generation, and bundle analyzer scripts and patterns for React/Next.js.
+
 
 
 
@@ -66,7 +68,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Changed
 - `languages-standards/testing-patterns` — Migrated completely from Jest to **Vitest** mocking and assertions.
+- `frontend-ui/react-ui-patterns` — Updated to be fully self-contained with inline examples for loading/error/button states instead of separate file links.
 - `tools-automation/documentation-expert` — Consolidated with `doc-writer` to cover project knowledge bases (`.knowledge/` directory).
+
 - Updated all folder-level playbooks (`README.md` files) and the root `README.md`.
 
 ### Removed / Deprecated

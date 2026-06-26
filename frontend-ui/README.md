@@ -21,7 +21,7 @@ graph TD
 
 _Goal: Write code that doesn't rot._
 
-1.  **Set the Rules**: Start with **[`frontend-dev-guidelines`](frontend-dev-guidelines/SKILL.md)** and general **[`frontend-developer`](frontend-developer/SKILL.md)** guidelines.
+1.  **Set the Rules**: Start with **[`frontend-dev-guidelines`](frontend-dev-guidelines/SKILL.md)** and general **[`frontend-developer`](frontend-developer/SKILL.md)** guidelines. For project scaffolding, component generation, and bundle analysis, reference **[`senior-frontend`](senior-frontend/SKILL.md)**.
     - _Core Principle_: Colocation > File Type. Keep styles, types, tests, and logic together.
     - _Typography_: Define your scale early.
 
@@ -95,7 +95,9 @@ _Goal: Pay down technical debt and debug production safely._
 | **[`antigravity-design-expert`](antigravity-design-expert/)** | Spatial & Motion | Weightless 3D & glassmorphism | Immersive landing pages, dashboards, and GSAP motion |
 | **[`design-spells`](design-spells/)** | Spells/UX | Micro-interactions & Easter eggs | Polishing completed components to add wow factor and magic |
 | **[`frontend-dev-guidelines`](frontend-dev-guidelines/)** | Standards | Consistency across team | Starting new project/onboarding |
+| **[`senior-frontend`](senior-frontend/)** | Architecture/QA | Component scaffolding & bundle analysis | Scaffolding Next.js apps, generating server/client components, and analyzing bundle size |
 | **[`frontend-developer`](frontend-developer/)** | Logic/UI | Component structure | Implementing frontend components |
+
 | **[`accessibility-audit`](accessibility-audit/)** | Accessibility | WCAG compliance & keyboard testing | Auditing and fixing accessibility barriers |
 | **[`ui-a11y`](ui-a11y/)** | Accessibility/UI | WCAG 2.2 AA StyleSeed component audit | Auditing and autofixing mobile-first interactive controls |
 | **[`wcag-audit-patterns`](wcag-audit-patterns/)** | Accessibility | WCAG 2.2 audit guide & checklists | Auditing layouts and forms for WCAG compliance |
@@ -113,7 +115,8 @@ _Goal: Pay down technical debt and debug production safely._
 | **[`tanstack-query-expert`](tanstack-query-expert/)** | Server State | Data synchronization | Managing async server queries and mutations |
 | **[`redux-migration-rtk-zustand`](redux-migration-rtk-zustand/)** | State | Modern state management | Moving away from legacy Redux |
 | **[`react-migration-16-to-19`](react-migration-16-to-19/)** | Legacy | Paying technical debt | Upgrading old React codebases |
-| **[`react-ui-patterns`](react-ui-patterns/)** | Components | Layout patterns | Building consistent structures |
+| **[`react-ui-patterns`](react-ui-patterns/)** | Components | UI States & Data | Loading states, error handling, empty states, and button loaders |
+
 | **[`progressive-web-app`](progressive-web-app/)** | PWA | App installability | Packaging web apps as PWAs |
 | **[`lovable-cleanup`](lovable-cleanup/)** | Cleanup | Stripping templates | Exporting code from Lovable Cloud |
 | **[`web-artifacts-builder`](web-artifacts-builder/)** | Artifacts | Bundling self-contained UIs | Building React-based documentation pages for Antigravity |
