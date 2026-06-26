@@ -23,6 +23,7 @@ _Goal: Connect APIs quickly without maintaining servers._
 1.  **Workflow Orchestration**: Use **[`n8n-workflow-builder`](n8n-workflow-builder/SKILL.md)**.
     - _Best For_: Webhooks, connecting SaaS (Slack -> Sheets), Cron jobs.
     - _Example_: **[`meli-n8n-crm-logger`](meli-n8n-crm-logger/SKILL.md)** shows how to log high-volume e-commerce data without writing a backend.
+    - _Scripting in n8n_: Use **[`n8n-code-javascript`](n8n-code-javascript/SKILL.md)** to write custom JavaScript logic within n8n Code nodes (managing item scopes, webhook nesting, and Luxon dates).
 
 2.  **API Management**: Use **[`linear-expert`](linear-expert/SKILL.md)** to script task synchronization between codebase commits and Linear boards via GraphQL.
 
@@ -67,6 +68,7 @@ _Goal: Handle complex file formats and maintain document architecture._
 | Skill | Focus Area | When to use |
 | :--- | :--- | :--- |
 | **[`n8n-workflow-builder`](n8n-workflow-builder/)** | Low-Code | Connecting APIs, event-driven workflows, cron jobs |
+| **[`n8n-code-javascript`](n8n-code-javascript/)** | Scripting | Writing custom JavaScript inside n8n Code nodes |
 | **[`browser-automation-expert`](browser-automation-expert/)** | Scraping | Automating web interactions, testing, scraping data |
 | **[`meli-n8n-crm-logger`](meli-n8n-crm-logger/)** | E-commerce | Specific recipe for MercadoLibre CRM logging |
 | **[`linear-expert`](linear-expert/)** | API Sync | Scripting issues, tasks, and roadmaps in Linear |

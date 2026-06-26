@@ -167,6 +167,7 @@ If you are looking for a specific skill, here is the complete index by domain.
 
 - **[`browser-automation-expert`](tools-automation/browser-automation-expert)**: Resilient scraping.
 - **[`n8n-workflow-builder`](tools-automation/n8n-workflow-builder)**: Workflow automation.
+- **[`n8n-code-javascript`](tools-automation/n8n-code-javascript)**: Writing custom JavaScript inside n8n Code nodes.
 - **[`meli-n8n-crm-logger`](tools-automation/meli-n8n-crm-logger)**: Specific Mercado Libre logging recipe.
 - **[`linear-expert`](tools-automation/linear-expert)**: Linear board API sync scripts.
 - **[`vibers-code-review`](tools-automation/vibers-code-review)**: Human PR review triggers.
