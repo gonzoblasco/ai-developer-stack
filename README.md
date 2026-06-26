@@ -196,8 +196,10 @@ If you are looking for a specific skill, here is the complete index by domain.
 - **[`plan-writing`](product-building/plan-writing)**: Short actionable code implementation plans.
 - **[`vibe-code-auditor`](product-building/vibe-code-auditor)**: Audit AI-generated code.
 - **[`vibecode-production-qa-validator`](product-building/vibecode-production-qa-validator)**: 13-phase QA launch-readiness validator for fullstack Next.js.
+- **[`new-task`](product-building/new-task)**: Inicializar una nueva task del epic activo, validar precondiciones y entorno.
 - **[`close-epic`](product-building/close-epic)**: Ritual de consolidación, versionado y cierre de Epics en Git.
 - **[`copilot`](product-building/copilot)**: Orquestador universal de workflow y checklist pre-flight obligatorio.
+
 
 ### 📏 Languages & Standards
 

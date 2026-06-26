@@ -14,7 +14,9 @@ A diferencia de `strategy-architecture/` (planificación abstracta) o `tools-aut
 | [vibe-code-auditor](vibe-code-auditor/SKILL.md) | Auditoría de robustez en código generado rápidamente por IA | Calidad · Producción |
 | [react-nextjs-development](react-nextjs-development/SKILL.md) | Coordinación de fases de desarrollo en React/Next.js | React · Next.js |
 | [vibecode-production-qa-validator](vibecode-production-qa-validator/SKILL.md) | 13-phase production QA validator for fullstack Next.js apps | QA · Next.js · Production |
+| [new-task](new-task/SKILL.md) | Inicializar una nueva task del epic activo, validar precondiciones y entorno | Workflow · Git · Task Management |
 | [close-epic](close-epic/SKILL.md) | Ritual de consolidación, versionado y cierre de Epics en Git | Git · Versioning · Release |
+
 | [copilot](copilot/SKILL.md) | Orquestador universal de workflow y checklist pre-flight | Workflow · Gates · QA |
 | [brainstorming](brainstorming/SKILL.md) | Técnicas de ideación y resolución de bloqueos creativos | Creatividad |
 
