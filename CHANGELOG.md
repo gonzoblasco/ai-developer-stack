@@ -46,6 +46,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - `product-building/new-task` — Inicializar una nueva task del epic activo, incluyendo lectura de contexto, precondiciones de branch y validación de entorno.
 - `product-building/pr` — Crear pull request con descripción estructurada, correr revisión local y mergear automáticamente vía API.
 - `product-building/close-epic` — Ritual de consolidación, versionado y cierre de bloques de desarrollo estratégico (Epics) en Git.
+- `product-building/micro-saas-launcher` — Lanzamiento rápido de MVPs y SaaS con enfoque Indie Hacker (idea validation, pricing, launch, churn, onboard).
 
 - `product-building/copilot` — Orquestador universal de workflow y checklist pre-flight obligatorio para gobernar las tareas.
 
