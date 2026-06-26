@@ -1,78 +1,78 @@
-# 🧠 Strategy & Architecture Playbook
+# 🧠 Playbook de Estrategia y Arquitectura
 
-> **"If you fail to plan, you are planning to fail."**
+> **"Si fallás en planificar, estás planificando fallar."**
 
-This playbook covers the "Meta" layer of software development: deciding _what_ to build, _why_ to build it, and _how_ to architect it before writing a single line of code.
+Este playbook cubre la capa 'Meta' del desarrollo de software: decidir _qué_ construir, _por qué_ construirlo y _cómo_ diseñarlo arquitectónicamente antes de escribir una sola línea de código.
 
 ---
 
-## 🚀 The Vision-to-Execution Lifecycle
+## 🚀 El Ciclo de Vida de la Visión a la Ejecución
 
-Great software starts on a whiteboard, not in an IDE.
+El excelente software comienza en una pizarra, no en un IDE.
 
 ```mermaid
 graph TD
-    A[Phase 1: Ideation & Strategy] --> B[Phase 2: Architecture & Decision]
-    B --> C[Phase 3: Planning & Roadmap]
-    C --> D[Phase 4: Execution & Improvement]
+    A[Fase 1: Ideación y Estrategia] --> B[Fase 2: Arquitectura y Decisión]
+    B --> C[Fase 3: Planificación y Hoja de Ruta]
+    C --> D[Fase 4: Ejecución y Mejora]
 ```
 
-### 💡 Phase 1: Ideation & Strategy (The "Why")
+### 💡 Fase 1: Ideación y Estrategia (El "Por qué")
 
-_Goal: Validate the idea and define value._
+_Objetivo: Validar la idea y definir el valor._
 
-1.  **Unlock Creativity**: Use **[`brainstorming`](brainstorming/SKILL.md)** to generate ideas or solve blockers.
-    - _Techniques_: SCAMPER, First Principles, Inversion.
+1.  **Desbloquear la Creatividad**: Usá **[`brainstorming`](brainstorming/SKILL.md)** para generar ideas o resolver bloqueos.
+    - _Técnicas_: SCAMPER, Primeros Principios, Inversión.
 
-2.  **Design Flow Control**: Use **[`design-orchestration`](design-orchestration/SKILL.md)** to route designs through brainstorming, reviews, and execution readiness checks.
+2.  **Diseñar el Control de Flujo**: Usá **[`design-orchestration`](design-orchestration/SKILL.md)** para enrutar diseños a través de tormentas de ideas, revisiones y chequeos de preparación para la ejecución.
 
-3.  **Define the Market**: Use **[`marketing-ideas`](marketing-ideas/SKILL.md)** and **[`pricing-strategy`](pricing-strategy/SKILL.md)** early.
-    - _Rule_: If you can't define who pays or how they pay, you don't have a product yet.
+3.  **Definir el Mercado**: Usá **[`marketing-ideas`](marketing-ideas/SKILL.md)** y **[`pricing-strategy`](pricing-strategy/SKILL.md)** temprano.
+    - _Regla_: Si no podés definir quién paga o cómo paga, todavía no tenés un producto.
 
-4.  **Prototype Fast**: Use **[`app-builder`](app-builder/SKILL.md)** to map the MVP.
-    - _Focus_: Core Value Proposition only. Everything else is distraction.
+4.  **Prototipar Rápido**: Usá **[`app-builder`](app-builder/SKILL.md)** para mapear el MVP.
+    - _Enfoque_: Únicamente la Propuesta de Valor Core. Todo lo demás es distracción.
 
-5.  **Multi-Skill Orchestration**: Use **[`antigravity-workflows`](antigravity-workflows/SKILL.md)** to run structured workflows (SaaS MVP delivery, QA, security, etc.) by chaining multiple specialized skills.
+5.  **Orquestación de Multi-Skills**: Usá **[`antigravity-workflows`](antigravity-workflows/SKILL.md)** para ejecutar flujos de trabajo estructurados (entrega de SaaS MVP, QA, seguridad, etc.) encadenando múltiples skills especializadas.
 
-### 🏗️ Phase 2: Architecture & Decision (The "What")
+### 🏗️ Fase 2: Arquitectura y Decisión (El "Qué")
 
-_Goal: Design a system that survives success._
+_Objetivo: Diseñar un sistema que sobreviva al éxito._
 
-1.  **System Design**: Use **[`senior-architect`](senior-architect/SKILL.md)** or the general **[`architecture`](architecture/SKILL.md)** framework.
-    - _Deliverables_: C4 Diagrams, ERDs, Tech Stack Decision Records (ADRs).
-    - _Mindset_: Analyze trade-offs. "Microservices" is not always the answer.
+1.  **Diseño de Sistemas**: Usá **[`senior-architect`](senior-architect/SKILL.md)** o el framework general de **[`architecture`](architecture/SKILL.md)**.
+    - _Entregables_: Diagramas C4, ERDs, Registros de Decisión Tecnológica (ADRs).
+    - _Mentalidad_: Analizar pros y contras (trade-offs). "Microservicios" no siempre es la respuesta.
 
-2.  **Select Patterns**: Apply **[`architecture-patterns`](architecture-patterns/SKILL.md)** for Clean/Hexagonal Architecture and Domain-Driven Design rules.
+2.  **Seleccionar Patrones**: Aplicá **[`architecture-patterns`](architecture-patterns/SKILL.md)** para arquitectura Hexagonal/Limpia y reglas de Domain-Driven Design (DDD).
 
-3.  **Multi-Tenancy**: Use **[`saas-multi-tenant`](saas-multi-tenant/SKILL.md)** to isolate customer databases.
+3.  **Multi-Tenancy**: Usá **[`saas-multi-tenant`](saas-multi-tenant/SKILL.md)** para aislar las bases de datos de los clientes.
 
-### 📅 Phase 3: Planning & Roadmap (The "When")
+### 📅 Fase 3: Planificación y Hoja de Ruta (El "Cuándo")
 
-_Goal: Create a realistic path to delivery._
+_Objetivo: Crear un camino realista hacia la entrega._
 
-1.  **Break it Down**: Use **[`plan-writing`](../product-building/plan-writing/SKILL.md)** for code-level roadmaps or follow the **Antigravity native planning mode** (`implementation_plan.md` / `task.md`).
+1.  **Desglosar**: Usá **[`plan-writing`](../product-building/plan-writing/SKILL.md)** para hojas de ruta a nivel de código o seguí el **modo de planificación nativo de Antigravity** (`implementation_plan.md` / `task.md`).
 
-### 🔄 Phase 4: Execution & Improvement (The "How")
+### 🔄 Fase 4: Ejecución y Mejora (El "Cómo")
 
-_Goal: Better every day._
+_Objetivo: Mejorar todos los días._
 
-1.  **Continuous Improvement**: Use **[`kaizen`](kaizen/SKILL.md)**.
-    - _Workflow_: Regular retrospectives. Fix the _process_, not just the _bug_.
+1.  **Mejora Continua**: Usá **[`kaizen`](kaizen/SKILL.md)**.
+    - _Workflow_: Retrospectivas regulares. Corregí el _proceso_, no solo el _bug_.
 
 ---
 
-## 📚 Skill Index
+## 📚 Índice de Skills
 
-| Skill | Focus Area | When to use |
+| Skill | Área de Enfoque | Cuándo usar |
 | :--- | :--- | :--- |
-| **[`senior-architect`](senior-architect/)** | System Design | High-level decisions, tradeoff analysis, diagrams |
-| **[`architecture`](architecture/)** | Decisions | Documenting system design decisions using ADRs |
-| **[`architecture-patterns`](architecture-patterns/)** | Patterns | Hexagonal, Clean, and DDD patterns |
-| **[`saas-multi-tenant`](saas-multi-tenant/)** | Multi-Tenancy | Database isolation and tenant schemas |
-| **[`brainstorming`](brainstorming/)** | Creativity | Unblocking problems, generating feature ideas |
-| **[`design-orchestration`](design-orchestration/)** | Orchestration | Routing and reviewing design workflows (brainstorming, review, implementation) |
-| **[`antigravity-workflows`](antigravity-workflows/)** | Meta-Workflows | Guided multi-skill orchestration (MVP, QA, security, agent-builds) |
-| **[`app-builder`](app-builder/)** | MVP | End-to-end guide for building new apps |
-| **[`pricing-strategy`](pricing-strategy/)** | Business | Determining monetization models |
-| **[`marketing-ideas`](marketing-ideas/)** | Growth | Go-to-market strategies |
-| **[`kaizen`](kaizen/)** | Process | Improving team workflows and personal efficiency |
+| **[`senior-architect`](senior-architect/)** | Diseño de Sistemas | Decisiones de alto nivel, análisis de trade-offs, diagramas |
+| **[`architecture`](architecture/)** | Decisiones | Documentación de decisiones de diseño de sistemas usando ADRs |
+| **[`architecture-patterns`](architecture-patterns/)** | Patrones | Patrones Hexagonales, Clean y DDD |
+| **[`saas-multi-tenant`](saas-multi-tenant/)** | Multi-Tenancy | Aislamiento de bases de datos y esquemas de tenants |
+| **[`brainstorming`](brainstorming/)** | Creatividad | Desbloquear problemas, generar ideas de features |
+| **[`design-orchestration`](design-orchestration/)** | Orquestación | Enrutar y revisar flujos de diseño (ideación, revisión, ejecución) |
+| **[`antigravity-workflows`](antigravity-workflows/)** | Meta-Workflows | Orquestación guiada de multi-skills (MVP, QA, seguridad, agent-builds) |
+| **[`app-builder`](app-builder/)** | MVP | Guía de extremo a extremo para construir nuevas aplicaciones |
+| **[`pricing-strategy`](pricing-strategy/)** | Negocios | Determinación de modelos de monetización |
+| **[`marketing-ideas`](marketing-ideas/)** | Crecimiento | Estrategias de go-to-market |
+| **[`kaizen`](kaizen/)** | Procesos | Mejorar los flujos del equipo y la eficiencia personal |

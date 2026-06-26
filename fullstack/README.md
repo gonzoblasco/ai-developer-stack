@@ -1,17 +1,16 @@
-# 🌐 Full-Stack Playbook
+# 🌐 Playbook Full-Stack
 
-This playbook focuses on continuous code health, refactoring, and production hardening of full-stack applications.
+Este playbook se enfoca en la salud continua del código, la refactorización y el fortalecimiento en producción de aplicaciones full-stack.
 
-## Skills Available
+## Skills Disponibles
 
-| Skill | Description | Target |
+| Skill | Descripción | Target |
 | --- | --- | --- |
-| [vibe-code-cleanup](vibe-code-cleanup/SKILL.md) | Safe production cleanup and hardening for AI/vibe-coded fullstack apps | Next.js · React · Node.js |
+| [vibe-code-cleanup](vibe-code-cleanup/SKILL.md) | Limpieza segura de producción y fortalecimiento para aplicaciones full-stack AI/vibe-coded | Next.js · React · Node.js |
 | [refactor](refactor/SKILL.md) | Refactoriza código existente para mejorar legibilidad, reducir duplicación y alinear con las convenciones del proyecto, sin cambiar comportamiento | Next.js · React · Node.js · TypeScript |
 
+## Filosofía
 
-## Philosophy
-
-1. **Surgery, not demolition**: Never break existing, functioning logic for cosmetic purposes.
-2. **Incremental validation**: Verify that types check and the project builds successfully after every cleanup step.
-3. **Traceability**: Document environment variables, keep configurations secure, and maintain a clean commit history.
+1. **Cirugía, no demolición**: Nunca rompas lógica existente y funcional por motivos estéticos.
+2. **Validación incremental**: Verificá que los tipos compilen y que el proyecto se construya con éxito después de cada paso de limpieza.
+3. **Trazabilidad**: Documentá las variables de entorno, mantené las configuraciones seguras y conservá un historial de commits limpio.

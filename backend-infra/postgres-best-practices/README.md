@@ -1,119 +1,118 @@
-# Postgres Best Practices - Contributor Guide
+# Postgres Best Practices - Guía del Colaborador
 
-This repository contains Postgres performance optimization rules optimized for
-AI agents and LLMs.
+Este repositorio contiene reglas de optimización de rendimiento de Postgres adaptadas para agentes de IA y LLMs.
 
-## Quick Start
+## Inicio Rápido
 
 ```bash
-# Install dependencies
+# Instalar dependencias
 cd packages/postgres-best-practices-build
 npm install
 
-# Validate existing rules
+# Validar reglas existentes
 npm run validate
 
-# Build AGENTS.md
+# Compilar AGENTS.md
 npm run build
 ```
 
-## Creating a New Rule
+## Crear una Nueva Regla
 
-1. **Choose a section prefix** based on the category:
-   - `query-` Query Performance (CRITICAL)
-   - `conn-` Connection Management (CRITICAL)
-   - `security-` Security & RLS (CRITICAL)
-   - `schema-` Schema Design (HIGH)
-   - `lock-` Concurrency & Locking (MEDIUM-HIGH)
-   - `data-` Data Access Patterns (MEDIUM)
-   - `monitor-` Monitoring & Diagnostics (LOW-MEDIUM)
-   - `advanced-` Advanced Features (LOW)
+1. **Elegí un prefijo de sección** basado en la categoría:
+   - `query-` Rendimiento de Consultas (CRÍTICO)
+   - `conn-` Gestión de Conexiones (CRÍTICO)
+   - `security-` Seguridad y RLS (CRÍTICO)
+   - `schema-` Diseño de Esquemas (ALTO)
+   - `lock-` Concurrencia y Bloqueos (MEDIO-ALTO)
+   - `data-` Patrones de Acceso a Datos (MEDIO)
+   - `monitor-` Monitoreo y Diagnóstico (BAJO-MEDIO)
+   - `advanced-` Características Avanzadas (BAJO)
 
-2. **Copy the template**:
+2. **Copiá la plantilla**:
    ```bash
-   cp rules/_template.md rules/query-your-rule-name.md
+   cp rules/_template.md rules/query-nombre-de-tu-regla.md
    ```
 
-3. **Fill in the content** following the template structure
+3. **Completá el contenido** siguiendo la estructura de la plantilla.
 
-4. **Validate and build**:
+4. **Validá y compilá**:
    ```bash
    npm run validate
    npm run build
    ```
 
-5. **Review** the generated `AGENTS.md`
+5. **Revisá** el archivo `AGENTS.md` generado.
 
-## Repository Structure
+## Estructura del Repositorio
 
 ```
 skills/postgres-best-practices/
-├── SKILL.md           # Agent-facing skill manifest
-├── AGENTS.md          # [GENERATED] Compiled rules document
-├── README.md          # This file
-├── metadata.json      # Version and metadata
+├── SKILL.md           # Manifiesto de skill orientado al agente
+├── AGENTS.md          # [GENERADO] Documento compilado de reglas
+├── README.md          # Este archivo
+├── metadata.json      # Versión y metadatos
 └── rules/
-    ├── _template.md      # Rule template
-    ├── _sections.md      # Section definitions
-    ├── _contributing.md  # Writing guidelines
-    └── *.md              # Individual rules
+    ├── _template.md      # Plantilla de regla
+    ├── _sections.md      # Definiciones de secciones
+    ├── _contributing.md  # Pautas de escritura
+    └── *.md              # Reglas individuales
 
 packages/postgres-best-practices-build/
-├── src/               # Build system source
-├── package.json       # NPM scripts
-└── test-cases.json    # [GENERATED] Test artifacts
+├── src/               # Código fuente del sistema de compilación
+├── package.json       # Scripts de NPM
+└── test-cases.json    # [GENERADO] Artefactos de prueba
 ```
 
-## Rule File Structure
+## Estructura del Archivo de Regla
 
-See `rules/_template.md` for the complete template. Key elements:
+Consultá `rules/_template.md` para ver la plantilla completa. Elementos clave:
 
 ````markdown
 ---
-title: Clear, Action-Oriented Title
+title: Título claro y orientado a la acción
 impact: CRITICAL|HIGH|MEDIUM-HIGH|MEDIUM|LOW-MEDIUM|LOW
-impactDescription: Quantified benefit (e.g., "10-100x faster")
-tags: relevant, keywords
+impactDescription: Beneficio cuantificado (ej: "10-100x más rápido")
+tags: palabras clave, relevantes
 ---
 
-## [Title]
+## [Título]
 
-[1-2 sentence explanation]
+[Explicación de 1 o 2 oraciones]
 
-**Incorrect (description):**
+**Incorrecto (descripción):**
 
 ```sql
--- Comment explaining what's wrong
-[Bad SQL example]
+-- Comentario explicando qué está mal
+[Ejemplo de SQL malo]
 ```
 ````
 
-**Correct (description):**
+**Correcto (descripción):**
 
 ```sql
--- Comment explaining why this is better
-[Good SQL example]
+-- Comentario explicando por qué esto es mejor
+[Ejemplo de SQL bueno]
 ```
 
 ```
-## Writing Guidelines
+## Pautas de Escritura
 
-See `rules/_contributing.md` for detailed guidelines. Key principles:
+Consultá `rules/_contributing.md` para obtener pautas detalladas. Principios clave:
 
-1. **Show concrete transformations** - "Change X to Y", not abstract advice
-2. **Error-first structure** - Show the problem before the solution
-3. **Quantify impact** - Include specific metrics (10x faster, 50% smaller)
-4. **Self-contained examples** - Complete, runnable SQL
-5. **Semantic naming** - Use meaningful names (users, email), not (table1, col1)
+1. **Mostrá transformaciones concretas**: "Cambiá X por Y", evitá consejos abstractos.
+2. **Estructura error-first**: Mostrá el problema antes de la solución.
+3. **Cuantificá el impacto**: Incluí métricas específicas (10x más rápido, 50% más chico).
+4. **Ejemplos autocontenidos**: SQL completo y ejecutable.
+5. **Nombres semánticos**: Usá nombres significativos (usuarios, email) en lugar de genéricos (tabla1, col1).
 
-## Impact Levels
+## Niveles de Impacto
 
-| Level | Improvement | Examples |
-|-------|-------------|----------|
-| CRITICAL | 10-100x | Missing indexes, connection exhaustion |
-| HIGH | 5-20x | Wrong index types, poor partitioning |
-| MEDIUM-HIGH | 2-5x | N+1 queries, RLS optimization |
-| MEDIUM | 1.5-3x | Redundant indexes, stale statistics |
-| LOW-MEDIUM | 1.2-2x | VACUUM tuning, config tweaks |
-| LOW | Incremental | Advanced patterns, edge cases |
+| Nivel | Mejora | Ejemplos |
+|-------|--------|----------|
+| CRITICAL | 10-100x | Falta de índices, agotamiento de conexiones |
+| HIGH | 5-20x | Tipos de índice incorrectos, particionamiento deficiente |
+| MEDIUM-HIGH | 2-5x | Consultas N+1, optimización de RLS |
+| MEDIUM | 1.5-3x | Índices redundantes, estadísticas desactualizadas |
+| LOW-MEDIUM | 1.2-2x | Ajuste de VACUUM, retoques de configuración |
+| LOW | Incremental | Patrones avanzados, casos borde |
 ```

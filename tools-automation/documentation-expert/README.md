@@ -1,21 +1,21 @@
-# Documentation Expert Skill
+# Skill de Experto en Documentación
 
-## Description
-This skill focuses on creating and maintaining professional documentation for software projects. It provides templates and guidelines for `README.md`, `CHANGELOG.md`, `AGENTS.md`, and `CONTRIBUTING.md`.
+## Descripción
+Esta skill se enfoca en crear y mantener documentación profesional para proyectos de software. Proporciona plantillas y pautas para `README.md`, `CHANGELOG.md`, `AGENTS.md` y `CONTRIBUTING.md`.
 
-## Features
-- **Project Structure Analysis**: Automatically identifies key directories and technologies.
-- **Template-Based Generation**: Ensures consistency using standardized markdown patterns.
-- **Agent-Ready Docs**: Specifically creates instructions for AI agents to collaborate effectively.
-- **Changelog Management**: Helps maintain a clear history of project evolution.
+## Características
+- **Análisis de Estructura de Proyectos**: Identifica automáticamente directorios clave y tecnologías.
+- **Generación Basada en Plantillas**: Garantiza la consistencia mediante el uso de patrones estandarizados de markdown.
+- **Documentación Lista para Agentes**: Crea específicamente instrucciones para que los agentes de IA colaboren de manera efectiva.
+- **Gestión del Changelog**: Ayuda a mantener un historial claro de la evolución del proyecto.
 
-## Usage
-Trigger this skill when you need to:
-1. Initialize documentation for a new project.
-2. Update the `CHANGELOG.md` after a task or release.
-3. Improve the clarity of existing documentation for both humans and AI.
+## Uso
+Invocá esta skill cuando necesites:
+1. Inicializar la documentación de un nuevo proyecto.
+2. Actualizar el `CHANGELOG.md` después de una tarea o release.
+3. Mejorar la claridad de la documentación existente tanto para humanos como para la IA.
 
-## Templates Available
+## Plantillas Disponibles
 - `README_TEMPLATE.md`
 - `CHANGELOG_TEMPLATE.md`
 - `AGENTS_TEMPLATE.md`

@@ -1,79 +1,79 @@
 # agent-tool-builder
 
-Comprehensive skill for designing AI agent tools following best practices.
+Skill integral para diseñar herramientas de agentes de IA siguiendo las mejores prácticas.
 
-## Overview
+## Resumen
 
-This skill guides you through creating well-designed tools for AI agents, focusing on JSON Schema design, clear descriptions, structured error handling, and the MCP standard.
+Esta skill te guía en la creación de herramientas bien diseñadas para agentes de IA, enfocándose en el diseño de JSON Schema, descripciones claras, manejo de errores estructurado y el estándar MCP.
 
-**Core Insight:** The LLM never sees your code - only the schema and description. Make them crystal clear.
+**Insight Clave:** El LLM nunca ve tu código, solo el esquema y la descripción. Hacelos transparentes y legibles.
 
-## Quick Start
+## Inicio Rápido
 
-1. **Read** [SKILL.md](SKILL.md) for comprehensive guidance
-2. **Use** scripts to validate and generate:
+1. **Leé** [SKILL.md](SKILL.md) para obtener una guía completa.
+2. **Usá** los scripts para validar y generar:
    ```bash
-   python scripts/validate_tool_schema.py your_tool.json
-   python scripts/generate_tool_template.py --name my_tool --type mcp --params "query:string"
+   python scripts/validate_tool_schema.py tu_herramienta.json
+   python scripts/generate_tool_template.py --name mi_herramienta --type mcp --params "query:string"
    ```
-3. **Reference** templates and checklists as you build
-4. **Deep dive** into references for advanced topics
+3. **Consultá** las plantillas y checklists mientras construís.
+4. **Profundizá** en las referencias para temas avanzados.
 
-## What's Included
+## Qué Incluye
 
-### Core Documentation
+### Documentación Core
 
-- **[SKILL.md](SKILL.md)** - Main skill (814 lines)
-- **[walkthrough.md](walkthrough.md)** - Complete rewrite process documentation
-- **[implementation_plan.md](implementation_plan.md)** - TDD planning
-- **[task.md](task.md)** - Process tracking
+- **[SKILL.md](SKILL.md)** - Skill principal (814 líneas)
+- **[walkthrough.md](walkthrough.md)** - Documentación completa del proceso de reescritura
+- **[implementation_plan.md](implementation_plan.md)** - Planificación de TDD
+- **[task.md](task.md)** - Seguimiento del proceso
 
-### Practical Tools
+### Herramientas Prácticas
 
-- **[validate_tool_schema.py](scripts/validate_tool_schema.py)** - Validate schemas against best practices
-- **[generate_tool_template.py](scripts/generate_tool_template.py)** - Generate boilerplate code
+- **[validate_tool_schema.py](scripts/validate_tool_schema.py)** - Validar esquemas contra las mejores prácticas
+- **[generate_tool_template.py](scripts/generate_tool_template.py)** - Generar código base (boilerplate)
 
-### Templates & Checklists
+### Plantillas y Checklists
 
-- **[mcp-tool-template.py](assets/templates/mcp-tool-template.py)** - Complete MCP tool template
-- **[tool-schema-template.json](assets/templates/tool-schema-template.json)** - JSON Schema template
-- **[tool-quality-checklist.md](assets/checklists/tool-quality-checklist.md)** - Quality review checklist
-- **[tool-design-decisions.md](assets/decision-trees/tool-design-decisions.md)** - Decision flowcharts
+- **[mcp-tool-template.py](assets/templates/mcp-tool-template.py)** - Plantilla completa de herramienta MCP
+- **[tool-schema-template.json](assets/templates/tool-schema-template.json)** - Plantilla de JSON Schema
+- **[tool-quality-checklist.md](assets/checklists/tool-quality-checklist.md)** - Checklist de revisión de calidad
+- **[tool-design-decisions.md](assets/decision-trees/tool-design-decisions.md)** - Diagramas de flujo de decisión
 
-### Deep Dives
+### Temas Profundos
 
-- **[json-schema-deep-dive.md](references/json-schema-deep-dive.md)** - Advanced JSON Schema patterns
-- **[mcp-standard-guide.md](references/mcp-standard-guide.md)** - MCP implementation guide
-- **[error-handling-patterns.md](references/error-handling-patterns.md)** - Error handling strategies
+- **[json-schema-deep-dive.md](references/json-schema-deep-dive.md)** - Patrones avanzados de JSON Schema
+- **[mcp-standard-guide.md](references/mcp-standard-guide.md)** - Guía de implementación de MCP
+- **[error-handling-patterns.md](references/error-handling-patterns.md)** - Estrategias de manejo de errores
 
-## Usage Examples
+## Ejemplos de Uso
 
-### Validate a Tool Schema
+### Validar el Esquema de una Herramienta
 
 ```bash
-python scripts/validate_tool_schema.py my_tool_schema.json
+python scripts/validate_tool_schema.py mi_esquema_de_herramienta.json
 ```
 
-Output:
+Salida:
 
 ```
-✅ Schema is valid and follows all best practices!
+✅ ¡El esquema es válido y sigue todas las mejores prácticas!
 ```
 
-or
+o bien:
 
 ```
-❌ ERRORS (must fix):
-  - Parameter 'query' missing description
-
-⚠️  WARNINGS (should fix):
-  - Description is too short (15 words, minimum 20)
-
-💡 SUGGESTIONS (nice to have):
-  - Add examples for complex parameter 'filters'
+❌ ERRORES (deben corregirse):
+  - El parámetro 'query' no tiene descripción
+ 
+⚠️  ADVERTENCIAS (deberían corregirse):
+  - La descripción es demasiado corta (15 palabras, mínimo 20)
+ 
+💡 SUGERENCIAS (opcional):
+  - Agregar ejemplos para el parámetro complejo 'filters'
 ```
 
-### Generate a New Tool
+### Generar una Nueva Herramienta
 
 ```bash
 python scripts/generate_tool_template.py \
@@ -82,58 +82,58 @@ python scripts/generate_tool_template.py \
   --params "query:string,limit:integer,filters:object"
 ```
 
-Generates complete boilerplate with schema, code, and description template.
+Genera el boilerplate completo con el esquema, el código y la plantilla de descripción.
 
-## Key Principles
+## Principios Clave
 
-1. **LLM sees schema + description, not code** → Make them crystal clear
-2. **Description > Implementation** → A vague tool with perfect code will fail
-3. **Errors should guide recovery** → Not just report failures
-4. **Be specific with types** → Enums, constraints, examples
-5. **Test against real scenarios** → Happy path + edge cases + errors
+1. **El LLM ve el esquema + la descripción, no el código** → Hacelos claros, específicos y legibles.
+2. **Descripción > Implementación** → Una herramienta con código perfecto pero descripción vaga fallará.
+3. **Los errores deben guiar la recuperación** → No te limites a reportar la falla, sugerí cómo solucionarlo.
+4. **Sé específico con los tipos** → Usá enums, restricciones y ejemplos siempre que sea posible.
+5. **Probá contra escenarios reales** → Caso feliz (happy path) + casos borde + recuperación de errores.
 
-## Structure
+## Estructura
 
 ```
 agent-tool-builder/
-├── SKILL.md                  # Core content (814 lines)
-├── README.md                 # This file
-├── walkthrough.md            # Process documentation
-├── implementation_plan.md    # TDD planning
-├── task.md                   # Tracking
+├── SKILL.md                  # Contenido principal (814 líneas)
+├── README.md                 # Este archivo
+├── walkthrough.md            # Documentación del proceso
+├── implementation_plan.md    # Planificación de TDD
+├── task.md                   # Seguimiento
 │
-├── scripts/                  # Validation & generation tools
+├── scripts/                  # Herramientas de validación y generación
 │   ├── validate_tool_schema.py
 │   └── generate_tool_template.py
 │
 ├── assets/
-│   ├── templates/            # Code & schema templates
-│   ├── checklists/           # Quality checklists
-│   └── decision-trees/       # Decision flowcharts
+│   ├── templates/            # Plantillas de código y esquemas
+│   ├── checklists/           # Checklists de calidad
+│   └── decision-trees/       # Diagramas de flujo de decisión
 │
-└── references/               # Deep dive documentation
+└── references/               # Documentación en profundidad
     ├── json-schema-deep-dive.md
     ├── mcp-standard-guide.md
     └── error-handling-patterns.md
 ```
 
-## Related Skills
+## Skills Relacionadas
 
-- **`mcp-builder`** - For designing complete MCP servers
-- **`autonomous-agent-expert`** - For agent loops and tool integration patterns
-- **`backend-expert`** - For implementing tools in Node.js/Express
-- **`prompt-mastery`** - For optimizing tool descriptions and prompts
+- **`mcp-builder`** - Para diseñar servidores MCP completos
+- **`autonomous-agent-expert`** - Para bucles de agentes y patrones de integración de herramientas
+- **`backend-expert`** - Para implementar herramientas en Node.js/Express
+- **`prompt-mastery`** - Para optimizar las descripciones de las herramientas y los prompts
 
-## Meta Note
+## Nota Meta
 
-This skill **exemplifies its own principles**:
+Esta skill **ejemplifica sus propios principios**:
 
-- The validation script returns structured errors (what it teaches)
-- Templates demonstrate best practices (progressive disclosure)
-- Scripts have clear descriptions and error handling (meta-recursive)
+- El script de validación devuelve errores estructurados (lo que enseña).
+- Las plantillas demuestran las mejores prácticas (divulgación progresiva).
+- Los scripts tienen descripciones y manejo de errores claros (meta-recursivo).
 
-A skill about tool design that uses tools to teach tool design. 🪞
+Una skill sobre diseño de herramientas que utiliza herramientas para enseñar diseño de herramientas. 🪞
 
 ---
 
-**Remember:** Every tool you design is a contract between the LLM and the world. Make it clear, make it specific, make it helpful.
+**Recordá:** Cada herramienta que diseñás es un contrato entre el LLM y el mundo. Hacela clara, hacela específica, hacela útil.

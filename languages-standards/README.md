@@ -1,63 +1,63 @@
-# 📏 Code & Quality Playbook
+# 📏 Playbook de Código y Calidad
 
-> **"If it's not typed, it doesn't exist. If it's not tested, it's broken."**
+> **"Si no está tipado, no existe. Si no está testeado, está roto."**
 
-This playbook establishes the non-negotiable standards for code quality across the entire stack. Use these skills to write code that documents itself and refuses to break.
+Este playbook establece los estándares no negociables de calidad de código para todo el stack. Usá estas skills para escribir código que se documente a sí mismo y se resista a romperse.
 
 ---
 
-## 🛡️ The Quality Lifecycle
+## 🛡️ El Ciclo de Vida de la Calidad
 
-Quality isn't a "testing phase"; it's a continuous process that starts with the first line of code.
+La calidad no es una "fase de testing"; es un proceso continuo que comienza con la primera línea de código.
 
 ```mermaid
 graph TD
-    A[Phase 1: Strict Typing & Principles] --> B[Phase 2: Framework/Language Standards]
-    B --> C[Phase 3: Testing Strategy]
+    A[Fase 1: Tipado Estricto y Principios] --> B[Fase 2: Estándares de Runtimes y Frameworks]
+    B --> C[Fase 3: Estrategia de Testing]
 ```
 
-### 🔷 Phase 1: Strict Typing (The First Defense)
+### 🔷 Fase 1: Tipado Estricto (La Primera Defensa)
 
-_Goal: Catch errors at compile time, not runtime._
+_Objetivo: Detectar errores en tiempo de compilación, no en runtime._
 
-1.  **TypeScript by Default**: There is no "Vanilla JS" in this stack. Use **[`typescript-expert`](typescript-expert/SKILL.md)**.
-    - _No `any`_: Use `unknown` if you must, and cast safely later.
-    - _Generics_: Learn to use generics to create reusable, type-safe utilities.
-    - _Zod/Valibot_: Use runtime validation at the edges (API inputs), static typing internally.
+1.  **TypeScript por Defecto**: No existe "Vanilla JS" en este stack. Usá **[`typescript-expert`](typescript-expert/SKILL.md)**.
+    - _Sin `any`_: Usá `unknown` si es necesario y casteá de forma segura más adelante.
+    - _Genéricos_: Aprendé a usar genéricos para crear utilidades reutilizables y type-safe.
+    - _Zod/Valibot_: Usá validación en runtime en los extremos (entradas de API) y tipado estático internamente.
 
-2.  **Clean Code Philosophy**: Apply Uncle Bob's guidelines with **[`clean-code`](clean-code/SKILL.md)**.
-    - _Descriptive Naming_: No cryptonyms or single letter variables.
-    - _Single Responsibility_: One method does exactly one thing.
+2.  **Filosofía Clean Code**: Aplicá las pautas de Uncle Bob con **[`clean-code`](clean-code/SKILL.md)**.
+    - _Nombres Descriptivos_: Sin criptónimos ni variables de una sola letra.
+    - _Responsabilidad Única_: Un método hace exactamente una cosa.
 
-3.  **Conventional Commits**: Apply **[`commit`](commit/SKILL.md)** to format and write clean, semantic commit messages under Conventional Commits before pushing changes.
+3.  **Conventional Commits**: Aplicá **[`commit`](commit/SKILL.md)** para formatear y escribir mensajes de commit limpios y semánticos bajo Conventional Commits antes de subir cambios.
 
-### ⚙️ Phase 2: Runtime & Framework Standards
+### ⚙️ Fase 2: Estándares de Runtimes y Frameworks
 
-_Goal: Choose the right runtime tools and write consistent backend code._
+_Objetivo: Elegir las herramientas de ejecución correctas y escribir código backend consistente._
 
-1.  **Node.js Architecture**: Apply **[`nodejs-best-practices`](nodejs-best-practices/SKILL.md)** to select runtimes, design controllers/services, and handle exceptions.
+1.  **Arquitectura Node.js**: Aplicá **[`nodejs-best-practices`](nodejs-best-practices/SKILL.md)** para seleccionar runtimes, diseñar controladores/servicios y manejar excepciones.
 
-### 🧪 Phase 3: Testing Strategy (The Safety Net)
+### 🧪 Fase 3: Estrategia de Testing (La Red de Seguridad)
 
-_Goal: Sleep well at night._
+_Objetivo: Dormir bien por las noches._
 
-1.  **TDD & Mocking**: Use **[`testing-patterns`](testing-patterns/SKILL.md)**.
-    - _Unit Tests_: Test pure logic (utils, helpers) extensively with Vitest.
-    - _Mocking_: Use `vi.mock` to isolate components under test.
-    - _Factories_: Utilize mock data factories to keep test sets DRY.
+1.  **TDD y Mocking**: Usá **[`testing-patterns`](testing-patterns/SKILL.md)**.
+    - _Unit Tests_: Testeá la lógica pura (utilidades, helpers) exhaustivamente con Vitest.
+    - _Mocking_: Usá `vi.mock` para aislar los componentes bajo prueba.
+    - _Factories_: Utilizá fábricas de datos simulados (mock data factories) para mantener los conjuntos de prueba secos (DRY).
 
 ---
 
-## 📚 Skill Index
+## 📚 Índice de Skills
 
-| Skill | Focus Area | When to use |
+| Skill | Área de Enfoque | Cuándo usar |
 | :--- | :--- | :--- |
-| **[`typescript-expert`](typescript-expert/)** | Type Safety | Advanced types, generics, strict config patterns |
-| **[`clean-code`](clean-code/)** | Principles | Improving readability, refactoring logic, class designs |
-| **[`software-architecture`](software-architecture/)** | Code Standards | Code style rules, naming conventions, library-first approach |
-| **[`commit`](commit/)** | Git / Workflow | Conventional Commits formatting, git logs, and hybrid orchestration |
-| **[`nodejs-best-practices`](nodejs-best-practices/)** | Runtime/Architecture | Node.js backend architecture, frameworks, async and security principles |
-| **[`testing-patterns`](testing-patterns/)** | QA & TDD | Vitest unit/integration testing strategies, mocking, factories |
-| **[`javascript-mastery`](javascript-mastery/)** | JS Fundamentals | 33+ core JS concepts: primitives, closures, async, prototypes, ES6+ |
-| **[`javascript-testing-patterns`](javascript-testing-patterns/)** | Testing Strategy | Unit, integration, E2E, component, MSW, TDD, and CI/CD testing patterns |
-| **[`modern-javascript-patterns`](modern-javascript-patterns/)** | ES6+ Patterns | Refactoring recipes, async migration, functional pipelines, performance |
+| **[`typescript-expert`](typescript-expert/)** | Seguridad de Tipos | Tipos avanzados, genéricos, patrones de configuración estrictos |
+| **[`clean-code`](clean-code/)** | Principios | Mejorar legibilidad, refactorizar lógica, diseño de clases |
+| **[`software-architecture`](software-architecture/)** | Estándares de Código | Reglas de estilo de código, convenciones de nombres, enfoque library-first |
+| **[`commit`](commit/)** | Git / Workflow | Formateo de Conventional Commits, git logs y orquestación híbrida |
+| **[`nodejs-best-practices`](nodejs-best-practices/)** | Runtime/Arquitectura | Arquitectura backend de Node.js, frameworks, principios asincrónicos y de seguridad |
+| **[`testing-patterns`](testing-patterns/)** | QA y TDD | Estrategias de pruebas unitarias/integración con Vitest, mocking, factories |
+| **[`javascript-mastery`](javascript-mastery/)** | Fundamentos de JS | Más de 33 conceptos clave de JS: primitivos, closures, async, prototipos, ES6+ |
+| **[`javascript-testing-patterns`](javascript-testing-patterns/)** | Estrategia de Testing | Patrones de pruebas unitarias, integración, E2E, de componentes, MSW, TDD y CI/CD |
+| **[`modern-javascript-patterns`](modern-javascript-patterns/)** | Patrones ES6+ | Recetas de refactorización, migración asincrónica, pipelines funcionales, rendimiento |

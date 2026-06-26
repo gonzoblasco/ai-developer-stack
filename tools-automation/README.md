@@ -1,96 +1,94 @@
-# 🛠️ Tools & Automation Playbook
+# 🛠️ Playbook de Herramientas y Automatización
 
-> **"If you have to do it more than twice, automate it."**
+> **"Si tenés que hacerlo más de dos veces, automatizalo."**
 
-This playbook covers the "Machine Labor" department of your stack. These skills are for building the robots that do the boring work so humans don't have to.
+Este playbook cubre el departamento de "Trabajo Mecánico" de tu stack. Estas skills sirven para construir los robots que hacen el trabajo aburrido para que los humanos no tengan que hacerlo.
 
 ---
 
-## 🦾 The Automation Spectrum
+## 🦾 El Espectro de la Automatización
 
-Choose the right tool for the job. Do not use a browser when an API exists. Do not write code when a low-code flow suffices.
+Elegí la herramienta adecuada para el trabajo. No uses un navegador cuando exista una API. No escribas código cuando baste con un flujo low-code.
 
 ```mermaid
 graph TD
-    A[Level 1: Low-Code Workflows] --> B[Level 2: Browser Automation]
-    B --> C[Level 3: Specialized Utilities]
+    A[Nivel 1: Flujos de Trabajo Low-Code] --> B[Nivel 2: Automatización de Navegador]
+    B --> C[Nivel 3: Utilidades Especializadas]
 ```
 
-### ⚡ Level 1: Low-Code Workflows (The Glue)
+### ⚡ Nivel 1: Flujos de Trabajo Low-Code (El Pegamento)
 
-_Goal: Connect APIs quickly without maintaining servers._
+_Objetivo: Conectar APIs rápidamente sin mantener servidores._
 
-1.  **Workflow Orchestration**: Use **[`n8n-workflow-builder`](n8n-workflow-builder/SKILL.md)**.
-    - _Best For_: Webhooks, connecting SaaS (Slack -> Sheets), Cron jobs.
-    - _Example_: **[`meli-n8n-crm-logger`](meli-n8n-crm-logger/SKILL.md)** shows how to log high-volume e-commerce data without writing a backend.
-    - _Scripting in n8n_: Use **[`n8n-code-javascript`](n8n-code-javascript/SKILL.md)** to write custom JavaScript logic within n8n Code nodes (managing item scopes, webhook nesting, and Luxon dates).
-    - _Architectural Patterns_: Apply **[`n8n-workflow-patterns`](n8n-workflow-patterns/SKILL.md)** to select the right structure (webhook processing, API integrations, scheduled tasks, database sync, or AI agent setups) before building.
+1.  **Orquestación de Workflows**: Usá **[`n8n-workflow-builder`](n8n-workflow-builder/SKILL.md)**.
+    - _Ideal Para_: Webhooks, conectar SaaS (Slack -> Sheets), tareas programadas (cron).
+    - _Ejemplo_: **[`meli-n8n-crm-logger`](meli-n8n-crm-logger/SKILL.md)** muestra cómo registrar datos de comercio electrónico de alto volumen sin escribir un backend.
+    - _Scripting en n8n_: Usá **[`n8n-code-javascript`](n8n-code-javascript/SKILL.md)** para escribir lógica personalizada de JavaScript dentro de nodos Code de n8n (gestión de alcances de items, anidamiento de webhooks y fechas con Luxon).
+    - _Patrones Arquitectónicos_: Aplicá **[`n8n-workflow-patterns`](n8n-workflow-patterns/SKILL.md)** para seleccionar la estructura correcta (procesamiento de webhooks, integraciones de API, tareas programadas, sincronización de bases de datos o configuraciones de agentes de IA) antes de construir.
 
-2.  **API Management**: Use **[`linear-expert`](linear-expert/SKILL.md)** to script task synchronization between codebase commits and Linear boards via GraphQL.
+2.  **Gestión de APIs**: Usá **[`linear-expert`](linear-expert/SKILL.md)** para programar la sincronización de tareas entre commits del código y tableros de Linear mediante GraphQL.
 
-3.  **GitHub MCP Automation**: Use **[`github-automation`](github-automation/SKILL.md)** to interact with repositories, issues, pull requests, and branches directly via Rube MCP.
+3.  **Automatización de GitHub MCP**: Usá **[`github-automation`](github-automation/SKILL.md)** para interactuar con repositorios, issues, pull requests y ramas directamente a través de Rube MCP.
 
-### 🕸️ Level 2: Browser & Review Automation (The Heavy Lifting)
+### 🕸️ Nivel 2: Automatización de Navegador y Revisiones (El Trabajo Pesado)
 
-_Goal: Interact with websites that don't have APIs, or automate reviews._
+_Objetivo: Interactuar con sitios web que no tienen APIs, o automatizar revisiones._
 
-1.  **Scraping & Control**: Use **[`browser-automation-expert`](browser-automation-expert/SKILL.md)**.
-    - _Principle_: Resiliency > Speed.
-    - _Technique_: Always use explicit waits (`waitForSelector`). Never rely on fixed `sleep()`.
+1.  **Scraping y Control**: Usá **[`browser-automation-expert`](browser-automation-expert/SKILL.md)**.
+    - _Principio_: Resiliencia > Velocidad.
+    - _Técnica_: Usá siempre esperas explícitas (`waitForSelector`). Nunca confíes en un `sleep()` fijo.
 
-2.  **QA & E2E Testing**: Reference **[`e2e-testing-patterns`](e2e-testing-patterns/SKILL.md)** for Playwright structures.
+2.  **QA y Pruebas E2E**: Consultá **[`e2e-testing-patterns`](e2e-testing-patterns/SKILL.md)** para estructurar suites con Playwright.
 
-3.  **Cognitive Linter Review**: Use **[`pr-review`](pr-review/SKILL.md)** to automatically analyze the git diff against conventions, security, correctness, and performance patterns.
+3.  **Revisión del Linter Cognitivo**: Usá **[`pr-review`](pr-review/SKILL.md)** para analizar automáticamente el diff de git contra patrones de convenciones, seguridad, corrección y rendimiento.
 
-4.  **Human Code Review**: Use **[`vibers-code-review`](vibers-code-review/SKILL.md)** to request human PR feedback and compliance checks.
+4.  **Revisión de Código por Humanos**: Usá **[`vibers-code-review`](vibers-code-review/SKILL.md)** para solicitar feedback humano de PR y chequeos de cumplimiento de especificaciones.
 
-5.  **GitHub Workflow Automation**: Use **[`github-workflow-automation`](github-workflow-automation/SKILL.md)** to configure automated PR reviews, issue triage labels, and smart CI/CD triggers.
+5.  **Automatización de Workflows de GitHub**: Usá **[`github-workflow-automation`](github-workflow-automation/SKILL.md)** para configurar revisiones automáticas de PR, etiquetas de triaging de issues y triggers inteligentes de CI/CD.
 
-6.  **GitHub Actions Templates**: Use **[`github-actions-templates`](github-actions-templates/SKILL.md)** for production-ready, reusable CI/CD workflows, dockerization, EKS deployment, and security scanning configs.
+6.  **Plantillas de GitHub Actions**: Usá **[`github-actions-templates`](github-actions-templates/SKILL.md)** para configuraciones listas para producción de workflows de CI/CD reutilizables, dockerización, despliegue en EKS y escaneo de seguridad.
 
-7.  **Git PR Description Generator**: Use **[`git-pr-review`](git-pr-review/SKILL.md)** to analyze local commit histories and generate structured PR titles and descriptions with minimal token usage.
+7.  **Generador de Descripciones de PR**: Usá **[`git-pr-review`](git-pr-review/SKILL.md)** para analizar el historial de commits locales y generar títulos y descripciones estructuradas de PR con un consumo mínimo de tokens.
 
-### 📄 Level 3: Specialized Utilities & Docs
+### 📄 Nivel 3: Utilidades Especializadas y Docs
 
-_Goal: Handle complex file formats and maintain document architecture._
+_Objetivo: Manejar formatos de archivo complejos y mantener la arquitectura de la documentación._
 
-1.  **Document Generation**: Use **[`pdf-official`](pdf-official/SKILL.md)** for PDF invoicing or reporting.
+1.  **Generación de Documentos**: Usá **[`pdf-official`](pdf-official/SKILL.md)** para facturación o informes en PDF.
 
-2.  **Documentation Architecture**: Use **[`docs-architect`](docs-architect/SKILL.md)** for compiling massive codebase technical reference manuals.
+2.  **Arquitectura de Documentación**: Usá **[`docs-architect`](docs-architect/SKILL.md)** para compilar manuales de referencia técnica masivos de bases de código.
 
-3.  **Repository Hygiene**: Use **[`documentation-expert`](documentation-expert/SKILL.md)** to generate project README, CHANGELOG, and AGENTS.md files.
-    - _README Generator_: Apply **[`readme`](readme/SKILL.md)** to write or update highly thorough, copy-pasteable, and structured README.md files for local setup, architecture maps, and deployments.
-    - _Documentation Synchronization_: Apply **[`docs-sync`](docs-sync/SKILL.md)** to analyze code changes and update out-of-sync knowledge files automatically at the end of an epic.
+3.  **Higiene del Repositorio**: Usá **[`documentation-expert`](documentation-expert/SKILL.md)** para generar automáticamente archivos README, CHANGELOG y AGENTS.md.
+    - _Generador de README_: Aplicá **[`readme`](readme/SKILL.md)** para redactar o actualizar archivos README.md sumamente minuciosos, estructurados y listos para copiar y pegar para configuración local, mapas de arquitectura y despliegues.
+    - _Sincronización de Documentación_: Aplicá **[`docs-sync`](docs-sync/SKILL.md)** para analizar cambios en el código y actualizar archivos de conocimiento desactualizados automáticamente al cerrar un epic.
 
-4.  **Design System Synthesis**: Use **[`design-md`](design-md/SKILL.md)** to analyze Stitch projects via MCP and compile design systems into `DESIGN.md` files.
+4.  **Síntesis de Sistemas de Diseño**: Usá **[`design-md`](design-md/SKILL.md)** para analizar proyectos Stitch vía MCP y compilar sistemas de diseño en archivos `DESIGN.md`.
 
-5.  **Session Postmortem Diagnostics**: Use **[`analyze-project`](analyze-project/SKILL.md)** to analyze coding session logs, root causes of churn, and identify fragile subsystems.
+5.  **Diagnósticos Postmortem de Sesiones**: Usá **[`analyze-project`](analyze-project/SKILL.md)** para analizar registros de sesiones de programación, causas raíz de retrabajo (churn) e identificar subsistemas frágiles.
 
 ---
 
-## 📚 Skill Index
+## 📚 Índice de Skills
 
-| Skill | Focus Area | When to use |
+| Skill | Área de Enfoque | Cuándo usar |
 | :--- | :--- | :--- |
-| **[`n8n-workflow-builder`](n8n-workflow-builder/)** | Low-Code | Connecting APIs, event-driven workflows, cron jobs |
-| **[`n8n-code-javascript`](n8n-code-javascript/)** | Scripting | Writing custom JavaScript inside n8n Code nodes |
-| **[`n8n-workflow-patterns`](n8n-workflow-patterns/)** | Architecture | Core architectural structures and routing patterns in n8n |
-| **[`browser-automation-expert`](browser-automation-expert/)** | Scraping | Automating web interactions, testing, scraping data |
-| **[`meli-n8n-crm-logger`](meli-n8n-crm-logger/)** | E-commerce | Specific recipe for MercadoLibre CRM logging |
-| **[`linear-expert`](linear-expert/)** | API Sync | Scripting issues, tasks, and roadmaps in Linear |
-| **[`pr-review`](pr-review/)** | Code Review | Cognitive linter auditing code correctness, tests, security and performance on git diffs |
-| **[`vibers-code-review`](vibers-code-review/)** | Code Review | Standard workflow for human spec-based PR reviews |
-| **[`git-pr-review`](git-pr-review/)** | PR Description | Local commit history analyzer for PR description drafting |
-| **[`e2e-testing-patterns`](e2e-testing-patterns/)** | E2E Testing | Designing Playwright test suites |
-| **[`pdf-official`](pdf-official/)** | Documents | Generating and manipulating PDF files |
-| **[`docs-architect`](docs-architect/)** | Architecture Docs | Compiling deep codebase reference manuals |
-| **[`documentation-expert`](documentation-expert/)** | Repo Hygiene | Automating README, CHANGELOG, AGENTS, and `.knowledge/` base |
-| **[`readme`](readme/)** | Repo Hygiene | Absurdly thorough README generation and structure mapping |
-| **[`docs-sync`](docs-sync/)** | Sync | Surgical documentation synchronization upon epic closure |
-
-
-| **[`design-md`](design-md/)** | Design Systems | Synthesizing Stitch projects into DESIGN.md files |
-| **[`github-workflow-automation`](github-workflow-automation/)** | CI/CD & Review | Automating GitHub workflows with Actions and AI assistance |
-| **[`github-actions-templates`](github-actions-templates/)** | CI/CD Templates | Production-ready GitHub Actions workflow patterns |
-| **[`analyze-project`](analyze-project/)** | Forensic Diagnostics | Postmortem analysis of coding session churn and hotspots |
-| **[`github-automation`](github-automation/)** | API / MCP | Programmatic repository, issue, and PR management via Rube MCP |
+| **[`n8n-workflow-builder`](n8n-workflow-builder/)** | Low-Code | Conectar APIs, workflows orientados a eventos, tareas programadas (cron) |
+| **[`n8n-code-javascript`](n8n-code-javascript/)** | Scripting | Escribir JavaScript personalizado dentro de nodos Code de n8n |
+| **[`n8n-workflow-patterns`](n8n-workflow-patterns/)** | Arquitectura | Estructuras arquitectónicas principales y patrones de enrutamiento en n8n |
+| **[`browser-automation-expert`](browser-automation-expert/)** | Scraping | Automatizar interacciones web, pruebas, extracción de datos |
+| **[`meli-n8n-crm-logger`](meli-n8n-crm-logger/)** | E-commerce | Receta específica para el registro de CRM en MercadoLibre |
+| **[`linear-expert`](linear-expert/)** | Sincronización API | Programar issues, tareas y hojas de ruta en Linear |
+| **[`pr-review`](pr-review/)** | Revisión de Código | Linter cognitivo para auditar corrección, tests, seguridad y rendimiento en diffs de git |
+| **[`vibers-code-review`](vibers-code-review/)** | Revisión de Código | Workflow estándar para revisiones de PR basadas en especificaciones de humanos |
+| **[`git-pr-review`](git-pr-review/)** | Descripción de PR | Analizador del historial de commits locales para redactar descripciones de PR |
+| **[`e2e-testing-patterns`](e2e-testing-patterns/)** | Pruebas E2E | Diseñar suites de pruebas con Playwright |
+| **[`pdf-official`](pdf-official/)** | Documentos | Generar y manipular archivos PDF |
+| **[`docs-architect`](docs-architect/)** | Docs de Arquitectura | Compilar manuales de referencia detallados de bases de código |
+| **[`documentation-expert`](documentation-expert/)** | Higiene del Repo | Automatizar README, CHANGELOG, AGENTS y la base de conocimiento `.knowledge/` |
+| **[`readme`](readme/)** | Higiene del Repo | Generación y mapeo de estructura de READMEs ridículamente detallados |
+| **[`docs-sync`](docs-sync/)** | Sincronización | Sincronización quirúrgica de documentación al cerrar un epic |
+| **[`design-md`](design-md/)** | Sistemas de Diseño | Sintetizar proyectos de Stitch en archivos DESIGN.md |
+| **[`github-workflow-automation`](github-workflow-automation/)** | CI/CD y Revisiones | Automatizar workflows de GitHub con Actions y asistencia de IA |
+| **[`github-actions-templates`](github-actions-templates/)** | Plantillas de CI/CD | Patrones listos para producción de workflows de GitHub Actions |
+| **[`analyze-project`](analyze-project/)** | Diagnósticos Forenses | Análisis postmortem de retrabajo (churn) y hotspots de sesiones de desarrollo |
+| **[`github-automation`](github-automation/)** | API / MCP | Gestión programática de repositorios, issues y PRs mediante Rube MCP |

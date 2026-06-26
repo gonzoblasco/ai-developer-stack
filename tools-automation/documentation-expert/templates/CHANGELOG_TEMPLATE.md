@@ -1,27 +1,27 @@
-# Changelog
+# Changelog (Historial de Cambios)
 
-All notable changes to this project will be documented in this file.
+Todos los cambios notables en este proyecto serán documentados en este archivo.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+El formato está basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/),
+y este proyecto se adhiere a [SemVer (Versionado Semántico)](https://semver.org/lang/es/spec/v2.0.0.html).
 
-## [Unreleased]
-### Added
-- *New features.*
-### Changed
-- *Changes in existing functionality.*
-### Deprecated
-- *Soon-to-be removed features.*
-### Removed
-- *Now removed features.*
-### Fixed
-- *Any bug fixes.*
-### Security
-- *In case of vulnerabilities.*
+## [Sin lanzar]
+### Agregado
+- *Nuevas funcionalidades.*
+### Modificado
+- *Cambios en la funcionalidad existente.*
+### Obsoleto
+- *Funcionalidades que se eliminarán pronto.*
+### Eliminado
+- *Funcionalidades eliminadas en esta versión.*
+### Corregido
+- *Cualquier corrección de errores (bug fixes).*
+### Seguridad
+- *En caso de vulnerabilidades.*
 
-## [1.0.0] - YYYY-MM-DD
-### Added
-- Initial release of the project.
+## [1.0.0] - AAAA-MM-DD
+### Agregado
+- Lanzamiento inicial del proyecto.
 
 ---
-*Maintained by Documentation Expert Skill*
+*Mantenido por el Skill de Experto en Documentación*

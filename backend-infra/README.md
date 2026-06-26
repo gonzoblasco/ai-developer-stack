@@ -1,78 +1,77 @@
-# ⚙️ Backend Engineering Playbook
+# ⚙️ Playbook de Ingeniería Backend
 
-> **"Scalability is not a feature; it is an architectural decision."**
+> **"La escalabilidad no es un feature; es una decisión de arquitectura."**
 
-This playbook guides you through building robust, scalable backend systems. It moves from high-level architecture to specific database optimizations and infrastructure choices.
+Este playbook te guía en la construcción de sistemas backend robustos y escalables. Va desde la arquitectura de alto nivel hasta optimizaciones específicas de base de datos y decisiones de infraestructura.
 
 ---
 
-## 🏗️ The Backend Lifecycle
+## 🏗️ El Ciclo de Vida del Backend
 
-A great backend is built in layers, starting from the API contract down to the metal (containers).
+Un buen backend se construye en capas, desde el contrato de la API hasta el metal (contenedores).
 
 ```mermaid
 graph TD
-    A[Phase 1: Foundation & API] --> B[Phase 2: Data & Persistence]
-    B --> C[Phase 3: Integrations]
-    C --> D[Phase 4: Infrastructure]
+    A[Fase 1: Fundamento y API] --> B[Fase 2: Datos y Persistencia]
+    B --> C[Fase 3: Integraciones]
+    C --> D[Fase 4: Infraestructura]
 ```
 
-### 🏰 Phase 1: Foundation & Architecture
+### 🏰 Fase 1: Fundamento y Arquitectura
 
-_Goal: Define how the system communicates and organizes logic._
+_Objetivo: Definir cómo se comunica el sistema y cómo organiza su lógica._
 
-1.  **Define the Contract**: Before writing code, agree on the interface using **[`api-patterns`](api-patterns/SKILL.md)**.
-    - _Standard_: REST vs GraphQL? Versioning strategy?
-    - _Constraint_: Always define error envelope formats first.
+1.  **Definir el Contrato**: Antes de escribir código, definí la interfaz usando **[`api-patterns`](api-patterns/SKILL.md)**.
+    - _Estándar_: ¿REST o GraphQL? ¿Estrategia de versionado?
+    - _Restricción_: Siempre definí primero los formatos de los sobres de error (error envelopes).
 
-2.  **Choose the Framework & Standards**:
-    - **General/Node.js**: Use **[`nodejs-best-practices`](../languages-standards/nodejs-best-practices/SKILL.md)** for runtime, framework selection (Hono/Fastify/Express), and layered architecture standards.
-    - **Enterprise**: Use **[`nestjs-expert`](nestjs-expert/SKILL.md)** for structured, modular applications. Enforce Dependency Injection and strictly separate Controllers from Services.
+2.  **Elegir el Framework y Estándares**:
+    - **General/Node.js**: Usá **[`nodejs-best-practices`](../languages-standards/nodejs-best-practices/SKILL.md)** para el runtime, la selección del framework (Hono/Fastify/Express) y los estándares de arquitectura en capas.
+    - **Enterprise**: Usá **[`nestjs-expert`](nestjs-expert/SKILL.md)** para aplicaciones estructuradas y modulares. Forzá la Inyección de Dependencias y separá estrictamente los Controladores de los Servicios.
 
-### 💾 Phase 2: Data & Persistence
+### 💾 Fase 2: Datos y Persistencia
 
-_Goal: Store data reliably and efficiently._
+_Objetivo: Almacenar datos de forma confiable y eficiente._
 
-1.  **Design the Schema**: Use **[`database-design`](database-design/SKILL.md)** before running `CREATE TABLE`.
-    - _Normalization_: 3NF by default, denormalize only for read-heavy hotspots.
-    - _Keys_: UUIDs vs Integers? Foreign Key constraints are mandatory.
-    - _ORM**: Use **[`prisma-expert`](prisma-expert/SKILL.md)** for Prisma specific migrations, relationships, and queries.
+1.  **Diseñar el Esquema**: Usá **[`database-design`](database-design/SKILL.md)** antes de ejecutar `CREATE TABLE`.
+    - _Normalización_: 3NF por defecto, desnormalizá únicamente para hotspots con alta carga de lectura.
+    - _Claves_: ¿UUIDs o Integers? Las restricciones de Clave Foránea (Foreign Key) son obligatorias.
+    - _ORM_: Usá **[`prisma-expert`](prisma-expert/SKILL.md)** para migraciones, relaciones y consultas específicas de Prisma.
 
-2.  **Optimize the Engine**: If using PostgreSQL (recommended), apply **[`postgres-best-practices`](postgres-best-practices/SKILL.md)**.
-    - _Performance_: Indexing strategies (B-Tree, GIN for JSONB).
-    - _Safety_: Tuning autovacuum and connection pooling (PgBouncer).
+2.  **Optimizar el Motor**: Si usás PostgreSQL (recomendado), aplicá **[`postgres-best-practices`](postgres-best-practices/SKILL.md)**.
+    - _Rendimiento_: Estrategias de indexación (B-Tree, GIN para JSONB).
+    - _Seguridad_: Configuración de autovacuum y pool de conexiones (PgBouncer).
 
-### 🔌 Phase 3: Integrations
+### 🔌 Fase 3: Integraciones
 
-_Goal: Talk to the outside world._
+_Objetivo: Comunicarse con el mundo exterior._
 
-1.  **External Ecosystems**: When connecting to complex third parties, don't reinvent the wheel.
-    - **MercadoLibre**: Use **[`mercadolibre-api`](mercadolibre-api/SKILL.md)** for handling auth (OAuth) and rate limits specifically for the MELI ecosystem.
+1.  **Ecosistemas Externos**: Al conectarte con terceros complejos, no reinventes la rueda.
+    - **MercadoLibre**: Usá **[`mercadolibre-api`](mercadolibre-api/SKILL.md)** para manejar la autenticación (OAuth) y los límites de rate limit específicos del ecosistema de MELI.
 
-### 🐳 Phase 4: Infrastructure, DevOps & Security
+### 🐳 Fase 4: Infraestructura, DevOps y Seguridad
 
-_Goal: Run anywhere, consistently and securely._
+_Objetivo: Ejecutar en cualquier lugar de manera consistente y segura._
 
-1.  **Containerize**: "It works on my machine" is unacceptable. Use **[`docker-expert`](docker-expert/SKILL.md)**.
-    - _Optimization_: Multi-stage builds for small images.
-    - _Orchestration_: Docker Compose for local dev, tailored for production readiness.
+1.  **Contenedorizar**: "Funciona en mi máquina" es inaceptable. Usá **[`docker-expert`](docker-expert/SKILL.md)**.
+    - _Optimización_: Builds multi-etapa (multi-stage) para lograr imágenes livianas.
+    - _Orquestación_: Docker Compose para desarrollo local, adaptado para estar listo para producción.
 
-2.  **Hardening & Threat Modeling**: Perform focused audits on backend attack surfaces using **[`security-audit`](security-audit/SKILL.md)**.
-    - _Analysis_: Check for multi-tenancy data leaks, API authentication guards, webhook signatures, and data exposure in serialization layers.
-    - _Blocking_: A critical finding in RLS or guards will halt the automated epic closure workflow.
+2.  **Fortalecimiento y Modelado de Amenazas**: Realizá auditorías enfocadas en las superficies de ataque del backend usando **[`security-audit`](security-audit/SKILL.md)**.
+    - _Análisis_: Comprobá fugas de datos de multi-tenancy, guards de autenticación de APIs, firmas de webhooks y exposición de datos en capas de serialización.
+    - _Bloqueo_: Un hallazgo crítico en RLS o guards detendrá el workflow automatizado de cierre de epics.
 
 ---
 
-## 📚 Skill Index
+## 📚 Índice de Skills
 
-| Skill | Focus Area | When to use |
+| Skill | Área de Enfoque | Cuándo usar |
 | :--- | :--- | :--- |
-| **[`api-patterns`](api-patterns/)** | API Design | Defining REST/GraphQL contracts, versioning, error handling |
-| **[`nestjs-expert`](nestjs-expert/)** | Node.js Framework | Building scalable applications with NestJS |
-| **[`prisma-expert`](prisma-expert/)** | ORM | Working with Prisma, database modeling, migrations, and queries |
-| **[`database-design`](database-design/)** | Data Modeling | Schema design, database selection, and normalization |
-| **[`postgres-best-practices`](postgres-best-practices/)** | Database Specifics | Tuning, indexing, and advanced PostgreSQL/Supabase features |
-| **[`mercadolibre-api`](mercadolibre-api/)** | Integration | Connecting with MercadoLibre APIs (MELI) |
-| **[`docker-expert`](docker-expert/)** | DevOps | Containerization, Dockerfiles, docker-compose |
-| **[`security-audit`](security-audit/)** | Security | Performing threat modeling, multi-tenancy RLS audits, and API guard checks |
-
+| **[`api-patterns`](api-patterns/)** | Diseño de APIs | Definición de contratos REST/GraphQL, versionado, manejo de errores |
+| **[`nestjs-expert`](nestjs-expert/)** | Framework Node.js | Construcción de aplicaciones escalables con NestJS |
+| **[`prisma-expert`](prisma-expert/)** | ORM | Trabajo con Prisma, modelado de bases de datos, migraciones y consultas |
+| **[`database-design`](database-design/)** | Modelado de Datos | Diseño de esquemas, selección de bases de datos y normalización |
+| **[`postgres-best-practices`](postgres-best-practices/)** | Especificidades de BD | Optimización, indexación y características avanzadas de PostgreSQL/Supabase |
+| **[`mercadolibre-api`](mercadolibre-api/)** | Integración | Conexión con las APIs de MercadoLibre (MELI) |
+| **[`docker-expert`](docker-expert/)** | DevOps | Contenedorización, Dockerfiles, docker-compose |
+| **[`security-audit`](security-audit/)** | Seguridad | Modelado de amenazas, auditorías de RLS multi-tenant y chequeo de guards de APIs |

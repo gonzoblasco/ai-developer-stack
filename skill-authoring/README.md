@@ -1,16 +1,16 @@
-# ✍️ Skill Authoring Playbook
+# ✍️ Playbook de Creación de Skills
 
-This playbook outlines the standards, guidelines, and core philosophies for authoring predictable and effective AI agent skills.
+Este playbook detalla los estándares, pautas y filosofías centrales para la creación de skills de agentes de IA predecibles y efectivas.
 
-## Skills Available
+## Skills Disponibles
 
-| Skill | Description | Target |
+| Skill | Descripción | Target |
 | --- | --- | --- |
-| [writing-great-skills](writing-great-skills/SKILL.md) | Vocabulary, information hierarchy, and principles for writing predictable skills | Agent Engineering |
+| [writing-great-skills](writing-great-skills/SKILL.md) | Vocabulario, jerarquía de información y principios para escribir skills predecibles | Ingeniería de Agentes |
 
-## Philosophy
+## Filosofía
 
-1. **Predictability is Key**: A skill exists to make the agent's execution process predictable and consistent.
-2. **Context Window Hygiene**: Balance model-invoked vs. user-invoked configurations to optimize the context load.
-3. **Progressive Disclosure**: Keep `SKILL.md` clean and concise by pushing deep references and examples into separate files/folders.
-4. **Leading Words**: Recruit the model's pretrained concepts (e.g., *red loop*, *Gemba*) to anchor complex behaviors in fewer tokens.
+1. **La predictibilidad es clave**: Una skill existe para hacer que el proceso de ejecución del agente sea predecible y consistente.
+2. **Higiene de la ventana de contexto**: Balanceá las configuraciones invocadas por el modelo frente a las invocadas por el usuario para optimizar la carga del contexto.
+3. **Divulgación progresiva**: Mantené `SKILL.md` limpio y conciso empujando las referencias profundas y los ejemplos a archivos/carpetas separados.
+4. **Palabras clave (Leading Words)**: Aprovechá los conceptos preentrenados del modelo (por ejemplo, *red loop*, *Gemba*) para anclar comportamientos complejos en menos tokens.
