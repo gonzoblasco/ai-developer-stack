@@ -7,6 +7,8 @@ This playbook focuses on continuous code health, refactoring, and production har
 | Skill | Description | Target |
 | --- | --- | --- |
 | [vibe-code-cleanup](vibe-code-cleanup/SKILL.md) | Safe production cleanup and hardening for AI/vibe-coded fullstack apps | Next.js · React · Node.js |
+| [refactor](refactor/SKILL.md) | Refactoriza código existente para mejorar legibilidad, reducir duplicación y alinear con las convenciones del proyecto, sin cambiar comportamiento | Next.js · React · Node.js · TypeScript |
+
 
 ## Philosophy
 

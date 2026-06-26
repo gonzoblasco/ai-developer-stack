@@ -165,6 +165,8 @@ If you are looking for a specific skill, here is the complete index by domain.
 ### 🌐 Full-Stack
 
 - **[`vibe-code-cleanup`](fullstack/vibe-code-cleanup)**: Safe production cleanup and hardening for AI/vibe-coded fullstack apps.
+- **[`refactor`](fullstack/refactor)**: Refactoriza código existente para mejorar legibilidad y reducir duplicación sin alterar comportamiento.
+
 
 ### 🛠️ Tools & Automation
 
