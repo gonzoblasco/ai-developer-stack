@@ -36,6 +36,13 @@ _From API Contract to Container._
 - **Data:** Schema normalization, Prisma, and PostgreSQL optimization.
 - **DevOps:** Dockerization and production readiness.
 
+### 🌐 [Full-Stack Playbook](fullstack/README.md)
+
+_From Vibe Coding to Hardened Production._
+
+- **Health:** Clean up AI-generated codebase debt.
+- **Refactoring:** Safe incremental changes without demolition.
+
 ### 🎨 [Frontend Engineering Playbook](frontend-ui/README.md)
 
 _From Guidelines to 'Wow' Factor._
@@ -69,6 +76,20 @@ _From First Prompt to MVP in Production._
 - **Stack:** Lovable Cloud + Supabase + Edge Functions.
 - **Workflow:** Persistent memory using 8 structured planning files (PRD to Tracker).
 - **Philosophy:** Plan-writing roadmaps, vibe code auditing, and incremental iteration.
+
+### 📈 [Growth & Personal Brand Playbook](growth/README.md)
+
+_From Technical Expert to Authority._
+
+- **Identity:** Clear positioning and audience growth.
+- **Copywriting:** Platform-native social media content and SEO.
+
+### ✍️ [Skill Authoring Playbook](skill-authoring/README.md)
+
+_From Prompting to Predictable Agent Skills._
+
+- **Standards:** Designing robust and reusable AI skills.
+- **Hygiene:** Managing context windows and progressive disclosure.
 
 ---
 
@@ -135,6 +156,10 @@ If you are looking for a specific skill, here is the complete index by domain.
 - **[`progressive-web-app`](frontend-ui/progressive-web-app)**: PWA patterns.
 - **[`lovable-cleanup`](frontend-ui/lovable-cleanup)**: Cleaning up Lovable Cloud exports.
 
+### 🌐 Full-Stack
+
+- **[`vibe-code-cleanup`](fullstack/vibe-code-cleanup)**: Safe production cleanup and hardening for AI/vibe-coded fullstack apps.
+
 ### 🛠️ Tools & Automation
 
 - **[`browser-automation-expert`](tools-automation/browser-automation-expert)**: Resilient scraping.
@@ -165,6 +190,15 @@ If you are looking for a specific skill, here is the complete index by domain.
 - **[`software-architecture`](languages-standards/software-architecture)**: Code style rules, naming conventions, and library-first approach.
 - **[`nodejs-best-practices`](languages-standards/nodejs-best-practices)**: Node.js runtime and architecture best practices.
 - **[`testing-patterns`](languages-standards/testing-patterns)**: Vitest unit testing & mock factories.
+
+### 📈 Growth & Personal Brand
+
+- **[`linkedin-profile-optimizer`](growth/linkedin-profile-optimizer)**: Audit and optimize LinkedIn profile positioning for authority and SEO.
+- **[`social-post-writer-seo`](growth/social-post-writer-seo)**: Platform-optimized social media content generation.
+
+### ✍️ Skill Authoring
+
+- **[`writing-great-skills`](skill-authoring/writing-great-skills)**: Vocabulary, information hierarchy, and principles for writing predictable skills.
 
 ---
 

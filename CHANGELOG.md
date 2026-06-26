@@ -29,6 +29,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - `tools-automation/analyze-project` — Forensic root cause analyzer for Antigravity sessions to classify scope deltas, rework patterns, and hotspots.
 - `ai-agents/prompt-engineer` — Transmute raw prompts into structured prompt frameworks (RTF, RISEN, Chain of Thought, etc.) to optimize AI output.
 - `tools-automation/github-workflow-automation` — AI-assisted GitHub Action setups, issue triage, and smart test select patterns.
+- `fullstack/vibe-code-cleanup` — Safe production cleanup and hardening for AI/vibe-coded fullstack apps.
+- `growth/linkedin-profile-optimizer` — Audit and optimize LinkedIn profile positioning for authority and SEO.
+- `growth/social-post-writer-seo` — Platform-optimized social media content generation.
+- `skill-authoring/writing-great-skills` — Vocabulary, information hierarchy, and principles for writing predictable skills.
 
 ### Changed
 - `languages-standards/testing-patterns` — Migrated completely from Jest to **Vitest** mocking and assertions.
