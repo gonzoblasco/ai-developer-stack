@@ -13,6 +13,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - `tools-automation/docs-architect` — Deep technical manuals compilation from codebase analysis.
 - `languages-standards/nodejs-best-practices` — Layered architecture, runtime selection, and async principles for Node.js.
 - `languages-standards/software-architecture` — General code style rules, naming conventions, and library-first development standards.
+- `languages-standards/commit` — Conventional Commits formatting, git logs, and hybrid orchestration (consolidated with commit-formatter).
 - `ai-agents/ai-agents-architect` — Master loops, memory architectures, and multi-agent coordination.
 - `strategy-architecture/architecture` — System design and ADR templates.
 - `strategy-architecture/architecture-patterns` — Hexagonal, Clean, and DDD patterns.
@@ -30,6 +31,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - `frontend-ui/ui-ux-designer` — User research methodologies, wireframing, design systems (atomic design), and design tokens for cross-platform layouts.
 - `frontend-ui/dashboard-design` — Implementation guide and DNA for analytics-focused grids, modular widgets, and responsive layouts.
 - `product-building/vibecode-production-qa-validator` — 13-phase QA launch-readiness validator for fullstack Next.js applications covering SEO, Auth, and performance.
+- `product-building/close-epic` — Ritual de consolidación, versionado y cierre de bloques de desarrollo estratégico (Epics) en Git.
+- `product-building/copilot` — Orquestador universal de workflow y checklist pre-flight obligatorio para gobernar las tareas.
 - `tools-automation/analyze-project` — Forensic root cause analyzer for Antigravity sessions to classify scope deltas, rework patterns, and hotspots.
 - `ai-agents/prompt-engineer` — Transmute raw prompts into structured prompt frameworks (RTF, RISEN, Chain of Thought, etc.) to optimize AI output.
 - `tools-automation/github-workflow-automation` — AI-assisted GitHub Action setups, issue triage, and smart test select patterns.

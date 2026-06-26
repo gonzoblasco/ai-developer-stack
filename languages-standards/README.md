@@ -29,6 +29,8 @@ _Goal: Catch errors at compile time, not runtime._
     - _Descriptive Naming_: No cryptonyms or single letter variables.
     - _Single Responsibility_: One method does exactly one thing.
 
+3.  **Conventional Commits**: Apply **[`commit`](commit/SKILL.md)** to format and write clean, semantic commit messages under Conventional Commits before pushing changes.
+
 ### ⚙️ Phase 2: Runtime & Framework Standards
 
 _Goal: Choose the right runtime tools and write consistent backend code._
@@ -53,5 +55,6 @@ _Goal: Sleep well at night._
 | **[`typescript-expert`](typescript-expert/)** | Type Safety | Advanced types, generics, strict config patterns |
 | **[`clean-code`](clean-code/)** | Principles | Improving readability, refactoring logic, class designs |
 | **[`software-architecture`](software-architecture/)** | Code Standards | Code style rules, naming conventions, library-first approach |
+| **[`commit`](commit/)** | Git / Workflow | Conventional Commits formatting, git logs, and hybrid orchestration |
 | **[`nodejs-best-practices`](nodejs-best-practices/)** | Runtime/Architecture | Node.js backend architecture, frameworks, async and security principles |
 | **[`testing-patterns`](testing-patterns/)** | QA & TDD | Vitest unit/integration testing strategies, mocking, factories |

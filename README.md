@@ -191,12 +191,15 @@ If you are looking for a specific skill, here is the complete index by domain.
 - **[`plan-writing`](product-building/plan-writing)**: Short actionable code implementation plans.
 - **[`vibe-code-auditor`](product-building/vibe-code-auditor)**: Audit AI-generated code.
 - **[`vibecode-production-qa-validator`](product-building/vibecode-production-qa-validator)**: 13-phase QA launch-readiness validator for fullstack Next.js.
+- **[`close-epic`](product-building/close-epic)**: Ritual de consolidación, versionado y cierre de Epics en Git.
+- **[`copilot`](product-building/copilot)**: Orquestador universal de workflow y checklist pre-flight obligatorio.
 
 ### 📏 Languages & Standards
 
 - **[`typescript-expert`](languages-standards/typescript-expert)**: Strict static typing.
 - **[`clean-code`](languages-standards/clean-code)**: Clean code principles.
 - **[`software-architecture`](languages-standards/software-architecture)**: Code style rules, naming conventions, and library-first approach.
+- **[`commit`](languages-standards/commit)**: Conventional Commits formatting, git logs, and hybrid orchestration.
 - **[`nodejs-best-practices`](languages-standards/nodejs-best-practices)**: Node.js runtime and architecture best practices.
 - **[`testing-patterns`](languages-standards/testing-patterns)**: Vitest unit testing & mock factories.
 
