@@ -110,7 +110,7 @@ If you are looking for a specific skill, here is the complete index by domain.
 
 ### 🧠 Strategy & Architecture
 
-- **[`senior-architect`](strategy-architecture/senior-architect)**: System design & tradeoff analysis.
+- **[`senior-architect`](strategy-architecture/senior-architect)**: System design, trade-off analysis, architecture diagrams, dependency audits, ADR framework, and full cloud stack coverage.
 - **[`architecture`](strategy-architecture/architecture)**: Documenting decisions using Architectural Decision Records (ADRs).
 - **[`architecture-patterns`](strategy-architecture/architecture-patterns)**: Hexagonal, Clean, and DDD patterns.
 - **[`saas-multi-tenant`](strategy-architecture/saas-multi-tenant)**: Tenant database separation.

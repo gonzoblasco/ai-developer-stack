@@ -82,6 +82,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - `tools-automation/documentation-expert` — Consolidated with `doc-writer` to cover project knowledge bases (`.knowledge/` directory).
 
 - Updated all folder-level playbooks (`README.md` files) and the root `README.md`.
+- `strategy-architecture/senior-architect` — **Upgraded** from minimal stub to full community template: expanded tech stack (Flutter, Kotlin, Terraform, AWS/GCP/Azure), ADR decision framework, scalability checklist, and enriched script documentation.
 
 ### Removed / Deprecated
 - `backend-infra/backend-expert` — Consolidated into `nodejs-best-practices` and `database-design`.
