@@ -48,6 +48,7 @@ _Goal: Turn users into fans._
 1.  **Design System & Styling**: Use **[`design-it`](design-it/SKILL.md)** to route your interface design to one of the 48 sophisticated visual styles.
     - _Primitives_: Integrate **[`shadcn`](shadcn/SKILL.md)** components for accessible, themeable UI blocks.
     - _Layouts_: Apply **[`react-ui-patterns`](react-ui-patterns/SKILL.md)** for layouts.
+    - _Dashboard Design_: Apply **[`dashboard-design`](dashboard-design/SKILL.md)** to implement clean, modular, and scannable grids for analytics-focused screens and metrics tracking.
 
 2.  **Premium Feel**: Apply **[`ui-ux-pro-max`](ui-ux-pro-max/SKILL.md)**.
     - _Micro-interactions_: Feedback on every click.
@@ -85,6 +86,7 @@ _Goal: Pay down technical debt and debug production safely._
 | Skill | Focus | Goal | When to use |
 | :--- | :--- | :--- | :--- |
 | **[`design-it`](design-it/)** | Visuals | Routing design to 48 opinions | Selecting specific premium layout aesthetics |
+| **[`dashboard-design`](dashboard-design/)** | Layouts | Analytics-focused grids | Building responsive metrics dashboards (web/mobile) |
 | **[`ui-ux-pro-max`](ui-ux-pro-max/)** | Aesthetics | Creating premium interfaces | Polishing UI for wow factor |
 | **[`ui-ux-designer`](ui-ux-designer/)** | Strategy/UX | User research & design tokens | High-level system design guidelines and cross-platform UX strategy |
 | **[`antigravity-design-expert`](antigravity-design-expert/)** | Spatial & Motion | Weightless 3D & glassmorphism | Immersive landing pages, dashboards, and GSAP motion |
