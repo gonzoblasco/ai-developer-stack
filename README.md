@@ -93,6 +93,7 @@ If you are looking for a specific skill, here is the complete index by domain.
 - **[`architecture-patterns`](strategy-architecture/architecture-patterns)**: Hexagonal, Clean, and DDD patterns.
 - **[`saas-multi-tenant`](strategy-architecture/saas-multi-tenant)**: Tenant database separation.
 - **[`brainstorming`](strategy-architecture/brainstorming)**: Unblocking creativity and generating feature ideas.
+- **[`design-orchestration`](strategy-architecture/design-orchestration)**: Meta-skill for design workflow routing, reviews, and execution readiness.
 - **[`app-builder`](strategy-architecture/app-builder)**: MVP scaffolding guide.
 - **[`pricing-strategy`](strategy-architecture/pricing-strategy)**: Monetization models.
 - **[`marketing-ideas`](strategy-architecture/marketing-ideas)**: Go-to-market strategy.
@@ -112,6 +113,8 @@ If you are looking for a specific skill, here is the complete index by domain.
 
 - **[`frontend-dev-guidelines`](frontend-ui/frontend-dev-guidelines)**: Scalable frontend code.
 - **[`frontend-developer`](frontend-ui/frontend-developer)**: React component structures.
+- **[`accessibility-audit`](frontend-ui/accessibility-audit)**: WCAG compliance, keyboard testing, and screen reader compatibility.
+- **[`ui-a11y`](frontend-ui/ui-a11y)**: StyleSeed components accessibility audit and autofixes.
 - **[`react-patterns`](frontend-ui/react-patterns)**: Hooks & composition (React 19).
 - **[`react-ui-patterns`](frontend-ui/react-ui-patterns)**: Layout structures.
 - **[`react-migration-16-to-19`](frontend-ui/react-migration-16-to-19)**: Upgrade guides.
@@ -119,6 +122,9 @@ If you are looking for a specific skill, here is the complete index by domain.
 - **[`nextjs-best-practices`](frontend-ui/nextjs-best-practices)**: App Router & SSR.
 - **[`nextjs-production-debugger`](frontend-ui/nextjs-production-debugger)**: Debugging hydration & caching.
 - **[`ui-review-nextjs-tailwind`](frontend-ui/ui-review-nextjs-tailwind)**: Code & design audits.
+- **[`ui-ux-pro-max`](frontend-ui/ui-ux-pro-max)**: UI/UX design intelligence and style matching.
+- **[`antigravity-design-expert`](frontend-ui/antigravity-design-expert)**: Weightless 3D spatial transforms and GSAP animations.
+- **[`design-spells`](frontend-ui/design-spells)**: Curated micro-interactions, Easter eggs, and visual magic.
 - **[`tailwind-patterns`](frontend-ui/tailwind-patterns)**: Utility-first CSS at scale.
 - **[`shadcn`](frontend-ui/shadcn)**: Composable accessible components.
 - **[`tanstack-query-expert`](frontend-ui/tanstack-query-expert)**: Server state queries and mutations.
@@ -136,6 +142,7 @@ If you are looking for a specific skill, here is the complete index by domain.
 - **[`pdf-official`](tools-automation/pdf-official)**: PDF generation tools.
 - **[`docs-architect`](tools-automation/docs-architect)**: Deep technical manuals.
 - **[`documentation-expert`](tools-automation/documentation-expert)**: Repository hygiene (README, CHANGELOG, etc.).
+- **[`design-md`](tools-automation/design-md)**: Stitch project analysis and DESIGN.md generation.
 
 ### 🏗️ Product Building
 
@@ -148,6 +155,7 @@ If you are looking for a specific skill, here is the complete index by domain.
 
 - **[`typescript-expert`](languages-standards/typescript-expert)**: Strict static typing.
 - **[`clean-code`](languages-standards/clean-code)**: Clean code principles.
+- **[`software-architecture`](languages-standards/software-architecture)**: Code style rules, naming conventions, and library-first approach.
 - **[`nodejs-best-practices`](languages-standards/nodejs-best-practices)**: Node.js runtime and architecture best practices.
 - **[`testing-patterns`](languages-standards/testing-patterns)**: Vitest unit testing & mock factories.
 

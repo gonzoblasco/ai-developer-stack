@@ -48,6 +48,8 @@ _Goal: Handle complex file formats and maintain document architecture._
 
 3.  **Repository Hygiene**: Use **[`documentation-expert`](documentation-expert/SKILL.md)** to generate project README, CHANGELOG, and AGENTS.md files.
 
+4.  **Design System Synthesis**: Use **[`design-md`](design-md/SKILL.md)** to analyze Stitch projects via MCP and compile design systems into `DESIGN.md` files.
+
 ---
 
 ## 📚 Skill Index
@@ -63,3 +65,4 @@ _Goal: Handle complex file formats and maintain document architecture._
 | **[`pdf-official`](pdf-official/)** | Documents | Generating and manipulating PDF files |
 | **[`docs-architect`](docs-architect/)** | Architecture Docs | Compiling deep codebase reference manuals |
 | **[`documentation-expert`](documentation-expert/)** | Repo Hygiene | Automating README, CHANGELOG, and AGENTS.md |
+| **[`design-md`](design-md/)** | Design Systems | Synthesizing Stitch projects into DESIGN.md files |

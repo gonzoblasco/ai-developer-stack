@@ -52,5 +52,6 @@ _Goal: Sleep well at night._
 | :--- | :--- | :--- |
 | **[`typescript-expert`](typescript-expert/)** | Type Safety | Advanced types, generics, strict config patterns |
 | **[`clean-code`](clean-code/)** | Principles | Improving readability, refactoring logic, class designs |
+| **[`software-architecture`](software-architecture/)** | Code Standards | Code style rules, naming conventions, library-first approach |
 | **[`nodejs-best-practices`](nodejs-best-practices/)** | Runtime/Architecture | Node.js backend architecture, frameworks, async and security principles |
 | **[`testing-patterns`](testing-patterns/)** | QA & TDD | Vitest unit/integration testing strategies, mocking, factories |

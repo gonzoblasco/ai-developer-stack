@@ -54,6 +54,10 @@ _Goal: Turn users into fans._
     - _Aesthetics_: Glassmorphism, modern gradients, and "breathing room" (whitespace).
     - _Mindset_: "If it looks basic, you failed."
 
+3.  **Spatial & Motion Design**: Apply **[`antigravity-design-expert`](antigravity-design-expert/SKILL.md)** for weightless, 3D spatial, and glassmorphism-based interfaces using GSAP and 3D transforms.
+
+4.  **Magic & Micro-interactions**: Use **[`design-spells`](design-spells/SKILL.md)** to inject delightful animations, easter eggs, and clever interactive design patterns that add personality.
+
 ### 🔄 Phase 4: Optimization, Debugging & Migrations
 
 _Goal: Pay down technical debt and debug production safely._
@@ -63,9 +67,12 @@ _Goal: Pay down technical debt and debug production safely._
     - _Hydration_: Fix text mismatch errors.
     - _Performance_: Audit waterfalls and bundle size.
 
-2.  **PWA Configuration**: Turn your app into an installable mobile experience with **[`progressive-web-app`](progressive-web-app/SKILL.md)**.
+2.  **Accessibility Audits**: Conduct audits with **[`accessibility-audit`](accessibility-audit/SKILL.md)** or focus on mobile-first StyleSeed component audits using **[`ui-a11y`](ui-a11y/SKILL.md)**.
+    - _Fixes_: Prioritize semantic HTML before ARIA, and verify touch targets (>=44x44px).
 
-3.  **Upgrade Path**: Upgrade safely to React 19 using **[`react-migration-16-to-19`](react-migration-16-to-19/SKILL.md)**.
+3.  **PWA Configuration**: Turn your app into an installable mobile experience with **[`progressive-web-app`](progressive-web-app/SKILL.md)**.
+
+4.  **Upgrade Path**: Upgrade safely to React 19 using **[`react-migration-16-to-19`](react-migration-16-to-19/SKILL.md)**.
 
 ---
 
@@ -75,8 +82,12 @@ _Goal: Pay down technical debt and debug production safely._
 | :--- | :--- | :--- | :--- |
 | **[`design-it`](design-it/)** | Visuals | Routing design to 48 opinions | Selecting specific premium layout aesthetics |
 | **[`ui-ux-pro-max`](ui-ux-pro-max/)** | Aesthetics | Creating premium interfaces | Polishing UI for wow factor |
+| **[`antigravity-design-expert`](antigravity-design-expert/)** | Spatial & Motion | Weightless 3D & glassmorphism | Immersive landing pages, dashboards, and GSAP motion |
+| **[`design-spells`](design-spells/)** | Spells/UX | Micro-interactions & Easter eggs | Polishing completed components to add wow factor and magic |
 | **[`frontend-dev-guidelines`](frontend-dev-guidelines/)** | Standards | Consistency across team | Starting new project/onboarding |
 | **[`frontend-developer`](frontend-developer/)** | Logic/UI | Component structure | Implementing frontend components |
+| **[`accessibility-audit`](accessibility-audit/)** | Accessibility | WCAG compliance & keyboard testing | Auditing and fixing accessibility barriers |
+| **[`ui-a11y`](ui-a11y/)** | Accessibility/UI | WCAG 2.2 AA StyleSeed component audit | Auditing and autofixing mobile-first interactive controls |
 | **[`nextjs-best-practices`](nextjs-best-practices/)** | Framework | Scalable architecture | Building new App Router apps |
 | **[`nextjs-production-debugger`](nextjs-production-debugger/)** | Fixes | Production stability | Debugging SSR/CSR bugs or slowness |
 | **[`ui-review-nextjs-tailwind`](ui-review-nextjs-tailwind/)** | Review | Design & code audit | Auditing layout and performance before shipping |

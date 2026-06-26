@@ -12,9 +12,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - `tools-automation/linear-expert` — Adapted from Claude-specific scripts to a generic REST/GraphQL workflow.
 - `tools-automation/docs-architect` — Deep technical manuals compilation from codebase analysis.
 - `languages-standards/nodejs-best-practices` — Layered architecture, runtime selection, and async principles for Node.js.
+- `languages-standards/software-architecture` — General code style rules, naming conventions, and library-first development standards.
 - `ai-agents/ai-agents-architect` — Master loops, memory architectures, and multi-agent coordination.
 - `strategy-architecture/architecture` — System design and ADR templates.
 - `strategy-architecture/architecture-patterns` — Hexagonal, Clean, and DDD patterns.
+- `frontend-ui/accessibility-audit` — Comprehensive WCAG compliance auditing, keyboard navigation, and screen reader verification workflows.
+- `frontend-ui/antigravity-design-expert` — Core UI/UX engineering skill for building highly interactive, spatial, weightless, and glassmorphism-based web interfaces using GSAP and 3D CSS.
+- `tools-automation/design-md` — Analyze Stitch projects and synthesize semantic design systems into DESIGN.md files.
+- `frontend-ui/design-spells` — Curated micro-interactions, Easter eggs, and design details that add magic and personality to websites and apps.
+- `strategy-architecture/design-orchestration` — Meta-skill to orchestrate design workflows through brainstorming, multi-agent review, and readiness checks.
+- `frontend-ui/ui-a11y` — StyleSeed-based component accessibility auditing, WCAG 2.2 AA verification, and mobile-first autofixes.
 
 ### Changed
 - `languages-standards/testing-patterns` — Migrated completely from Jest to **Vitest** mocking and assertions.

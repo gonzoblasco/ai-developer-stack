@@ -24,10 +24,12 @@ _Goal: Validate the idea and define value._
 1.  **Unlock Creativity**: Use **[`brainstorming`](brainstorming/SKILL.md)** to generate ideas or solve blockers.
     - _Techniques_: SCAMPER, First Principles, Inversion.
 
-2.  **Define the Market**: Use **[`marketing-ideas`](marketing-ideas/SKILL.md)** and **[`pricing-strategy`](pricing-strategy/SKILL.md)** early.
+2.  **Design Flow Control**: Use **[`design-orchestration`](design-orchestration/SKILL.md)** to route designs through brainstorming, reviews, and execution readiness checks.
+
+3.  **Define the Market**: Use **[`marketing-ideas`](marketing-ideas/SKILL.md)** and **[`pricing-strategy`](pricing-strategy/SKILL.md)** early.
     - _Rule_: If you can't define who pays or how they pay, you don't have a product yet.
 
-3.  **Prototype Fast**: Use **[`app-builder`](app-builder/SKILL.md)** to map the MVP.
+4.  **Prototype Fast**: Use **[`app-builder`](app-builder/SKILL.md)** to map the MVP.
     - _Focus_: Core Value Proposition only. Everything else is distraction.
 
 ### 🏗️ Phase 2: Architecture & Decision (The "What")
@@ -66,6 +68,7 @@ _Goal: Better every day._
 | **[`architecture-patterns`](architecture-patterns/)** | Patterns | Hexagonal, Clean, and DDD patterns |
 | **[`saas-multi-tenant`](saas-multi-tenant/)** | Multi-Tenancy | Database isolation and tenant schemas |
 | **[`brainstorming`](brainstorming/)** | Creativity | Unblocking problems, generating feature ideas |
+| **[`design-orchestration`](design-orchestration/)** | Orchestration | Routing and reviewing design workflows (brainstorming, review, implementation) |
 | **[`app-builder`](app-builder/)** | MVP | End-to-end guide for building new apps |
 | **[`pricing-strategy`](pricing-strategy/)** | Business | Determining monetization models |
 | **[`marketing-ideas`](marketing-ideas/)** | Growth | Go-to-market strategies |
