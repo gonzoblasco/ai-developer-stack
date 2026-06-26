@@ -62,12 +62,12 @@ _Goal: Turn users into fans._
 
 _Goal: Pay down technical debt and debug production safely._
 
-1.  **Debugging & Performance**: When things break in prod, use **[`nextjs-production-debugger`](nextjs-production-debugger/SKILL.md)** or **[`ui-review-nextjs-tailwind`](ui-review-nextjs-tailwind/SKILL.md)**.
+1.  **Debugging & Performance**: When things break in prod, use **[`nextjs-production-debugger`](nextjs-production-debugger/SKILL.md)** or **[`ui-review-nextjs-tailwind`](ui-review-nextjs-tailwind/SKILL.md)**. Review code against the latest web standards using **[`web-design-guidelines`](web-design-guidelines/SKILL.md)**.
     - _SSR vs CSR_: Identify if the bug is server-side or client-side.
     - _Hydration_: Fix text mismatch errors.
     - _Performance_: Audit waterfalls and bundle size.
 
-2.  **Accessibility Audits**: Conduct audits with **[`accessibility-audit`](accessibility-audit/SKILL.md)** or focus on mobile-first StyleSeed component audits using **[`ui-a11y`](ui-a11y/SKILL.md)**.
+2.  **Accessibility Audits**: Conduct audits with **[`accessibility-audit`](accessibility-audit/SKILL.md)**, execute WCAG 2.2 audits using **[`wcag-audit-patterns`](wcag-audit-patterns/SKILL.md)**, focus on mobile-first StyleSeed component audits using **[`ui-a11y`](ui-a11y/SKILL.md)**, or automate auditing and fixing using **[`accesslint-audit`](accesslint-audit/SKILL.md)**.
     - _Fixes_: Prioritize semantic HTML before ARIA, and verify touch targets (>=44x44px).
 
 3.  **PWA Configuration**: Turn your app into an installable mobile experience with **[`progressive-web-app`](progressive-web-app/SKILL.md)**.
@@ -88,9 +88,12 @@ _Goal: Pay down technical debt and debug production safely._
 | **[`frontend-developer`](frontend-developer/)** | Logic/UI | Component structure | Implementing frontend components |
 | **[`accessibility-audit`](accessibility-audit/)** | Accessibility | WCAG compliance & keyboard testing | Auditing and fixing accessibility barriers |
 | **[`ui-a11y`](ui-a11y/)** | Accessibility/UI | WCAG 2.2 AA StyleSeed component audit | Auditing and autofixing mobile-first interactive controls |
+| **[`wcag-audit-patterns`](wcag-audit-patterns/)** | Accessibility | WCAG 2.2 audit guide & checklists | Auditing layouts and forms for WCAG compliance |
+| **[`accesslint-audit`](accesslint-audit/)** | Accessibility/Fixes | WCAG 2.2 audit and autofix loops | Fixing codebases/pages using CDP or static HTML |
 | **[`nextjs-best-practices`](nextjs-best-practices/)** | Framework | Scalable architecture | Building new App Router apps |
 | **[`nextjs-production-debugger`](nextjs-production-debugger/)** | Fixes | Production stability | Debugging SSR/CSR bugs or slowness |
 | **[`ui-review-nextjs-tailwind`](ui-review-nextjs-tailwind/)** | Review | Design & code audit | Auditing layout and performance before shipping |
+| **[`web-design-guidelines`](web-design-guidelines/)** | Guidelines | Web Interface Guidelines verification | Checking layout, styling, and code against standards |
 | **[`react-patterns`](react-patterns/)** | Logic | Reusable hooks/patterns | Writing complex component logic |
 | **[`tailwind-patterns`](tailwind-patterns/)** | Styling | Maintainable CSS | Refactoring messy tailwind classes |
 | **[`shadcn`](shadcn/)** | Components | Reusable accessible parts | Designing UI block architecture |

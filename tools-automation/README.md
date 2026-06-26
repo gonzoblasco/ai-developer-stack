@@ -38,6 +38,8 @@ _Goal: Interact with websites that don't have APIs, or automate reviews._
 
 3.  **Human Code Review**: Use **[`vibers-code-review`](vibers-code-review/SKILL.md)** to request human PR feedback and compliance checks.
 
+4.  **GitHub Workflow Automation**: Use **[`github-workflow-automation`](github-workflow-automation/SKILL.md)** to configure automated PR reviews, issue triage labels, and smart CI/CD triggers.
+
 ### 📄 Level 3: Specialized Utilities & Docs
 
 _Goal: Handle complex file formats and maintain document architecture._
@@ -49,6 +51,8 @@ _Goal: Handle complex file formats and maintain document architecture._
 3.  **Repository Hygiene**: Use **[`documentation-expert`](documentation-expert/SKILL.md)** to generate project README, CHANGELOG, and AGENTS.md files.
 
 4.  **Design System Synthesis**: Use **[`design-md`](design-md/SKILL.md)** to analyze Stitch projects via MCP and compile design systems into `DESIGN.md` files.
+
+5.  **Session Postmortem Diagnostics**: Use **[`analyze-project`](analyze-project/SKILL.md)** to analyze coding session logs, root causes of churn, and identify fragile subsystems.
 
 ---
 
@@ -66,3 +70,5 @@ _Goal: Handle complex file formats and maintain document architecture._
 | **[`docs-architect`](docs-architect/)** | Architecture Docs | Compiling deep codebase reference manuals |
 | **[`documentation-expert`](documentation-expert/)** | Repo Hygiene | Automating README, CHANGELOG, and AGENTS.md |
 | **[`design-md`](design-md/)** | Design Systems | Synthesizing Stitch projects into DESIGN.md files |
+| **[`github-workflow-automation`](github-workflow-automation/)** | CI/CD & Review | Automating GitHub workflows with Actions and AI assistance |
+| **[`analyze-project`](analyze-project/)** | Forensic Diagnostics | Postmortem analysis of coding session churn and hotspots |

@@ -13,6 +13,7 @@ A diferencia de `strategy-architecture/` (planificación abstracta) o `tools-aut
 | [plan-writing](plan-writing/SKILL.md) | Creación de planes de tareas cortos e incrementales para código | TDD · Git |
 | [vibe-code-auditor](vibe-code-auditor/SKILL.md) | Auditoría de robustez en código generado rápidamente por IA | Calidad · Producción |
 | [react-nextjs-development](react-nextjs-development/SKILL.md) | Coordinación de fases de desarrollo en React/Next.js | React · Next.js |
+| [vibecode-production-qa-validator](vibecode-production-qa-validator/SKILL.md) | 13-phase production QA validator for fullstack Next.js apps | QA · Next.js · Production |
 | [brainstorming](brainstorming/SKILL.md) | Técnicas de ideación y resolución de bloqueos creativos | Creatividad |
 
 ## Filosofía

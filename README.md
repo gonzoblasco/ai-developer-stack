@@ -83,6 +83,7 @@ If you are looking for a specific skill, here is the complete index by domain.
 - **[`rag-expert`](ai-agents/rag-expert)**: High-precision RAG systems, semantic chunking, and reranking.
 - **[`mcp-builder`](ai-agents/mcp-builder)**: Building Model Context Protocol servers.
 - **[`prompt-mastery`](ai-agents/prompt-mastery)**: Advanced prompting (CoT, Few-Shot).
+- **[`prompt-engineer`](ai-agents/prompt-engineer)**: Optimizing prompts using structured frameworks (RTF, RISEN, RODES, etc.).
 - **[`meta-skill-antigravity`](ai-agents/meta-skill-antigravity)**: Methodology for creating new skills.
 - **[`elon-musk`](ai-agents/elon-musk)**: Persona simulation for strategic decision-making.
 
@@ -115,6 +116,8 @@ If you are looking for a specific skill, here is the complete index by domain.
 - **[`frontend-developer`](frontend-ui/frontend-developer)**: React component structures.
 - **[`accessibility-audit`](frontend-ui/accessibility-audit)**: WCAG compliance, keyboard testing, and screen reader compatibility.
 - **[`ui-a11y`](frontend-ui/ui-a11y)**: StyleSeed components accessibility audit and autofixes.
+- **[`wcag-audit-patterns`](frontend-ui/wcag-audit-patterns)**: WCAG 2.2 auditing guide and actionable remediation checklists.
+- **[`accesslint-audit`](frontend-ui/accesslint-audit)**: Automated WCAG 2.2 audit and autofix loops.
 - **[`react-patterns`](frontend-ui/react-patterns)**: Hooks & composition (React 19).
 - **[`react-ui-patterns`](frontend-ui/react-ui-patterns)**: Layout structures.
 - **[`react-migration-16-to-19`](frontend-ui/react-migration-16-to-19)**: Upgrade guides.
@@ -122,6 +125,7 @@ If you are looking for a specific skill, here is the complete index by domain.
 - **[`nextjs-best-practices`](frontend-ui/nextjs-best-practices)**: App Router & SSR.
 - **[`nextjs-production-debugger`](frontend-ui/nextjs-production-debugger)**: Debugging hydration & caching.
 - **[`ui-review-nextjs-tailwind`](frontend-ui/ui-review-nextjs-tailwind)**: Code & design audits.
+- **[`web-design-guidelines`](frontend-ui/web-design-guidelines)**: Compliance check against Vercel Web Interface Guidelines.
 - **[`ui-ux-pro-max`](frontend-ui/ui-ux-pro-max)**: UI/UX design intelligence and style matching.
 - **[`antigravity-design-expert`](frontend-ui/antigravity-design-expert)**: Weightless 3D spatial transforms and GSAP animations.
 - **[`design-spells`](frontend-ui/design-spells)**: Curated micro-interactions, Easter eggs, and visual magic.
@@ -138,11 +142,13 @@ If you are looking for a specific skill, here is the complete index by domain.
 - **[`meli-n8n-crm-logger`](tools-automation/meli-n8n-crm-logger)**: Specific Mercado Libre logging recipe.
 - **[`linear-expert`](tools-automation/linear-expert)**: Linear board API sync scripts.
 - **[`vibers-code-review`](tools-automation/vibers-code-review)**: Human PR review triggers.
+- **[`github-workflow-automation`](tools-automation/github-workflow-automation)**: AI-assisted GitHub actions and triage automation.
 - **[`e2e-testing-patterns`](tools-automation/e2e-testing-patterns)**: Playwright test design.
 - **[`pdf-official`](tools-automation/pdf-official)**: PDF generation tools.
 - **[`docs-architect`](tools-automation/docs-architect)**: Deep technical manuals.
 - **[`documentation-expert`](tools-automation/documentation-expert)**: Repository hygiene (README, CHANGELOG, etc.).
 - **[`design-md`](tools-automation/design-md)**: Stitch project analysis and DESIGN.md generation.
+- **[`analyze-project`](tools-automation/analyze-project)**: Forensic diagnostics of session rework patterns and hotspots.
 
 ### 🏗️ Product Building
 
@@ -150,6 +156,7 @@ If you are looking for a specific skill, here is the complete index by domain.
 - **[`not-a-vibe-coder`](product-building/not-a-vibe-coder)**: Multi-document planning for new projects.
 - **[`plan-writing`](product-building/plan-writing)**: Short actionable code implementation plans.
 - **[`vibe-code-auditor`](product-building/vibe-code-auditor)**: Audit AI-generated code.
+- **[`vibecode-production-qa-validator`](product-building/vibecode-production-qa-validator)**: 13-phase QA launch-readiness validator for fullstack Next.js.
 
 ### 📏 Languages & Standards
 

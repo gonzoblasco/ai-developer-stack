@@ -22,6 +22,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - `frontend-ui/design-spells` — Curated micro-interactions, Easter eggs, and design details that add magic and personality to websites and apps.
 - `strategy-architecture/design-orchestration` — Meta-skill to orchestrate design workflows through brainstorming, multi-agent review, and readiness checks.
 - `frontend-ui/ui-a11y` — StyleSeed-based component accessibility auditing, WCAG 2.2 AA verification, and mobile-first autofixes.
+- `frontend-ui/wcag-audit-patterns` — Comprehensive guide to auditing web content against WCAG 2.2 guidelines with actionable remediation strategies.
+- `frontend-ui/accesslint-audit` — Find and fix WCAG 2.2 accessibility issues using live DOM CDP or static HTML string audits.
+- `frontend-ui/web-design-guidelines` — Code compliance verification against Vercel's Web Interface Guidelines.
+- `product-building/vibecode-production-qa-validator` — 13-phase QA launch-readiness validator for fullstack Next.js applications covering SEO, Auth, and performance.
+- `tools-automation/analyze-project` — Forensic root cause analyzer for Antigravity sessions to classify scope deltas, rework patterns, and hotspots.
+- `ai-agents/prompt-engineer` — Transmute raw prompts into structured prompt frameworks (RTF, RISEN, Chain of Thought, etc.) to optimize AI output.
+- `tools-automation/github-workflow-automation` — AI-assisted GitHub Action setups, issue triage, and smart test select patterns.
 
 ### Changed
 - `languages-standards/testing-patterns` — Migrated completely from Jest to **Vitest** mocking and assertions.

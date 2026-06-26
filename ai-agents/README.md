@@ -21,10 +21,10 @@ graph TD
 
 _Goal: Define behavior, boundaries, and reasoning style._
 
-1.  **Architect the Prompt**: Don't guess. Use **[`prompt-mastery`](prompt-mastery/SKILL.md)** to structure your System Instructions.
+1.  **Architect the Prompt**: Don't guess. Use **[`prompt-mastery`](prompt-mastery/SKILL.md)** to structure your System Instructions or dynamically optimize user queries using framework routing in **[`prompt-engineer`](prompt-engineer/SKILL.md)**.
     - _Critical_: Apply "Anti-Injection" patterns from day one.
 
-2.  **Optimize Reasoning**: If the agent needs to solve complex problems, apply **[`prompt-mastery`](prompt-mastery/SKILL.md)** techniques.
+2.  **Optimize Reasoning**: If the agent needs to solve complex problems, apply **[`prompt-mastery`](prompt-mastery/SKILL.md)** or framework mappings from **[`prompt-engineer`](prompt-engineer/SKILL.md)**.
     - Use **Few-Shot Prompting** to teach by example.
     - Use **Chain-of-Thought** to force step-by-step logic before answering.
 
@@ -67,6 +67,7 @@ _Goal: Deploy without sleepless nights._
 | Skill | Focus Area | When to use |
 | :--- | :--- | :--- |
 | **[`prompt-mastery`](prompt-mastery/)** | Prompt Engineering | Optimizing prompts, Chain-of-Thought, templates |
+| **[`prompt-engineer`](prompt-engineer/)** | Prompt Frameworks | Transforming generic requests using RTF, RISEN, RODES, etc. |
 | **[`agent-tool-builder`](agent-tool-builder/)** | Tools & Functions | Designing JSON schemas for function calling |
 | **[`ai-agents-architect`](ai-agents-architect/)** | Agent Reliability | Building loops, memory systems, safety checks, and multi-agent orchestration |
 | **[`rag-expert`](rag-expert/)** | Knowledge/RAG | Building retrieval pipelines, chunking, reranking |
