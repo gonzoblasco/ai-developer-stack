@@ -48,6 +48,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - `product-building/close-epic` — Ritual de consolidación, versionado y cierre de bloques de desarrollo estratégico (Epics) en Git.
 - `product-building/micro-saas-launcher` — Lanzamiento rápido de MVPs y SaaS con enfoque Indie Hacker (idea validation, pricing, launch, churn, onboard).
 - `product-building/product-manager` — Senior PM agent: 6 knowledge domains, 30+ frameworks, 12 templates, 32 SaaS metrics with formulas (MIT / Digidai).
+- `product-building/product-manager-toolkit` — Practical PM toolkit: RICE prioritizer, NLP interview analyzer, PRD templates, discovery frameworks, and MoSCoW.
 
 - `product-building/copilot` — Orquestador universal de workflow y checklist pre-flight obligatorio para gobernar las tareas.
 

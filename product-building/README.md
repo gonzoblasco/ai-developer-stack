@@ -19,6 +19,7 @@ A diferencia de `strategy-architecture/` (planificación abstracta) o `tools-aut
 | [close-epic](close-epic/SKILL.md) | Ritual de consolidación, versionado y cierre de Epics en Git | Git · Versioning · Release |
 | [micro-saas-launcher](micro-saas-launcher/SKILL.md) | Lanzamiento rápido de MVPs y SaaS con enfoque Indie Hacker | Planificación · Stripe · MVP |
 | [product-manager](product-manager/SKILL.md) | Senior PM agent: 6 dominios, 30+ frameworks, 12 templates, 32 métricas SaaS | PRD · Roadmap · SaaS Metrics |
+| [product-manager-toolkit](product-manager-toolkit/SKILL.md) | Toolkit práctico PM: RICE prioritizer, customer interview analyzer, PRD templates | RICE · Discovery · Metrics |
 
 
 | [copilot](copilot/SKILL.md) | Orquestador universal de workflow y checklist pre-flight | Workflow · Gates · QA |
