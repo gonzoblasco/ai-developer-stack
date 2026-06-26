@@ -57,6 +57,7 @@ _Goal: Handle complex file formats and maintain document architecture._
 2.  **Documentation Architecture**: Use **[`docs-architect`](docs-architect/SKILL.md)** for compiling massive codebase technical reference manuals.
 
 3.  **Repository Hygiene**: Use **[`documentation-expert`](documentation-expert/SKILL.md)** to generate project README, CHANGELOG, and AGENTS.md files.
+    - _Documentation Synchronization_: Apply **[`docs-sync`](docs-sync/SKILL.md)** to analyze code changes and update out-of-sync knowledge files automatically at the end of an epic.
 
 4.  **Design System Synthesis**: Use **[`design-md`](design-md/SKILL.md)** to analyze Stitch projects via MCP and compile design systems into `DESIGN.md` files.
 
@@ -79,7 +80,8 @@ _Goal: Handle complex file formats and maintain document architecture._
 | **[`e2e-testing-patterns`](e2e-testing-patterns/)** | E2E Testing | Designing Playwright test suites |
 | **[`pdf-official`](pdf-official/)** | Documents | Generating and manipulating PDF files |
 | **[`docs-architect`](docs-architect/)** | Architecture Docs | Compiling deep codebase reference manuals |
-| **[`documentation-expert`](documentation-expert/)** | Repo Hygiene | Automating README, CHANGELOG, and AGENTS.md |
+| **[`documentation-expert`](documentation-expert/)** | Repo Hygiene | Automating README, CHANGELOG, AGENTS, and `.knowledge/` base |
+| **[`docs-sync`](docs-sync/)** | Sync | Surgical documentation synchronization upon epic closure |
 | **[`design-md`](design-md/)** | Design Systems | Synthesizing Stitch projects into DESIGN.md files |
 | **[`github-workflow-automation`](github-workflow-automation/)** | CI/CD & Review | Automating GitHub workflows with Actions and AI assistance |
 | **[`github-actions-templates`](github-actions-templates/)** | CI/CD Templates | Production-ready GitHub Actions workflow patterns |

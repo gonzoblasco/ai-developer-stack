@@ -180,7 +180,8 @@ If you are looking for a specific skill, here is the complete index by domain.
 - **[`e2e-testing-patterns`](tools-automation/e2e-testing-patterns)**: Playwright test design.
 - **[`pdf-official`](tools-automation/pdf-official)**: PDF generation tools.
 - **[`docs-architect`](tools-automation/docs-architect)**: Deep technical manuals.
-- **[`documentation-expert`](tools-automation/documentation-expert)**: Repository hygiene (README, CHANGELOG, etc.).
+- **[`documentation-expert`](tools-automation/documentation-expert)**: Repository hygiene (README, CHANGELOG, AGENTS, and `.knowledge/` base).
+- **[`docs-sync`](tools-automation/docs-sync)**: Surgical documentation synchronization upon epic closure.
 - **[`design-md`](tools-automation/design-md)**: Stitch project analysis and DESIGN.md generation.
 - **[`analyze-project`](tools-automation/analyze-project)**: Forensic diagnostics of session rework patterns and hotspots.
 
