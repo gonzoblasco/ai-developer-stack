@@ -58,6 +58,8 @@ _Goal: Turn users into fans._
 
 4.  **Magic & Micro-interactions**: Use **[`design-spells`](design-spells/SKILL.md)** to inject delightful animations, easter eggs, and clever interactive design patterns that add personality.
 
+5.  **Interactive Documentation**: Use **[`web-artifacts-builder`](web-artifacts-builder/SKILL.md)** to build self-contained React-based interactive dashboards and documentation pages that feed Antigravity.
+
 ### 🔄 Phase 4: Optimization, Debugging & Migrations
 
 _Goal: Pay down technical debt and debug production safely._
@@ -103,3 +105,4 @@ _Goal: Pay down technical debt and debug production safely._
 | **[`react-ui-patterns`](react-ui-patterns/)** | Components | Layout patterns | Building consistent structures |
 | **[`progressive-web-app`](progressive-web-app/)** | PWA | App installability | Packaging web apps as PWAs |
 | **[`lovable-cleanup`](lovable-cleanup/)** | Cleanup | Stripping templates | Exporting code from Lovable Cloud |
+| **[`web-artifacts-builder`](web-artifacts-builder/)** | Artifacts | Bundling self-contained UIs | Building React-based documentation pages for Antigravity |

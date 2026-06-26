@@ -32,6 +32,8 @@ _Goal: Validate the idea and define value._
 4.  **Prototype Fast**: Use **[`app-builder`](app-builder/SKILL.md)** to map the MVP.
     - _Focus_: Core Value Proposition only. Everything else is distraction.
 
+5.  **Multi-Skill Orchestration**: Use **[`antigravity-workflows`](antigravity-workflows/SKILL.md)** to run structured workflows (SaaS MVP delivery, QA, security, etc.) by chaining multiple specialized skills.
+
 ### 🏗️ Phase 2: Architecture & Decision (The "What")
 
 _Goal: Design a system that survives success._
@@ -69,6 +71,7 @@ _Goal: Better every day._
 | **[`saas-multi-tenant`](saas-multi-tenant/)** | Multi-Tenancy | Database isolation and tenant schemas |
 | **[`brainstorming`](brainstorming/)** | Creativity | Unblocking problems, generating feature ideas |
 | **[`design-orchestration`](design-orchestration/)** | Orchestration | Routing and reviewing design workflows (brainstorming, review, implementation) |
+| **[`antigravity-workflows`](antigravity-workflows/)** | Meta-Workflows | Guided multi-skill orchestration (MVP, QA, security, agent-builds) |
 | **[`app-builder`](app-builder/)** | MVP | End-to-end guide for building new apps |
 | **[`pricing-strategy`](pricing-strategy/)** | Business | Determining monetization models |
 | **[`marketing-ideas`](marketing-ideas/)** | Growth | Go-to-market strategies |

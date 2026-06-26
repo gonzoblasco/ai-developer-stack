@@ -26,6 +26,8 @@ _Goal: Connect APIs quickly without maintaining servers._
 
 2.  **API Management**: Use **[`linear-expert`](linear-expert/SKILL.md)** to script task synchronization between codebase commits and Linear boards via GraphQL.
 
+3.  **GitHub MCP Automation**: Use **[`github-automation`](github-automation/SKILL.md)** to interact with repositories, issues, pull requests, and branches directly via Rube MCP.
+
 ### 🕸️ Level 2: Browser & Review Automation (The Heavy Lifting)
 
 _Goal: Interact with websites that don't have APIs, or automate reviews._
@@ -39,6 +41,10 @@ _Goal: Interact with websites that don't have APIs, or automate reviews._
 3.  **Human Code Review**: Use **[`vibers-code-review`](vibers-code-review/SKILL.md)** to request human PR feedback and compliance checks.
 
 4.  **GitHub Workflow Automation**: Use **[`github-workflow-automation`](github-workflow-automation/SKILL.md)** to configure automated PR reviews, issue triage labels, and smart CI/CD triggers.
+
+5.  **GitHub Actions Templates**: Use **[`github-actions-templates`](github-actions-templates/SKILL.md)** for production-ready, reusable CI/CD workflows, dockerization, EKS deployment, and security scanning configs.
+
+6.  **Git PR Description Generator**: Use **[`git-pr-review`](git-pr-review/SKILL.md)** to analyze local commit histories and generate structured PR titles and descriptions with minimal token usage.
 
 ### 📄 Level 3: Specialized Utilities & Docs
 
@@ -65,10 +71,13 @@ _Goal: Handle complex file formats and maintain document architecture._
 | **[`meli-n8n-crm-logger`](meli-n8n-crm-logger/)** | E-commerce | Specific recipe for MercadoLibre CRM logging |
 | **[`linear-expert`](linear-expert/)** | API Sync | Scripting issues, tasks, and roadmaps in Linear |
 | **[`vibers-code-review`](vibers-code-review/)** | Code Review | Standard workflow for human spec-based PR reviews |
+| **[`git-pr-review`](git-pr-review/)** | PR Description | Local commit history analyzer for PR description drafting |
 | **[`e2e-testing-patterns`](e2e-testing-patterns/)** | E2E Testing | Designing Playwright test suites |
 | **[`pdf-official`](pdf-official/)** | Documents | Generating and manipulating PDF files |
 | **[`docs-architect`](docs-architect/)** | Architecture Docs | Compiling deep codebase reference manuals |
 | **[`documentation-expert`](documentation-expert/)** | Repo Hygiene | Automating README, CHANGELOG, and AGENTS.md |
 | **[`design-md`](design-md/)** | Design Systems | Synthesizing Stitch projects into DESIGN.md files |
 | **[`github-workflow-automation`](github-workflow-automation/)** | CI/CD & Review | Automating GitHub workflows with Actions and AI assistance |
+| **[`github-actions-templates`](github-actions-templates/)** | CI/CD Templates | Production-ready GitHub Actions workflow patterns |
 | **[`analyze-project`](analyze-project/)** | Forensic Diagnostics | Postmortem analysis of coding session churn and hotspots |
+| **[`github-automation`](github-automation/)** | API / MCP | Programmatic repository, issue, and PR management via Rube MCP |

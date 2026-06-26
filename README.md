@@ -116,6 +116,7 @@ If you are looking for a specific skill, here is the complete index by domain.
 - **[`saas-multi-tenant`](strategy-architecture/saas-multi-tenant)**: Tenant database separation.
 - **[`brainstorming`](strategy-architecture/brainstorming)**: Unblocking creativity and generating feature ideas.
 - **[`design-orchestration`](strategy-architecture/design-orchestration)**: Meta-skill for design workflow routing, reviews, and execution readiness.
+- **[`antigravity-workflows`](strategy-architecture/antigravity-workflows)**: Guided multi-skill orchestration (MVP, QA, security, agent-builds).
 - **[`app-builder`](strategy-architecture/app-builder)**: MVP scaffolding guide.
 - **[`pricing-strategy`](strategy-architecture/pricing-strategy)**: Monetization models.
 - **[`marketing-ideas`](strategy-architecture/marketing-ideas)**: Go-to-market strategy.
@@ -155,6 +156,7 @@ If you are looking for a specific skill, here is the complete index by domain.
 - **[`tanstack-query-expert`](frontend-ui/tanstack-query-expert)**: Server state queries and mutations.
 - **[`progressive-web-app`](frontend-ui/progressive-web-app)**: PWA patterns.
 - **[`lovable-cleanup`](frontend-ui/lovable-cleanup)**: Cleaning up Lovable Cloud exports.
+- **[`web-artifacts-builder`](frontend-ui/web-artifacts-builder)**: Bundling self-contained UIs for Antigravity interactive docs.
 
 ### 🌐 Full-Stack
 
@@ -167,7 +169,10 @@ If you are looking for a specific skill, here is the complete index by domain.
 - **[`meli-n8n-crm-logger`](tools-automation/meli-n8n-crm-logger)**: Specific Mercado Libre logging recipe.
 - **[`linear-expert`](tools-automation/linear-expert)**: Linear board API sync scripts.
 - **[`vibers-code-review`](tools-automation/vibers-code-review)**: Human PR review triggers.
+- **[`git-pr-review`](tools-automation/git-pr-review)**: Local commit history analyzer for PR description drafting.
 - **[`github-workflow-automation`](tools-automation/github-workflow-automation)**: AI-assisted GitHub actions and triage automation.
+- **[`github-automation`](tools-automation/github-automation)**: Programmatic repository, issue, and PR management via Rube MCP.
+- **[`github-actions-templates`](tools-automation/github-actions-templates)**: Production-ready GitHub Actions workflow patterns.
 - **[`e2e-testing-patterns`](tools-automation/e2e-testing-patterns)**: Playwright test design.
 - **[`pdf-official`](tools-automation/pdf-official)**: PDF generation tools.
 - **[`docs-architect`](tools-automation/docs-architect)**: Deep technical manuals.

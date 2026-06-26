@@ -21,10 +21,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - `tools-automation/design-md` — Analyze Stitch projects and synthesize semantic design systems into DESIGN.md files.
 - `frontend-ui/design-spells` — Curated micro-interactions, Easter eggs, and design details that add magic and personality to websites and apps.
 - `strategy-architecture/design-orchestration` — Meta-skill to orchestrate design workflows through brainstorming, multi-agent review, and readiness checks.
+- `strategy-architecture/antigravity-workflows` — Orchestrate multiple Antigravity skills through guided workflows for SaaS MVP, security audits, AI agents, and browser QA.
 - `frontend-ui/ui-a11y` — StyleSeed-based component accessibility auditing, WCAG 2.2 AA verification, and mobile-first autofixes.
 - `frontend-ui/wcag-audit-patterns` — Comprehensive guide to auditing web content against WCAG 2.2 guidelines with actionable remediation strategies.
 - `frontend-ui/accesslint-audit` — Find and fix WCAG 2.2 accessibility issues using live DOM CDP or static HTML string audits.
 - `frontend-ui/web-design-guidelines` — Code compliance verification against Vercel's Web Interface Guidelines.
+- `frontend-ui/web-artifacts-builder` — Bundling self-contained React/Tailwind/shadcn UIs as interactive documentation pages for Antigravity.
 - `product-building/vibecode-production-qa-validator` — 13-phase QA launch-readiness validator for fullstack Next.js applications covering SEO, Auth, and performance.
 - `tools-automation/analyze-project` — Forensic root cause analyzer for Antigravity sessions to classify scope deltas, rework patterns, and hotspots.
 - `ai-agents/prompt-engineer` — Transmute raw prompts into structured prompt frameworks (RTF, RISEN, Chain of Thought, etc.) to optimize AI output.
@@ -33,6 +35,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - `growth/linkedin-profile-optimizer` — Audit and optimize LinkedIn profile positioning for authority and SEO.
 - `growth/social-post-writer-seo` — Platform-optimized social media content generation.
 - `skill-authoring/writing-great-skills` — Vocabulary, information hierarchy, and principles for writing predictable skills.
+- `tools-automation/github-automation` — Automate GitHub repositories, issues, PRs, and workflows via Rube MCP (Composio).
+- `tools-automation/github-actions-templates` — Production-ready GitHub Actions workflow patterns for testing, building, and deploying.
+- `tools-automation/git-pr-review` — Generate a concise and structured PR description from commit history with minimal token usage.
 
 ### Changed
 - `languages-standards/testing-patterns` — Migrated completely from Jest to **Vitest** mocking and assertions.
