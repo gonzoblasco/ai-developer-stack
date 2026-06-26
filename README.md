@@ -145,6 +145,8 @@ If you are looking for a specific skill, here is the complete index by domain.
 - **[`react-patterns`](frontend-ui/react-patterns)**: Hooks & composition (React 19).
 - **[`react-ui-patterns`](frontend-ui/react-ui-patterns)**: Layout structures.
 - **[`dashboard-design`](frontend-ui/dashboard-design)**: Analytics-focused layouts, data visualization, and modular overview screens.
+- **[`material-design`](frontend-ui/material-design)**: Material Design 3 guidelines for Web, Android/Jetpack Compose, iOS/SwiftUI, Flutter, and React Native.
+
 - **[`react-migration-16-to-19`](frontend-ui/react-migration-16-to-19)**: Upgrade guides.
 - **[`redux-migration-rtk-zustand`](frontend-ui/redux-migration-rtk-zustand)**: Modern state management.
 - **[`nextjs-best-practices`](frontend-ui/nextjs-best-practices)**: App Router & SSR.
