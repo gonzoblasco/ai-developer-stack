@@ -230,6 +230,7 @@ If you are looking for a specific skill, here is the complete index by domain.
 - **[`nodejs-best-practices`](languages-standards/nodejs-best-practices)**: Node.js runtime and architecture best practices.
 - **[`testing-patterns`](languages-standards/testing-patterns)**: Vitest unit testing & mock factories.
 - **[`javascript-mastery`](languages-standards/javascript-mastery)**: 33+ core JS concepts — primitives, closures, async, prototypes, and modern ES6+.
+- **[`javascript-testing-patterns`](languages-standards/javascript-testing-patterns)**: Full-spectrum JS/TS testing — unit, integration, E2E (Playwright), component (Testing Library), MSW, TDD, and CI/CD.
 
 ### 📈 Growth & Personal Brand
 

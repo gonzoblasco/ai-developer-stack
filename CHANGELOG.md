@@ -71,6 +71,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - `tools-automation/docs-sync` — Surgical documentation synchronization upon epic/feature closure.
 - `tools-automation/readme` — Expert technical writer guide for creating absurdly thorough project README files.
 - `languages-standards/javascript-mastery` — 33+ core JavaScript concepts: primitives, type coercion, closures, event loop, functional patterns, prototypes, and modern ES6+.
+- `languages-standards/javascript-testing-patterns` — Full-spectrum JS/TS testing guide: unit (Vitest/Jest), integration, component (Testing Library), E2E (Playwright), MSW mocking, TDD, and CI/CD.
 
 
 
