@@ -40,13 +40,15 @@ _Goal: Interact with websites that don't have APIs, or automate reviews._
 
 2.  **QA & E2E Testing**: Reference **[`e2e-testing-patterns`](e2e-testing-patterns/SKILL.md)** for Playwright structures.
 
-3.  **Human Code Review**: Use **[`vibers-code-review`](vibers-code-review/SKILL.md)** to request human PR feedback and compliance checks.
+3.  **Cognitive Linter Review**: Use **[`pr-review`](pr-review/SKILL.md)** to automatically analyze the git diff against conventions, security, correctness, and performance patterns.
 
-4.  **GitHub Workflow Automation**: Use **[`github-workflow-automation`](github-workflow-automation/SKILL.md)** to configure automated PR reviews, issue triage labels, and smart CI/CD triggers.
+4.  **Human Code Review**: Use **[`vibers-code-review`](vibers-code-review/SKILL.md)** to request human PR feedback and compliance checks.
 
-5.  **GitHub Actions Templates**: Use **[`github-actions-templates`](github-actions-templates/SKILL.md)** for production-ready, reusable CI/CD workflows, dockerization, EKS deployment, and security scanning configs.
+5.  **GitHub Workflow Automation**: Use **[`github-workflow-automation`](github-workflow-automation/SKILL.md)** to configure automated PR reviews, issue triage labels, and smart CI/CD triggers.
 
-6.  **Git PR Description Generator**: Use **[`git-pr-review`](git-pr-review/SKILL.md)** to analyze local commit histories and generate structured PR titles and descriptions with minimal token usage.
+6.  **GitHub Actions Templates**: Use **[`github-actions-templates`](github-actions-templates/SKILL.md)** for production-ready, reusable CI/CD workflows, dockerization, EKS deployment, and security scanning configs.
+
+7.  **Git PR Description Generator**: Use **[`git-pr-review`](git-pr-review/SKILL.md)** to analyze local commit histories and generate structured PR titles and descriptions with minimal token usage.
 
 ### 📄 Level 3: Specialized Utilities & Docs
 
@@ -75,6 +77,7 @@ _Goal: Handle complex file formats and maintain document architecture._
 | **[`browser-automation-expert`](browser-automation-expert/)** | Scraping | Automating web interactions, testing, scraping data |
 | **[`meli-n8n-crm-logger`](meli-n8n-crm-logger/)** | E-commerce | Specific recipe for MercadoLibre CRM logging |
 | **[`linear-expert`](linear-expert/)** | API Sync | Scripting issues, tasks, and roadmaps in Linear |
+| **[`pr-review`](pr-review/)** | Code Review | Cognitive linter auditing code correctness, tests, security and performance on git diffs |
 | **[`vibers-code-review`](vibers-code-review/)** | Code Review | Standard workflow for human spec-based PR reviews |
 | **[`git-pr-review`](git-pr-review/)** | PR Description | Local commit history analyzer for PR description drafting |
 | **[`e2e-testing-patterns`](e2e-testing-patterns/)** | E2E Testing | Designing Playwright test suites |
@@ -82,6 +85,7 @@ _Goal: Handle complex file formats and maintain document architecture._
 | **[`docs-architect`](docs-architect/)** | Architecture Docs | Compiling deep codebase reference manuals |
 | **[`documentation-expert`](documentation-expert/)** | Repo Hygiene | Automating README, CHANGELOG, AGENTS, and `.knowledge/` base |
 | **[`docs-sync`](docs-sync/)** | Sync | Surgical documentation synchronization upon epic closure |
+
 | **[`design-md`](design-md/)** | Design Systems | Synthesizing Stitch projects into DESIGN.md files |
 | **[`github-workflow-automation`](github-workflow-automation/)** | CI/CD & Review | Automating GitHub workflows with Actions and AI assistance |
 | **[`github-actions-templates`](github-actions-templates/)** | CI/CD Templates | Production-ready GitHub Actions workflow patterns |

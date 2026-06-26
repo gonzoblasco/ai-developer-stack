@@ -42,6 +42,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - `tools-automation/analyze-project` — Forensic root cause analyzer for Antigravity sessions to classify scope deltas, rework patterns, and hotspots.
 - `ai-agents/prompt-engineer` — Transmute raw prompts into structured prompt frameworks (RTF, RISEN, Chain of Thought, etc.) to optimize AI output.
 - `tools-automation/github-workflow-automation` — AI-assisted GitHub Action setups, issue triage, and smart test select patterns.
+- `tools-automation/pr-review` — Cognitive pre-merge code linter checking safety, conventions, correctness, and performance on branch diffs.
+
 - `fullstack/vibe-code-cleanup` — Safe production cleanup and hardening for AI/vibe-coded fullstack apps.
 - `fullstack/refactor` — Refactoriza código existente para mejorar legibilidad y reducir duplicación sin alterar comportamiento.
 

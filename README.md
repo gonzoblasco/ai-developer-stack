@@ -176,8 +176,10 @@ If you are looking for a specific skill, here is the complete index by domain.
 - **[`n8n-workflow-patterns`](tools-automation/n8n-workflow-patterns)**: Architectural patterns and routing structures for n8n workflows.
 - **[`meli-n8n-crm-logger`](tools-automation/meli-n8n-crm-logger)**: Specific Mercado Libre logging recipe.
 - **[`linear-expert`](tools-automation/linear-expert)**: Linear board API sync scripts.
+- **[`pr-review`](tools-automation/pr-review)**: Cognitive pre-merge code linter checking safety, rules and correctness.
 - **[`vibers-code-review`](tools-automation/vibers-code-review)**: Human PR review triggers.
 - **[`git-pr-review`](tools-automation/git-pr-review)**: Local commit history analyzer for PR description drafting.
+
 - **[`github-workflow-automation`](tools-automation/github-workflow-automation)**: AI-assisted GitHub actions and triage automation.
 - **[`github-automation`](tools-automation/github-automation)**: Programmatic repository, issue, and PR management via Rube MCP.
 - **[`github-actions-templates`](tools-automation/github-actions-templates)**: Production-ready GitHub Actions workflow patterns.
