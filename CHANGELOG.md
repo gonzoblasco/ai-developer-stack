@@ -40,6 +40,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - `tools-automation/github-actions-templates` — Production-ready GitHub Actions workflow patterns for testing, building, and deploying.
 - `tools-automation/git-pr-review` — Generate a concise and structured PR description from commit history with minimal token usage.
 - `tools-automation/n8n-code-javascript` — Write custom JavaScript inside n8n Code nodes (managing arrays, dates, and nested webhook bodies).
+- `tools-automation/n8n-workflow-patterns` — High-level architectural design patterns for n8n (webhooks, API pipelines, db sync, and scheduled jobs).
 
 ### Changed
 - `languages-standards/testing-patterns` — Migrated completely from Jest to **Vitest** mocking and assertions.
