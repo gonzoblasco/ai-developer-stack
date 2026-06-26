@@ -151,6 +151,8 @@ If you are looking for a specific skill, here is the complete index by domain.
 
 - **[`dashboard-design`](frontend-ui/dashboard-design)**: Analytics-focused layouts, data visualization, and modular overview screens.
 - **[`material-design`](frontend-ui/material-design)**: Material Design 3 guidelines for Web, Android/Jetpack Compose, iOS/SwiftUI, Flutter, and React Native.
+- **[`threejs-fundamentals`](frontend-ui/threejs-fundamentals)**: WebGL/WebGPU 3D scene setup, camera configuration, and rendering optimization.
+
 
 - **[`react-migration-16-to-19`](frontend-ui/react-migration-16-to-19)**: Upgrade guides.
 - **[`redux-migration-rtk-zustand`](frontend-ui/redux-migration-rtk-zustand)**: Modern state management.

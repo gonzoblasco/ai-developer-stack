@@ -36,6 +36,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - `frontend-ui/react-best-practices` — Vercel-maintained React and Next.js performance guide covering waterfalls, bundle size, caching, and rendering.
 - `frontend-ui/react-state-management` — Guide to modern React state management patterns covering local state, server state, and global stores (Zustand, RTK, Jotai).
 - `frontend-ui/senior-frontend` — Scaffolding, component generation, and bundle analyzer scripts and patterns for React/Next.js.
+- `frontend-ui/threejs-fundamentals` — WebGL/WebGPU 3D scene setup, camera configurations, renderer features, and basic Math/Coordinate utilities.
+
 
 
 

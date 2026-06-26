@@ -64,7 +64,10 @@ _Goal: Turn users into fans._
 
 6.  **Interactive Documentation**: Use **[`web-artifacts-builder`](web-artifacts-builder/SKILL.md)** to build self-contained React-based interactive dashboards and documentation pages that feed Antigravity.
 
+7.  **3D Experiences**: Use **[`threejs-fundamentals`](threejs-fundamentals/SKILL.md)** to set up WebGL/WebGPU scenes, configure cameras/renderers, manage hierarchies, and apply optimization tips for responsive 3D elements.
+
 ### 🔄 Phase 4: Optimization, Debugging & Migrations
+
 
 _Goal: Pay down technical debt and debug production safely._
 
@@ -93,7 +96,9 @@ _Goal: Pay down technical debt and debug production safely._
 | **[`ui-ux-designer`](ui-ux-designer/)** | Strategy/UX | User research & design tokens | High-level system design guidelines and cross-platform UX strategy |
 
 | **[`antigravity-design-expert`](antigravity-design-expert/)** | Spatial & Motion | Weightless 3D & glassmorphism | Immersive landing pages, dashboards, and GSAP motion |
+| **[`threejs-fundamentals`](threejs-fundamentals/)** | Spatial/Motion | Three.js scene setup | Core WebGL/WebGPU scenes, camera configurations, rendering, and coordinate systems |
 | **[`design-spells`](design-spells/)** | Spells/UX | Micro-interactions & Easter eggs | Polishing completed components to add wow factor and magic |
+
 | **[`frontend-dev-guidelines`](frontend-dev-guidelines/)** | Standards | Consistency across team | Starting new project/onboarding |
 | **[`senior-frontend`](senior-frontend/)** | Architecture/QA | Component scaffolding & bundle analysis | Scaffolding Next.js apps, generating server/client components, and analyzing bundle size |
 | **[`frontend-developer`](frontend-developer/)** | Logic/UI | Component structure | Implementing frontend components |
