@@ -231,6 +231,7 @@ If you are looking for a specific skill, here is the complete index by domain.
 - **[`testing-patterns`](languages-standards/testing-patterns)**: Vitest unit testing & mock factories.
 - **[`javascript-mastery`](languages-standards/javascript-mastery)**: 33+ core JS concepts — primitives, closures, async, prototypes, and modern ES6+.
 - **[`javascript-testing-patterns`](languages-standards/javascript-testing-patterns)**: Full-spectrum JS/TS testing — unit, integration, E2E (Playwright), component (Testing Library), MSW, TDD, and CI/CD.
+- **[`modern-javascript-patterns`](languages-standards/modern-javascript-patterns)**: ES6+ refactoring recipes — async migration, functional pipelines, immutability, memoization, and performance patterns.
 
 ### 📈 Growth & Personal Brand
 

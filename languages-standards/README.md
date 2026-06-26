@@ -60,3 +60,4 @@ _Goal: Sleep well at night._
 | **[`testing-patterns`](testing-patterns/)** | QA & TDD | Vitest unit/integration testing strategies, mocking, factories |
 | **[`javascript-mastery`](javascript-mastery/)** | JS Fundamentals | 33+ core JS concepts: primitives, closures, async, prototypes, ES6+ |
 | **[`javascript-testing-patterns`](javascript-testing-patterns/)** | Testing Strategy | Unit, integration, E2E, component, MSW, TDD, and CI/CD testing patterns |
+| **[`modern-javascript-patterns`](modern-javascript-patterns/)** | ES6+ Patterns | Refactoring recipes, async migration, functional pipelines, performance |

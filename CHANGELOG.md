@@ -72,6 +72,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - `tools-automation/readme` — Expert technical writer guide for creating absurdly thorough project README files.
 - `languages-standards/javascript-mastery` — 33+ core JavaScript concepts: primitives, type coercion, closures, event loop, functional patterns, prototypes, and modern ES6+.
 - `languages-standards/javascript-testing-patterns` — Full-spectrum JS/TS testing guide: unit (Vitest/Jest), integration, component (Testing Library), E2E (Playwright), MSW mocking, TDD, and CI/CD.
+- `languages-standards/modern-javascript-patterns` — ES6+ refactoring recipes: async migration, functional pipelines, immutability, guard clauses, memoization, debounce/throttle, and lazy initialization.
 
 
 
