@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Antigravity Developer Stack — El manual que faltaba para la Ingeniería con IA</title>
+  <meta name="description" content="Más de 100 skills, patrones y workflows probados en batalla para operar ingeniería de alto nivel con IA. De Arquitectura de Sistemas a Agentes Autónomos.">
+  <meta name="keywords" content="AI Engineering, Agentes Autónomos, NestJS, React, Next.js, TypeScript, Skills, Prompts, Antigravity, AGDS">
+  <meta property="og:title" content="Antigravity Developer Stack (AGDS)">
+  <meta property="og:description" content="El manual que faltaba para la Ingeniería con IA. 100+ skills, patrones y workflows en español.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gonzoblasco.github.io/antigravity-developer-stack/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #07070f;
+      --bg-card: rgba(255,255,255,0.03);
+      --bg-card-hover: rgba(255,255,255,0.055);
+      --border: rgba(255,255,255,0.07);
+      --border-hover: rgba(255,255,255,0.14);
+      --text-primary: #eeeeff;
+      --text-secondary: rgba(238,238,255,0.55);
+      --text-muted: rgba(238,238,255,0.32);
+      --accent: #7c3aed;
+      --accent-2: #6366f1;
+      --font-sans: 'Inter', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --radius: 16px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg);
+      color: var(--text-primary);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Ambient background gradients */
+    .bg-mesh {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background:
+        radial-gradient(ellipse 90% 55% at 50% -10%, rgba(99,102,241,0.14) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 40% at 85% 90%, rgba(124,58,237,0.09) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 30% at 5% 60%, rgba(59,130,246,0.06) 0%, transparent 55%);
+    }
+
+    /* Subtle grid lines */
+    .bg-grid {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.022) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.022) 1px, transparent 1px);
+      background-size: 64px 64px;
+    }
+
+    canvas#particles {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      height: 60px;
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(7,7,15,0.75);
+      backdrop-filter: blur(24px) saturate(1.5);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      background: linear-gradient(135deg, #a78bfa, #818cf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    .nav-links a {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--text-primary); }
+
+    .nav-gh {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.35rem 0.875rem;
+      border-radius: 8px;
+      background: rgba(99,102,241,0.12);
+      border: 1px solid rgba(99,102,241,0.28);
+      color: #a78bfa !important;
+      font-weight: 600 !important;
+      font-size: 0.8rem !important;
+      transition: background 0.2s, border-color 0.2s !important;
+    }
+    .nav-gh:hover {
+      background: rgba(99,102,241,0.22) !important;
+      border-color: rgba(99,102,241,0.5) !important;
+      color: #c4b5fd !important;
+    }
+
+    /* ─── HERO ─── */
+    .hero {
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 7rem 2rem 5rem;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.3rem 1rem;
+      border-radius: 100px;
+      background: rgba(124,58,237,0.1);
+      border: 1px solid rgba(124,58,237,0.28);
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: #a78bfa;
+      margin-bottom: 2.25rem;
+      animation: fadeInDown 0.6s ease both;
+    }
+
+    .badge-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: #a78bfa;
+      box-shadow: 0 0 8px #a78bfa;
+      animation: blink 2.5s ease infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    .hero h1 {
+      font-size: clamp(2.75rem, 7.5vw, 5.75rem);
+      font-weight: 900;
+      line-height: 1.03;
+      letter-spacing: -0.035em;
+      margin-bottom: 1.5rem;
+      animation: fadeInUp 0.7s ease 0.1s both;
+    }
+
+    .grad {
+      background: linear-gradient(135deg, #e0e7ff 0%, #a78bfa 35%, #818cf8 65%, #67e8f9 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-desc {
+      font-size: clamp(1rem, 2.4vw, 1.2rem);
+      color: var(--text-secondary);
+      max-width: 560px;
+      line-height: 1.7;
+      margin-bottom: 2.75rem;
+      animation: fadeInUp 0.7s ease 0.2s both;
+    }
+    .hero-desc strong { color: var(--text-primary); font-weight: 600; }
+
+    .hero-actions {
+      display: flex;
+      gap: 0.875rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      animation: fadeInUp 0.7s ease 0.3s both;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.7rem 1.625rem;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.22s;
+      border: none;
+      line-height: 1;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #7c3aed, #5b5cf0);
+      color: white;
+      box-shadow: 0 0 28px rgba(99,102,241,0.28), 0 4px 14px rgba(0,0,0,0.35);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 48px rgba(99,102,241,0.5), 0 8px 28px rgba(0,0,0,0.35);
+    }
+    .btn-secondary {
+      background: rgba(255,255,255,0.05);
+      color: var(--text-primary);
+      border: 1px solid var(--border);
+    }
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.09);
+      border-color: var(--border-hover);
+      transform: translateY(-2px);
+    }
+
+    .scroll-cue {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--text-muted);
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      animation: fadeInUp 1s ease 0.9s both;
+    }
+    .scroll-line {
+      width: 1px; height: 38px;
+      background: linear-gradient(to bottom, rgba(255,255,255,0.25), transparent);
+      animation: scrollDrop 1.8s ease infinite;
+    }
+    @keyframes scrollDrop {
+      0%   { transform: scaleY(0); transform-origin: top; opacity: 1; }
+      50%  { transform: scaleY(1); transform-origin: top; opacity: 1; }
+      51%  { transform: scaleY(1); transform-origin: bottom; opacity: 1; }
+      100% { transform: scaleY(0); transform-origin: bottom; opacity: 0; }
+    }
+
+    /* ─── STATS ─── */
+    .stats-wrap {
+      position: relative;
+      z-index: 1;
+      padding: 0 2rem 4rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .stats-bar {
+      display: flex;
+      background: rgba(255,255,255,0.025);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      backdrop-filter: blur(12px);
+      overflow: hidden;
+    }
+
+    .stat {
+      padding: 1.5rem 3rem;
+      text-align: center;
+      border-right: 1px solid var(--border);
+    }
+    .stat:last-child { border-right: none; }
+
+    .stat-num {
+      font-family: var(--font-mono);
+      font-size: 2.25rem;
+      font-weight: 700;
+      line-height: 1;
+      background: linear-gradient(135deg, #a78bfa, #818cf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.3rem;
+    }
+    .stat-lbl {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    /* ─── SECTIONS SHARED ─── */
+    .section {
+      position: relative;
+      z-index: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 5rem 2rem;
+    }
+
+    .section-head {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .section-label {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: #818cf8;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 0.875rem;
+    }
+    .section-title {
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      line-height: 1.15;
+      margin-bottom: 0.875rem;
+    }
+    .section-sub {
+      color: var(--text-secondary);
+      font-size: 1.0625rem;
+      max-width: 540px;
+      margin: 0 auto;
+      line-height: 1.65;
+    }
+
+    /* ─── CATEGORIES GRID ─── */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+
+    .cat-card {
+      position: relative;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.625rem;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      transition: background 0.25s, border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+      overflow: hidden;
+    }
+    .cat-card:hover {
+      background: var(--bg-card-hover);
+      transform: translateY(-5px);
+    }
+
+    /* Glow strip at top on hover */
+    .cat-card::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--cat-color, #6366f1);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .cat-card:hover::after { opacity: 1; }
+
+    .cat-icon { font-size: 2rem; line-height: 1; }
+    .cat-name { font-size: 0.9375rem; font-weight: 700; }
+    .cat-desc {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      flex: 1;
+    }
+    .cat-foot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 0.25rem;
+    }
+    .cat-badge {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.2rem 0.6rem;
+      border-radius: 100px;
+      border: 1px solid;
+    }
+    .cat-arrow {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      transition: transform 0.2s, color 0.2s;
+    }
+    .cat-card:hover .cat-arrow {
+      transform: translateX(4px);
+      color: var(--text-secondary);
+    }
+
+    /* ─── PHILOSOPHY ─── */
+    .philosophy {
+      position: relative;
+      z-index: 1;
+      padding: 5rem 2rem;
+      background: rgba(255,255,255,0.012);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .philosophy-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .pillar {
+      text-align: center;
+      padding: 2.25rem 1.5rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+    .pillar-icon-wrap {
+      width: 52px; height: 52px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin: 0 auto 1.25rem;
+      background: rgba(99,102,241,0.1);
+      border: 1px solid rgba(99,102,241,0.18);
+    }
+    .pillar h3 {
+      font-size: 1.0625rem;
+      font-weight: 700;
+      margin-bottom: 0.625rem;
+    }
+    .pillar p {
+      font-size: 0.825rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+
+    /* ─── QUOTE ─── */
+    .quote-wrap {
+      position: relative;
+      z-index: 1;
+      padding: 6rem 2rem;
+      text-align: center;
+    }
+    .quote-mark {
+      display: block;
+      font-size: 5rem;
+      line-height: 0.6;
+      color: rgba(99,102,241,0.25);
+      font-family: Georgia, serif;
+      margin-bottom: 1.75rem;
+    }
+    .quote-text {
+      font-size: clamp(1.3rem, 3.2vw, 2rem);
+      font-weight: 600;
+      max-width: 680px;
+      margin: 0 auto 1rem;
+      line-height: 1.4;
+      letter-spacing: -0.015em;
+    }
+    .quote-text em {
+      font-style: normal;
+      background: linear-gradient(135deg, #a78bfa, #818cf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .quote-attr {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    /* ─── CTA ─── */
+    .cta-section {
+      position: relative;
+      z-index: 1;
+      padding: 4rem 2rem 6rem;
+      text-align: center;
+    }
+    .cta-box {
+      max-width: 660px;
+      margin: 0 auto;
+      padding: 3rem 2.5rem;
+      border-radius: 24px;
+      background: rgba(255,255,255,0.025);
+      border: 1px solid rgba(99,102,241,0.18);
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-box::before {
+      content: '';
+      position: absolute;
+      top: -60%; left: -30%;
+      width: 160%; height: 160%;
+      background: radial-gradient(ellipse at center, rgba(99,102,241,0.07) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .cta-box h2 {
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    .cta-box p {
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+      font-size: 0.9375rem;
+      line-height: 1.65;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .cta-btns {
+      display: flex;
+      justify-content: center;
+      gap: 0.875rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.75rem;
+    }
+    .clone-cmd {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.625rem 1.125rem;
+      border-radius: 9px;
+      background: rgba(0,0,0,0.45);
+      border: 1px solid var(--border);
+      font-family: var(--font-mono);
+      font-size: 0.775rem;
+      color: #86efac;
+      cursor: default;
+      user-select: all;
+    }
+    .clone-cmd .pr { color: #818cf8; }
+
+    /* ─── FOOTER ─── */
+    footer {
+      position: relative;
+      z-index: 1;
+      padding: 1.75rem 2rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .footer-brand {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+    }
+    .footer-brand strong { color: var(--text-secondary); }
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+    .footer-links a {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--text-primary); }
+
+    /* ─── REVEAL ANIMATIONS ─── */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 960px) {
+      .grid { grid-template-columns: repeat(2, 1fr); }
+      .pillars { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .grid { grid-template-columns: 1fr; }
+      .stats-bar { flex-direction: column; }
+      .stat { border-right: none; border-bottom: 1px solid var(--border); }
+      .stat:last-child { border-bottom: none; }
+      .nav-links a:not(.nav-gh) { display: none; }
+      nav { padding: 0 1.25rem; }
+      footer { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Decorative backgrounds -->
+<div class="bg-mesh"></div>
+<div class="bg-grid"></div>
+<canvas id="particles"></canvas>
+
+<!-- ─── NAV ─── -->
+<nav>
+  <a href="#" class="nav-logo">AGDS ⚡</a>
+  <div class="nav-links">
+    <a href="#categories">Skills</a>
+    <a href="#philosophy">Filosofía</a>
+    <a href="https://github.com/gonzoblasco/antigravity-developer-stack" target="_blank" class="nav-gh">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+      GitHub
+    </a>
+  </div>
+</nav>
+
+<!-- ─── HERO ─── -->
+<section class="hero" id="hero">
+  <div class="hero-badge">
+    <span class="badge-dot"></span>
+    v2.0 · Open Source · 10 Dominios
+  </div>
+  <h1>
+    <span class="grad">El manual que faltaba<br>para la Ingeniería con IA</span>
+  </h1>
+  <p class="hero-desc">
+    Un stack de <strong>100+ skills, patrones y workflows</strong> probados en batalla para operar ingeniería de alto nivel.
+    De Arquitectura de Sistemas a Agentes Autónomos. En español.
+  </p>
+  <div class="hero-actions">
+    <a href="#categories" class="btn btn-primary" id="hero-explore">
+      Explorar skills
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+    <a href="https://github.com/gonzoblasco/antigravity-developer-stack" target="_blank" class="btn btn-secondary" id="hero-github">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+      Ver en GitHub
+    </a>
+  </div>
+  <div class="scroll-cue" aria-hidden="true">
+    <div class="scroll-line"></div>
+    scroll
+  </div>
+</section>
+
+<!-- ─── STATS ─── -->
+<div class="stats-wrap">
+  <div class="stats-bar reveal" id="stats-bar">
+    <div class="stat">
+      <div class="stat-num" id="cnt-skills">0</div>
+      <div class="stat-lbl">Skills activas</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num" id="cnt-domains">0</div>
+      <div class="stat-lbl">Dominios cubiertos</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">100%</div>
+      <div class="stat-lbl">Open Source</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">🇦🇷</div>
+      <div class="stat-lbl">Docs en Español</div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── CATEGORIES ─── -->
+<section class="section" id="categories">
+  <div class="section-head reveal">
+    <p class="section-label">// Mapa de capacidades</p>
+    <h2 class="section-title">Domina todo el stack</h2>
+    <p class="section-sub">Cada dominio es un playbook completo con skills especializadas, patrones y workflows listos para usar en tu agente.</p>
+  </div>
+  <div class="grid" id="cat-grid"></div>
+</section>
+
+<!-- ─── PHILOSOPHY ─── -->
+<div class="philosophy">
+  <div class="philosophy-inner">
+    <div class="section-head reveal">
+      <p class="section-label">// Principios del stack</p>
+      <h2 class="section-title">No colecciones prompts.<br>Usá sistemas.</h2>
+      <p class="section-sub">La diferencia entre un desarrollador promedio y uno de alto impacto no es cuántas herramientas conoce, sino cómo las orquesta.</p>
+    </div>
+    <div class="pillars">
+      <div class="pillar reveal">
+        <div class="pillar-icon-wrap">🧩</div>
+        <h3>Patrones</h3>
+        <p>Skills reutilizables construidas sobre principios de ingeniería sólidos. No recetas únicas: sistemas que escalan con tu proyecto.</p>
+      </div>
+      <div class="pillar reveal" style="transition-delay:0.1s">
+        <div class="pillar-icon-wrap">🎯</div>
+        <h3>Contexto</h3>
+        <p>Cada skill incluye el contexto necesario para que el agente entienda no solo el qué, sino el por qué de cada decisión técnica.</p>
+      </div>
+      <div class="pillar reveal" style="transition-delay:0.2s">
+        <div class="pillar-icon-wrap">⚡</div>
+        <h3>Autonomía</h3>
+        <p>El objetivo final: agentes que toman decisiones técnicas correctas sin micromanagement constante. Menos prompt, más resultado.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── QUOTE ─── -->
+<section class="quote-wrap reveal">
+  <span class="quote-mark" aria-hidden="true">"</span>
+  <p class="quote-text">
+    La magia no está en la receta,<br>está en el cocinero.<br>
+    <em>Pero una buena receta ayuda.</em>
+  </p>
+  <p class="quote-attr">— Filosofía AGDS</p>
+</section>
+
+<!-- ─── CTA ─── -->
+<section class="cta-section reveal">
+  <div class="cta-box">
+    <h2>Cloná el stack.<br>Construí con ventaja.</h2>
+    <p>Todas las skills son gratuitas y de código abierto. Forkealas, adaptalas, mejóralas. La comunidad hispanohablante merece documentación técnica de primer nivel.</p>
+    <div class="cta-btns">
+      <a href="https://github.com/gonzoblasco/antigravity-developer-stack" target="_blank" class="btn btn-primary" id="cta-star">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        Star en GitHub
+      </a>
+      <a href="https://github.com/gonzoblasco/antigravity-developer-stack/fork" target="_blank" class="btn btn-secondary" id="cta-fork">
+        Fork del repo
+      </a>
+    </div>
+    <div class="clone-cmd" title="Copiá este comando">
+      <span class="pr">$</span>
+      git clone https://github.com/gonzoblasco/antigravity-developer-stack.git
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="footer-brand">
+    Construido por <strong>@gonzoblasco</strong> · Antigravity Developer Stack
+  </div>
+  <div class="footer-links">
+    <a href="https://github.com/gonzoblasco/antigravity-developer-stack" target="_blank">GitHub</a>
+    <a href="https://github.com/gonzoblasco/antigravity-developer-stack/blob/main/README.md" target="_blank">Docs</a>
+    <a href="https://github.com/gonzoblasco/antigravity-developer-stack/blob/main/CHANGELOG.md" target="_blank">Changelog</a>
+  </div>
+</footer>
+
+<script>
+// ─── DATA ───────────────────────────────────────────────────────────────────
+const REPO = 'https://github.com/gonzoblasco/antigravity-developer-stack';
+
+const CATS = [
+  {
+    icon: '🤖',
+    name: 'AI & Agentes Autónomos',
+    desc: 'Loops ReAct/Plan-Execute, memoria, RAG de alta precisión, MCP servers y prompt engineering avanzado.',
+    count: 8,
+    color: '#6366f1',
+    folder: 'ai-agents'
+  },
+  {
+    icon: '🧠',
+    name: 'Estrategia & Arquitectura',
+    desc: 'Diseño de sistemas, ADRs, C4 diagrams, Hexagonal Architecture, Clean Architecture y Domain-Driven Design.',
+    count: 11,
+    color: '#f59e0b',
+    folder: 'strategy-architecture'
+  },
+  {
+    icon: '⚙️',
+    name: 'Backend & Infraestructura',
+    desc: 'NestJS modular, Prisma ORM, PostgreSQL/Supabase, Docker y auditorías de seguridad de APIs.',
+    count: 8,
+    color: '#10b981',
+    folder: 'backend-infra'
+  },
+  {
+    icon: '🎨',
+    name: 'Frontend & UI/UX',
+    desc: 'React 19, Next.js App Router, WCAG 2.2, animaciones premium con GSAP/Three.js y micro-interacciones.',
+    count: 30,
+    color: '#ec4899',
+    folder: 'frontend-ui'
+  },
+  {
+    icon: '🌐',
+    name: 'Full-Stack',
+    desc: 'Limpieza segura de vibe-code, hardening de producción y refactoring incremental sin demolición.',
+    count: 2,
+    color: '#06b6d4',
+    folder: 'fullstack'
+  },
+  {
+    icon: '🛠️',
+    name: 'Herramientas & Automatización',
+    desc: 'n8n workflows, GitHub Actions, Playwright, PR review automático y generación de documentación técnica.',
+    count: 20,
+    color: '#f97316',
+    folder: 'tools-automation'
+  },
+  {
+    icon: '🏗️',
+    name: 'Product Building',
+    desc: 'De la primera idea al MVP en producción. Lovable Cloud, Supabase, planning estructurado y QA de lanzamiento.',
+    count: 12,
+    color: '#3b82f6',
+    folder: 'product-building'
+  },
+  {
+    icon: '📏',
+    name: 'Lenguajes & Estándares',
+    desc: 'TypeScript estricto (sin any), Clean Code, testing con Vitest, JavaScript moderno y Conventional Commits.',
+    count: 9,
+    color: '#ef4444',
+    folder: 'languages-standards'
+  },
+  {
+    icon: '📈',
+    name: 'Crecimiento & Marca Personal',
+    desc: 'LinkedIn authority building, copywriting técnico con SEO y posicionamiento como referente en IA.',
+    count: 2,
+    color: '#22c55e',
+    folder: 'growth'
+  },
+  {
+    icon: '✍️',
+    name: 'Autoría de Skills',
+    desc: 'Metodología para diseñar skills de IA predecibles, robustas y reutilizables para cualquier agente.',
+    count: 1,
+    color: '#a855f7',
+    folder: 'skill-authoring'
+  }
+];
+
+// ─── UTIL ────────────────────────────────────────────────────────────────────
+function hex2rgba(hex, a) {
+  const r = parseInt(hex.slice(1,3),16);
+  const g = parseInt(hex.slice(3,5),16);
+  const b = parseInt(hex.slice(5,7),16);
+  return `rgba(${r},${g},${b},${a})`;
+}
+
+// ─── RENDER CATEGORIES ───────────────────────────────────────────────────────
+function renderCategories() {
+  const grid = document.getElementById('cat-grid');
+  grid.innerHTML = CATS.map((c, i) => {
+    const color = c.color;
+    const bgBadge = hex2rgba(color, 0.12);
+    const borderBadge = hex2rgba(color, 0.28);
+    return `
+      <a
+        href="${REPO}/tree/main/${c.folder}"
+        target="_blank"
+        class="cat-card reveal"
+        style="--cat-color:${color}; transition-delay:${i * 0.045}s"
+        onmouseenter="this.style.borderColor='${hex2rgba(color,0.25)}'; this.style.boxShadow='0 12px 40px ${hex2rgba(color,0.12)}'"
+        onmouseleave="this.style.borderColor=''; this.style.boxShadow=''"
+        id="cat-${c.folder}"
+      >
+        <div class="cat-icon" aria-hidden="true">${c.icon}</div>
+        <div class="cat-name">${c.name}</div>
+        <div class="cat-desc">${c.desc}</div>
+        <div class="cat-foot">
+          <span class="cat-badge" style="color:${color}; background:${bgBadge}; border-color:${borderBadge}">
+            ${c.count} skill${c.count !== 1 ? 's' : ''}
+          </span>
+          <span class="cat-arrow" aria-hidden="true">→</span>
+        </div>
+      </a>
+    `;
+  }).join('');
+  // Observe new cards
+  grid.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+}
+
+// ─── INTERSECTION OBSERVER (reveal) ─────────────────────────────────────────
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      revealObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.08 });
+
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+// ─── COUNTER ANIMATION ───────────────────────────────────────────────────────
+function countUp(el, target, suffix, duration = 1400) {
+  const start = performance.now();
+  function step(now) {
+    const p = Math.min((now - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - p, 3);
+    el.textContent = Math.round(target * ease) + suffix;
+    if (p < 1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+
+const statsObserver = new IntersectionObserver((entries) => {
+  if (entries[0].isIntersecting) {
+    countUp(document.getElementById('cnt-skills'), 100, '+');
+    countUp(document.getElementById('cnt-domains'), 10, '');
+    statsObserver.disconnect();
+  }
+}, { threshold: 0.5 });
+
+statsObserver.observe(document.getElementById('stats-bar'));
+
+// ─── CANVAS PARTICLES ────────────────────────────────────────────────────────
+(function() {
+  const canvas = document.getElementById('particles');
+  const ctx = canvas.getContext('2d');
+  let W, H, pts = [], raf;
+
+  const COLORS = ['99,102,241', '124,58,237', '59,130,246', '167,139,250'];
+
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+
+  function spawn() {
+    return {
+      x: Math.random() * W,
+      y: Math.random() * H,
+      r: Math.random() * 1.4 + 0.4,
+      vx: (Math.random() - 0.5) * 0.25,
+      vy: (Math.random() - 0.5) * 0.25,
+      o: Math.random() * 0.35 + 0.08,
+      c: COLORS[Math.floor(Math.random() * COLORS.length)]
+    };
+  }
+
+  function init() {
+    pts = Array.from({ length: 70 }, spawn);
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    pts.forEach(p => {
+      p.x += p.vx; p.y += p.vy;
+      if (p.x < 0 || p.x > W || p.y < 0 || p.y > H) {
+        Object.assign(p, spawn(), { x: Math.random() * W, y: Math.random() * H });
+      }
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(${p.c},${p.o})`;
+      ctx.fill();
+    });
+    raf = requestAnimationFrame(draw);
+  }
+
+  window.addEventListener('resize', () => { resize(); init(); });
+  resize(); init(); draw();
+})();
+
+// ─── INIT ────────────────────────────────────────────────────────────────────
+renderCategories();
+</script>
+</body>
+</html>
