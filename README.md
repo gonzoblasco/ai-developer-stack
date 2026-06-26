@@ -215,6 +215,7 @@ If you are looking for a specific skill, here is the complete index by domain.
 - **[`pr`](product-building/pr)**: Pull request estructurado, review y merge automático de tasks.
 - **[`close-epic`](product-building/close-epic)**: Ritual de consolidación, versionado y cierre de Epics en Git.
 - **[`micro-saas-launcher`](product-building/micro-saas-launcher)**: Lanzamiento rápido de MVPs y SaaS con enfoque Indie Hacker.
+- **[`product-manager`](product-building/product-manager)**: Senior PM agent — 6 knowledge domains, 30+ frameworks, 12 templates, 32 SaaS metrics.
 
 - **[`copilot`](product-building/copilot)**: Orquestador universal de workflow y checklist pre-flight obligatorio.
 
