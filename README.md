@@ -143,7 +143,9 @@ If you are looking for a specific skill, here is the complete index by domain.
 - **[`wcag-audit-patterns`](frontend-ui/wcag-audit-patterns)**: WCAG 2.2 auditing guide and actionable remediation checklists.
 - **[`accesslint-audit`](frontend-ui/accesslint-audit)**: Automated WCAG 2.2 audit and autofix loops.
 - **[`react-patterns`](frontend-ui/react-patterns)**: Hooks & composition (React 19).
+- **[`react-best-practices`](frontend-ui/react-best-practices)**: Performance optimization guide for React/Next.js (waterfalls, bundle sizes).
 - **[`react-ui-patterns`](frontend-ui/react-ui-patterns)**: Layout structures.
+
 - **[`dashboard-design`](frontend-ui/dashboard-design)**: Analytics-focused layouts, data visualization, and modular overview screens.
 - **[`material-design`](frontend-ui/material-design)**: Material Design 3 guidelines for Web, Android/Jetpack Compose, iOS/SwiftUI, Flutter, and React Native.
 

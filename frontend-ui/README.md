@@ -68,7 +68,7 @@ _Goal: Turn users into fans._
 
 _Goal: Pay down technical debt and debug production safely._
 
-1.  **Debugging & Performance**: When things break in prod, use **[`nextjs-production-debugger`](nextjs-production-debugger/SKILL.md)** or **[`ui-review-nextjs-tailwind`](ui-review-nextjs-tailwind/SKILL.md)**. Review code against the latest web standards using **[`web-design-guidelines`](web-design-guidelines/SKILL.md)**.
+1.  **Debugging & Performance**: When writing components, implementing data fetching, or auditing performance issues, follow Vercel's **[`react-best-practices`](react-best-practices/SKILL.md)**. For production debugging, use **[`nextjs-production-debugger`](nextjs-production-debugger/SKILL.md)** or **[`ui-review-nextjs-tailwind`](ui-review-nextjs-tailwind/SKILL.md)**, and check standards against **[`web-design-guidelines`](web-design-guidelines/SKILL.md)**.
     - _SSR vs CSR_: Identify if the bug is server-side or client-side.
     - _Hydration_: Fix text mismatch errors.
     - _Performance_: Audit waterfalls and bundle size.
@@ -104,8 +104,10 @@ _Goal: Pay down technical debt and debug production safely._
 | **[`nextjs-production-debugger`](nextjs-production-debugger/)** | Fixes | Production stability | Debugging SSR/CSR bugs or slowness |
 | **[`ui-review-nextjs-tailwind`](ui-review-nextjs-tailwind/)** | Review | Design & code audit | Auditing layout and performance before shipping |
 | **[`web-design-guidelines`](web-design-guidelines/)** | Guidelines | Web Interface Guidelines verification | Checking layout, styling, and code against standards |
+| **[`react-best-practices`](react-best-practices/)** | Performance | Vercel React/Next.js optimizations | Auditing waterfalls, bundle size, caching, and rendering |
 | **[`react-patterns`](react-patterns/)** | Logic | Reusable hooks/patterns | Writing complex component logic |
 | **[`tailwind-patterns`](tailwind-patterns/)** | Styling | Maintainable CSS | Refactoring messy tailwind classes |
+
 | **[`shadcn`](shadcn/)** | Components | Reusable accessible parts | Designing UI block architecture |
 | **[`tanstack-query-expert`](tanstack-query-expert/)** | Server State | Data synchronization | Managing async server queries and mutations |
 | **[`redux-migration-rtk-zustand`](redux-migration-rtk-zustand/)** | State | Modern state management | Moving away from legacy Redux |

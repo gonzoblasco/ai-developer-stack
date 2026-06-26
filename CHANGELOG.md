@@ -33,6 +33,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - `frontend-ui/ui-ux-designer` — User research methodologies, wireframing, design systems (atomic design), and design tokens for cross-platform layouts.
 - `frontend-ui/dashboard-design` — Implementation guide and DNA for analytics-focused grids, modular widgets, and responsive layouts.
 - `frontend-ui/material-design` — Material Design 3 implementation guides across Web (CSS), iOS (SwiftUI), Android (Jetpack Compose), Flutter, and React Native.
+- `frontend-ui/react-best-practices` — Vercel-maintained React and Next.js performance guide covering waterfalls, bundle size, caching, and rendering.
+
 
 - `product-building/vibecode-production-qa-validator` — 13-phase QA launch-readiness validator for fullstack Next.js applications covering SEO, Auth, and performance.
 - `product-building/new-task` — Inicializar una nueva task del epic activo, incluyendo lectura de contexto, precondiciones de branch y validación de entorno.
