@@ -36,7 +36,7 @@ _Goal: Manage complexity without drowning in prop drilling._
 1.  **Framework Choice**: If building a product, default to **[`nextjs-best-practices`](nextjs-best-practices/SKILL.md)**.
     - _Architecture_: Use App Router specific patterns (Server Components for data, Client Components for interaction).
 
-2.  **State Management**:
+2.  **State Management**: Follow the comprehensive guide in **[`react-state-management`](react-state-management/SKILL.md)** to select the right approach (local state, global state, server state).
     - _Local State & Core Logic_: **[`react-patterns`](react-patterns/SKILL.md)** covers Hooks, Composition, and React 19 standards.
     - _Server State_: Use **[`tanstack-query-expert`](tanstack-query-expert/SKILL.md)** to manage server state caching, queries, and mutations.
     - _Global State_: Stop using Redux boilerplate. Use **[`redux-migration-rtk-zustand`](redux-migration-rtk-zustand/SKILL.md)** to switch to Redux Toolkit or Zustand.
@@ -105,6 +105,7 @@ _Goal: Pay down technical debt and debug production safely._
 | **[`ui-review-nextjs-tailwind`](ui-review-nextjs-tailwind/)** | Review | Design & code audit | Auditing layout and performance before shipping |
 | **[`web-design-guidelines`](web-design-guidelines/)** | Guidelines | Web Interface Guidelines verification | Checking layout, styling, and code against standards |
 | **[`react-best-practices`](react-best-practices/)** | Performance | Vercel React/Next.js optimizations | Auditing waterfalls, bundle size, caching, and rendering |
+| **[`react-state-management`](react-state-management/)** | State Management | Modern state management patterns | Setup, selection criteria (RTK, Zustand, Jotai, React Query), and slice architecture |
 | **[`react-patterns`](react-patterns/)** | Logic | Reusable hooks/patterns | Writing complex component logic |
 | **[`tailwind-patterns`](tailwind-patterns/)** | Styling | Maintainable CSS | Refactoring messy tailwind classes |
 
