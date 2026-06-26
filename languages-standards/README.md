@@ -58,3 +58,4 @@ _Goal: Sleep well at night._
 | **[`commit`](commit/)** | Git / Workflow | Conventional Commits formatting, git logs, and hybrid orchestration |
 | **[`nodejs-best-practices`](nodejs-best-practices/)** | Runtime/Architecture | Node.js backend architecture, frameworks, async and security principles |
 | **[`testing-patterns`](testing-patterns/)** | QA & TDD | Vitest unit/integration testing strategies, mocking, factories |
+| **[`javascript-mastery`](javascript-mastery/)** | JS Fundamentals | 33+ core JS concepts: primitives, closures, async, prototypes, ES6+ |

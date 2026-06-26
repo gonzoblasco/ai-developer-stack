@@ -229,6 +229,7 @@ If you are looking for a specific skill, here is the complete index by domain.
 - **[`commit`](languages-standards/commit)**: Conventional Commits formatting, git logs, and hybrid orchestration.
 - **[`nodejs-best-practices`](languages-standards/nodejs-best-practices)**: Node.js runtime and architecture best practices.
 - **[`testing-patterns`](languages-standards/testing-patterns)**: Vitest unit testing & mock factories.
+- **[`javascript-mastery`](languages-standards/javascript-mastery)**: 33+ core JS concepts — primitives, closures, async, prototypes, and modern ES6+.
 
 ### 📈 Growth & Personal Brand
 
