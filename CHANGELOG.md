@@ -34,7 +34,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - `frontend-ui/dashboard-design` — Implementation guide and DNA for analytics-focused grids, modular widgets, and responsive layouts.
 - `product-building/vibecode-production-qa-validator` — 13-phase QA launch-readiness validator for fullstack Next.js applications covering SEO, Auth, and performance.
 - `product-building/new-task` — Inicializar una nueva task del epic activo, incluyendo lectura de contexto, precondiciones de branch y validación de entorno.
+- `product-building/pr` — Crear pull request con descripción estructurada, correr revisión local y mergear automáticamente vía API.
 - `product-building/close-epic` — Ritual de consolidación, versionado y cierre de bloques de desarrollo estratégico (Epics) en Git.
+
 - `product-building/copilot` — Orquestador universal de workflow y checklist pre-flight obligatorio para gobernar las tareas.
 
 - `tools-automation/analyze-project` — Forensic root cause analyzer for Antigravity sessions to classify scope deltas, rework patterns, and hotspots.
