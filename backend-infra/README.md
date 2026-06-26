@@ -49,13 +49,17 @@ _Goal: Talk to the outside world._
 1.  **External Ecosystems**: When connecting to complex third parties, don't reinvent the wheel.
     - **MercadoLibre**: Use **[`mercadolibre-api`](mercadolibre-api/SKILL.md)** for handling auth (OAuth) and rate limits specifically for the MELI ecosystem.
 
-### 🐳 Phase 4: Infrastructure & DevOps
+### 🐳 Phase 4: Infrastructure, DevOps & Security
 
-_Goal: Run anywhere, consistently._
+_Goal: Run anywhere, consistently and securely._
 
 1.  **Containerize**: "It works on my machine" is unacceptable. Use **[`docker-expert`](docker-expert/SKILL.md)**.
     - _Optimization_: Multi-stage builds for small images.
     - _Orchestration_: Docker Compose for local dev, tailored for production readiness.
+
+2.  **Hardening & Threat Modeling**: Perform focused audits on backend attack surfaces using **[`security-audit`](security-audit/SKILL.md)**.
+    - _Analysis_: Check for multi-tenancy data leaks, API authentication guards, webhook signatures, and data exposure in serialization layers.
+    - _Blocking_: A critical finding in RLS or guards will halt the automated epic closure workflow.
 
 ---
 
@@ -70,3 +74,5 @@ _Goal: Run anywhere, consistently._
 | **[`postgres-best-practices`](postgres-best-practices/)** | Database Specifics | Tuning, indexing, and advanced PostgreSQL/Supabase features |
 | **[`mercadolibre-api`](mercadolibre-api/)** | Integration | Connecting with MercadoLibre APIs (MELI) |
 | **[`docker-expert`](docker-expert/)** | DevOps | Containerization, Dockerfiles, docker-compose |
+| **[`security-audit`](security-audit/)** | Security | Performing threat modeling, multi-tenancy RLS audits, and API guard checks |
+

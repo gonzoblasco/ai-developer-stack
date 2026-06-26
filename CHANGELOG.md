@@ -14,6 +14,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - `languages-standards/nodejs-best-practices` — Layered architecture, runtime selection, and async principles for Node.js.
 - `languages-standards/software-architecture` — General code style rules, naming conventions, and library-first development standards.
 - `languages-standards/commit` — Conventional Commits formatting, git logs, and hybrid orchestration (consolidated with commit-formatter).
+- `backend-infra/security-audit` — Focused backend security threat modeling, multi-tenancy RLS audits, and API authentication guards verification.
+
 - `ai-agents/ai-agents-architect` — Master loops, memory architectures, and multi-agent coordination.
 - `strategy-architecture/architecture` — System design and ADR templates.
 - `strategy-architecture/architecture-patterns` — Hexagonal, Clean, and DDD patterns.

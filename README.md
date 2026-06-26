@@ -131,6 +131,8 @@ If you are looking for a specific skill, here is the complete index by domain.
 - **[`postgres-best-practices`](backend-infra/postgres-best-practices)**: PostgreSQL/Supabase specifics.
 - **[`docker-expert`](backend-infra/docker-expert)**: Containerization best practices.
 - **[`mercadolibre-api`](backend-infra/mercadolibre-api)**: MELI Integration patterns.
+- **[`security-audit`](backend-infra/security-audit)**: Backend threat modeling, RLS checks, and API guard audits.
+
 
 ### 🎨 Frontend & UI/UX
 
