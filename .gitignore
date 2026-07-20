@@ -12,3 +12,6 @@ Thumbs.db
 brain/
 *.tmp
 temp/
+
+# Workspace memory (managed by workspace git)
+.knowledge/
