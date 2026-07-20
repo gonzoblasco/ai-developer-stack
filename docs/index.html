@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI Developer Stack — Skills, patrones y workflows para ingeniería con IA</title>
-  <meta name="description" content="100+ skills, patrones y workflows battle-tested para operar ingeniería de alto nivel con IA. De Arquitectura de Sistemas a Agentes Autónomos.">
-  <meta name="keywords" content="AI Engineering, Agentes Autónomos, NestJS, React, Next.js, TypeScript, Skills, Prompts, AI Developer Stack">
+  <meta name="description" content="Skills, patrones y workflows battle-tested para ingeniería con IA. 6 workflows que resuelven problemas reales.">
+  <meta name="keywords" content="AI Engineering, Workflows, React, Next.js, TypeScript, Skills, AI Developer Stack, Accesibilidad, WCAG">
   <meta property="og:title" content="AI Developer Stack">
-  <meta property="og:description" content="100+ skills, patrones y workflows battle-tested para ingeniería con IA.">
+  <meta property="og:description" content="6 workflows battle-tested para ingeniería con IA. De la idea al MVP, accesibilidad, testing, arquitectura.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://gonzoblasco.github.io/ai-developer-stack/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -471,9 +471,7 @@
     <h1>
       <span class="grad">El manual que faltaba<br>para la Ingeniería con IA</span>
     </h1>
-    <p>
-      Un stack de <strong>100+ skills, patrones y workflows</strong> battle-tested para operar ingeniería de alto nivel con inteligencia artificial. De Arquitectura de Sistemas a Agentes Autónomos. En español.
-    </p>
+    <p>Un stack de <strong>6 workflows</strong> que conectan skills en flujos cohesivos. De la idea al MVP, de la auditoría al fix, del vibe code a producción. En español.</p>
     <div class="hero-actions">
       <a href="#skills" class="btn btn-primary">
         Explorar skills
@@ -506,11 +504,11 @@
     </div>
   </div>
 
-  <!-- ─── PLAYBOOKS ─── -->
-  <section class="section" id="playbooks">
-    <h2><span class="hash">#</span> Playbooks</h2>
-    <p>Cada dominio tiene un playbook que conecta sus skills en un workflow cohesivo. No es una colección de prompts — es un sistema.</p>
-    <div class="playbooks" id="pb-grid"></div>
+  <!-- ─── WORKFLOWS ─── -->
+  <section class="section" id="workflows">
+    <h2><span class="hash">#</span> Workflows</h2>
+    <p>El valor del stack no está en la cantidad de skills, está en cómo se combinan. Cada workflow es un camino probado que conecta skills en un flujo cohesivo.</p>
+    <div class="playbooks" id="wf-grid"></div>
   </section>
 
   <!-- ─── QUOTE ─── -->
@@ -522,10 +520,10 @@
     <p class="quote-attr">— Filosofía del stack</p>
   </div>
 
-  <!-- ─── SKILLS ─── -->
+  <!-- ─── SKILLS CORE ─── -->
   <section class="section" id="skills">
-    <h2><span class="hash">#</span> Skills</h2>
-    <p>Más de 100 skills organizadas por dominio. Cada una tiene su SKILL.md con contexto, instrucciones y ejemplos.</p>
+    <h2><span class="hash">#</span> Skills Core</h2>
+    <p>Skills que forman parte de los workflows. Cada una tiene su SKILL.md con contexto, instrucciones y ejemplos.</p>
     <div id="skill-groups"></div>
   </section>
 
@@ -564,187 +562,108 @@
 // ─── DATA ───────────────────────────────────────────────────────────────────
 const REPO = 'https://github.com/gonzoblasco/ai-developer-stack';
 
-const PLAYBOOKS = [
-  { icon: '🤖', name: 'AI & Agentes Autónomos', desc: 'Loops ReAct/Plan-Execute, memoria, RAG, MCP servers y prompt engineering.', count: 8, folder: 'ai-agents' },
-  { icon: '🧠', name: 'Estrategia & Arquitectura', desc: 'Diseño de sistemas, ADRs, C4, Hexagonal, Clean Architecture y DDD.', count: 11, folder: 'strategy-architecture' },
-  { icon: '⚙️', name: 'Backend & Infraestructura', desc: 'NestJS, Prisma, PostgreSQL, Docker y auditorías de seguridad.', count: 8, folder: 'backend-infra' },
-  { icon: '🎨', name: 'Frontend & UI/UX', desc: 'React 19, Next.js, WCAG 2.2, GSAP, Three.js y micro-interacciones.', count: 30, folder: 'frontend-ui' },
-  { icon: '🌐', name: 'Full-Stack', desc: 'Limpieza de vibe-code, hardening de producción y refactoring incremental.', count: 2, folder: 'fullstack' },
-  { icon: '🛠️', name: 'Herramientas & Automatización', desc: 'n8n, GitHub Actions, Playwright, PR review y documentación.', count: 20, folder: 'tools-automation' },
-  { icon: '🏗️', name: 'Product Building', desc: 'De la idea al MVP. Lovable Cloud, Supabase, planning y QA de lanzamiento.', count: 12, folder: 'product-building' },
-  { icon: '📏', name: 'Lenguajes & Estándares', desc: 'TypeScript estricto, Clean Code, Vitest, JS moderno y Conventional Commits.', count: 9, folder: 'languages-standards' },
-  { icon: '📈', name: 'Crecimiento & Marca Personal', desc: 'LinkedIn authority, copywriting técnico y posicionamiento como referente.', count: 2, folder: 'growth' },
-  { icon: '✍️', name: 'Autoría de Skills', desc: 'Metodología para diseñar skills de IA predecibles y reutilizables.', count: 1, folder: 'skill-authoring' }
+const WORKFLOWS = [
+  { icon: '🧠', name: 'De la Idea al MVP', desc: 'Discovery, arquitectura, scaffold, build, QA y deploy. Del concepto a producción.', count: 17, folder: 'workflows/idea-to-mvp.md' },
+  { icon: '♿', name: 'Auditoría y Fix de Accesibilidad', desc: 'Auditar, diagnosticar, autofix, verificar y reportar cumplimiento WCAG 2.2.', count: 4, folder: 'workflows/accessibility-audit.md' },
+  { icon: '🧹', name: 'Limpieza de Vibe Code', desc: 'Detectar deuda técnica, limpiar, refactorizar, testear y endurecer código generado por IA.', count: 8, folder: 'workflows/vibe-code-cleanup.md' },
+  { icon: '📐', name: 'Arquitectura y Decisiones', desc: 'Diseño de sistemas, ADRs, patrones Hexagonal/Clean/DDD y auditoría de seguridad.', count: 6, folder: 'workflows/architecture.md' },
+  { icon: '🧪', name: 'Calidad y Testing', desc: 'TDD, unit, integración, E2E con Playwright, CI/CD y code review automático.', count: 7, folder: 'workflows/quality-testing.md' },
+  { icon: '🤖', name: 'AI Agent Setup', desc: 'Diseño de agentes, tools, prompts avanzados, RAG, MCP servers y skills reutilizables.', count: 8, folder: 'workflows/ai-agent-setup.md' }
 ];
 
 const SKILL_GROUPS = [
   {
-    icon: '🤖', name: 'IA & Agentes Autónomos',
+    icon: '🧠', name: 'Idea al MVP',
     skills: [
-      ['ai-agents-architect', 'ai-agents/ai-agents-architect', 'Loops maestros, memoria y orquestación'],
-      ['agent-tool-builder', 'ai-agents/agent-tool-builder', 'Tools robustas y JSON schemas'],
-      ['rag-expert', 'ai-agents/rag-expert', 'RAG de alta precisión, chunking semántico'],
-      ['mcp-builder', 'ai-agents/mcp-builder', 'Servidores Model Context Protocol'],
-      ['prompt-mastery', 'ai-agents/prompt-mastery', 'Prompting avanzado (CoT, Few-Shot)'],
-      ['prompt-engineer', 'ai-agents/prompt-engineer', 'Frameworks RTF, RISEN, RODES'],
-      ['meta-skill-antigravity', 'ai-agents/meta-skill-antigravity', 'Metodología para crear skills'],
-      ['elon-musk', 'ai-agents/elon-musk', 'Simulación de toma de decisiones']
-    ]
-  },
-  {
-    icon: '🧠', name: 'Strategy & Architecture',
-    skills: [
-      ['senior-architect', 'strategy-architecture/senior-architect', 'Diseño de sistemas, trade-offs, ADRs'],
-      ['architecture', 'strategy-architecture/architecture', 'Documentación con ADRs'],
-      ['architecture-patterns', 'strategy-architecture/architecture-patterns', 'Hexagonal, Clean, DDD'],
-      ['saas-multi-tenant', 'strategy-architecture/saas-multi-tenant', 'Separación por tenant'],
       ['brainstorming', 'strategy-architecture/brainstorming', 'Técnicas de ideación'],
-      ['design-orchestration', 'strategy-architecture/design-orchestration', 'Meta-skill de diseño'],
-      ['ai-workflows', 'strategy-architecture/antigravity-workflows', 'Orquestación de skills'],
+      ['product-manager', 'product-building/product-manager', 'PM Senior: 30+ frameworks'],
+      ['product-manager-toolkit', 'product-building/product-manager-toolkit', 'RICE, PRD, discovery'],
+      ['not-a-vibe-coder', 'product-building/not-a-vibe-coder', 'Planificación multi-documento'],
+      ['senior-architect', 'strategy-architecture/senior-architect', 'Diseño de sistemas'],
+      ['architecture', 'strategy-architecture/architecture', 'ADRs'],
       ['app-builder', 'strategy-architecture/app-builder', 'Scaffolding de MVP'],
-      ['pricing-strategy', 'strategy-architecture/pricing-strategy', 'Modelos de monetización'],
-      ['marketing-ideas', 'strategy-architecture/marketing-ideas', 'Estrategia go-to-market'],
-      ['kaizen', 'strategy-architecture/kaizen', 'Mejora continua']
+      ['lovable-saas-builder', 'product-building/lovable-saas-builder', 'SaaS con Lovable + Supabase'],
+      ['micro-saas-launcher', 'product-building/micro-saas-launcher', 'MVP rápido Indie Hacker'],
+      ['plan-writing', 'product-building/plan-writing', 'Planes de implementación'],
+      ['new-task', 'product-building/new-task', 'Inicializar task del epic'],
+      ['vibecode-production-qa-validator', 'product-building/vibecode-production-qa-validator', 'QA de 13 fases'],
+      ['pr', 'product-building/pr', 'PR + review + merge'],
+      ['close-epic', 'product-building/close-epic', 'Cierre de Epics'],
+      ['copilot', 'product-building/copilot', 'Orquestador de workflow'],
+      ['pricing-strategy', 'strategy-architecture/pricing-strategy', 'Monetización'],
+      ['marketing-ideas', 'strategy-architecture/marketing-ideas', 'Go-to-market']
     ]
   },
   {
-    icon: '⚙️', name: 'Backend & Infraestructura',
+    icon: '♿', name: 'Accesibilidad',
     skills: [
-      ['nestjs-expert', 'backend-infra/nestjs-expert', 'Aplicaciones NestJS modulares'],
-      ['prisma-expert', 'backend-infra/prisma-expert', 'Prisma ORM'],
-      ['api-patterns', 'backend-infra/api-patterns', 'REST/GraphQL'],
-      ['database-design', 'backend-infra/database-design', 'Modelado de datos'],
-      ['postgres-best-practices', 'backend-infra/postgres-best-practices', 'PostgreSQL/Supabase'],
-      ['docker-expert', 'backend-infra/docker-expert', 'Containerización'],
-      ['mercadolibre-api', 'backend-infra/mercadolibre-api', 'Integración MELI'],
-      ['security-audit', 'backend-infra/security-audit', 'Threat modeling, RLS, guards']
+      ['accessibility-audit', 'frontend-ui/accessibility-audit', 'Auditoría WCAG completa'],
+      ['wcag-audit-patterns', 'frontend-ui/wcag-audit-patterns', 'Guía de remediación'],
+      ['accesslint-audit', 'frontend-ui/accesslint-audit', 'Autofix WCAG 2.2'],
+      ['ui-a11y', 'frontend-ui/ui-a11y', 'Verificación de componentes']
     ]
   },
   {
-    icon: '🎨', name: 'Frontend & UI/UX',
+    icon: '🧹', name: 'Vibe Code Cleanup',
     skills: [
-      ['frontend-dev-guidelines', 'frontend-ui/frontend-dev-guidelines', 'Código frontend escalable'],
-      ['senior-frontend', 'frontend-ui/senior-frontend', 'Scaffolding y componentes'],
-      ['frontend-developer', 'frontend-ui/frontend-developer', 'Estructuras React'],
-      ['accessibility-audit', 'frontend-ui/accessibility-audit', 'WCAG, teclado, screen readers'],
-      ['ui-a11y', 'frontend-ui/ui-a11y', 'Auditoría StyleSeed + autofixes'],
-      ['wcag-audit-patterns', 'frontend-ui/wcag-audit-patterns', 'Guía WCAG 2.2'],
-      ['accesslint-audit', 'frontend-ui/accesslint-audit', 'Auditoría + autofix WCAG'],
-      ['react-patterns', 'frontend-ui/react-patterns', 'Hooks y composición React 19'],
-      ['react-best-practices', 'frontend-ui/react-best-practices', 'Rendimiento React/Next.js'],
-      ['react-ui-patterns', 'frontend-ui/react-ui-patterns', 'Loading, error, empty states'],
-      ['dashboard-design', 'frontend-ui/dashboard-design', 'Layouts de analytics'],
-      ['material-design', 'frontend-ui/material-design', 'Material Design 3'],
-      ['threejs-fundamentals', 'frontend-ui/threejs-fundamentals', '3D WebGL/WebGPU'],
-      ['redux-migration-rtk-zustand', 'frontend-ui/redux-migration-rtk-zustand', 'Estado moderno'],
-      ['react-state-management', 'frontend-ui/react-state-management', 'Zustand, RTK, Jotai'],
-      ['nextjs-best-practices', 'frontend-ui/nextjs-best-practices', 'App Router y SSR'],
-      ['nextjs-production-debugger', 'frontend-ui/nextjs-production-debugger', 'Debugging hidratación'],
-      ['ui-review-nextjs-tailwind', 'frontend-ui/ui-review-nextjs-tailwind', 'Auditorías código/diseño'],
-      ['web-design-guidelines', 'frontend-ui/web-design-guidelines', 'Vercel guidelines'],
-      ['ui-ux-pro-max', 'frontend-ui/ui-ux-pro-max', 'Diseño UI/UX avanzado'],
-      ['ui-ux-designer', 'frontend-ui/ui-ux-designer', 'User research, wireframing'],
-      ['design-expert', 'frontend-ui/antigravity-design-expert', '3D espacial + GSAP'],
-      ['design-spells', 'frontend-ui/design-spells', 'Micro-interacciones y easter eggs'],
-      ['tailwind-patterns', 'frontend-ui/tailwind-patterns', 'CSS utility-first'],
-      ['shadcn', 'frontend-ui/shadcn', 'Componentes accesibles'],
-      ['tanstack-query-expert', 'frontend-ui/tanstack-query-expert', 'Server state'],
-      ['progressive-web-app', 'frontend-ui/progressive-web-app', 'Patrones PWA'],
+      ['vibe-code-auditor', 'product-building/vibe-code-auditor', 'Detectar deuda técnica'],
+      ['vibe-code-cleanup', 'fullstack/vibe-code-cleanup', 'Hardening de producción'],
+      ['refactor', 'fullstack/refactor', 'Refactorización incremental'],
       ['lovable-cleanup', 'frontend-ui/lovable-cleanup', 'Limpieza Lovable Cloud'],
-      ['web-artifacts-builder', 'frontend-ui/web-artifacts-builder', 'UIs para docs interactivos'],
-      ['design-it', 'frontend-ui/design-it', 'Diseño y prototipado'],
-      ['react-nextjs-development', 'frontend-ui/react-nextjs-development', 'Coordinación de fases']
+      ['testing-patterns', 'languages-standards/testing-patterns', 'Vitest + mock factories'],
+      ['typescript-expert', 'languages-standards/typescript-expert', 'Tipado estricto'],
+      ['clean-code', 'languages-standards/clean-code', 'Código limpio'],
+      ['software-architecture', 'languages-standards/software-architecture', 'Convenciones y estilo']
     ]
   },
   {
-    icon: '🌐', name: 'Full-Stack',
+    icon: '📐', name: 'Arquitectura',
     skills: [
-      ['vibe-code-cleanup', 'fullstack/vibe-code-cleanup', 'Limpieza y hardening de producción'],
-      ['refactor', 'fullstack/refactor', 'Refactoring sin cambiar comportamiento']
+      ['senior-architect', 'strategy-architecture/senior-architect', 'Diseño de sistemas'],
+      ['architecture', 'strategy-architecture/architecture', 'ADRs'],
+      ['architecture-patterns', 'strategy-architecture/architecture-patterns', 'Hexagonal, Clean, DDD'],
+      ['saas-multi-tenant', 'strategy-architecture/saas-multi-tenant', 'Multi-tenancy'],
+      ['design-orchestration', 'strategy-architecture/design-orchestration', 'Orquestación de diseño'],
+      ['security-audit', 'backend-infra/security-audit', 'Threat modeling']
     ]
   },
   {
-    icon: '🛠️', name: 'Tools & Automation',
+    icon: '🧪', name: 'Calidad',
     skills: [
-      ['browser-automation-expert', 'tools-automation/browser-automation-expert', 'Scraping resiliente'],
-      ['n8n-workflow-builder', 'tools-automation/n8n-workflow-builder', 'Automatización low-code'],
-      ['n8n-code-javascript', 'tools-automation/n8n-code-javascript', 'JS en nodos Code de n8n'],
-      ['n8n-workflow-patterns', 'tools-automation/n8n-workflow-patterns', 'Patrones n8n'],
-      ['meli-n8n-crm-logger', 'tools-automation/meli-n8n-crm-logger', 'Logging MELI'],
-      ['linear-expert', 'tools-automation/linear-expert', 'API Linear'],
-      ['pr-review', 'tools-automation/pr-review', 'Linter cognitivo pre-merge'],
-      ['vibers-code-review', 'tools-automation/vibers-code-review', 'Revisión humana de PR'],
-      ['git-pr-review', 'tools-automation/git-pr-review', 'Descripciones de PR desde commits'],
-      ['github-workflow-automation', 'tools-automation/github-workflow-automation', 'Actions + triage'],
-      ['github-automation', 'tools-automation/github-automation', 'Gestión programática de repos'],
-      ['github-actions-templates', 'tools-automation/github-actions-templates', 'Templates de CI/CD'],
+      ['testing-patterns', 'languages-standards/testing-patterns', 'Unit testing'],
+      ['javascript-testing-patterns', 'languages-standards/javascript-testing-patterns', 'Testing full spectrum'],
       ['e2e-testing-patterns', 'tools-automation/e2e-testing-patterns', 'Playwright'],
-      ['pdf-official', 'tools-automation/pdf-official', 'Generación de PDFs'],
-      ['docs-architect', 'tools-automation/docs-architect', 'Manuales técnicos'],
-      ['documentation-expert', 'tools-automation/documentation-expert', 'Higiene de repositorio'],
-      ['readme', 'tools-automation/readme', 'READMEs detallados'],
-      ['docs-sync', 'tools-automation/docs-sync', 'Sincronización de docs'],
-      ['design-md', 'tools-automation/design-md', 'Análisis y DESIGN.md'],
+      ['pr-review', 'tools-automation/pr-review', 'Linter cognitivo pre-merge'],
+      ['github-actions-templates', 'tools-automation/github-actions-templates', 'CI/CD pipelines'],
+      ['vibers-code-review', 'tools-automation/vibers-code-review', 'Revisión humana'],
       ['analyze-project', 'tools-automation/analyze-project', 'Diagnóstico forense']
     ]
   },
   {
-    icon: '🏗️', name: 'Product Building',
+    icon: '🤖', name: 'AI Agents',
     skills: [
-      ['lovable-saas-builder', 'product-building/lovable-saas-builder', 'SaaS con Lovable + Supabase'],
-      ['not-a-vibe-coder', 'product-building/not-a-vibe-coder', 'Planificación multi-documento'],
-      ['plan-writing', 'product-building/plan-writing', 'Planes de implementación cortos'],
-      ['vibe-code-auditor', 'product-building/vibe-code-auditor', 'Auditoría de código IA'],
-      ['vibecode-production-qa-validator', 'product-building/vibecode-production-qa-validator', 'QA de 13 fases'],
-      ['new-task', 'product-building/new-task', 'Inicializar task del epic'],
-      ['pr', 'product-building/pr', 'PR + review + merge automático'],
-      ['close-epic', 'product-building/close-epic', 'Cierre de Epics en Git'],
-      ['micro-saas-launcher', 'product-building/micro-saas-launcher', 'MVP rápido Indie Hacker'],
-      ['product-manager', 'product-building/product-manager', 'PM Senior: 30+ frameworks'],
-      ['product-manager-toolkit', 'product-building/product-manager-toolkit', 'RICE, PRD, discovery'],
-      ['copilot', 'product-building/copilot', 'Orquestador universal de workflow'],
-      ['brainstorming', 'product-building/brainstorming', 'Ideación y bloqueos creativos']
-    ]
-  },
-  {
-    icon: '📏', name: 'Languages & Standards',
-    skills: [
-      ['typescript-expert', 'languages-standards/typescript-expert', 'Tipado estático estricto'],
-      ['clean-code', 'languages-standards/clean-code', 'Principios de código limpio'],
-      ['software-architecture', 'languages-standards/software-architecture', 'Estilo y naming'],
-      ['commit', 'languages-standards/commit', 'Conventional Commits'],
-      ['nodejs-best-practices', 'languages-standards/nodejs-best-practices', 'Runtime Node.js'],
-      ['testing-patterns', 'languages-standards/testing-patterns', 'Vitest + mock factories'],
-      ['javascript-mastery', 'languages-standards/javascript-mastery', '33+ conceptos JS core'],
-      ['javascript-testing-patterns', 'languages-standards/javascript-testing-patterns', 'Testing full spectrum'],
-      ['modern-javascript-patterns', 'languages-standards/modern-javascript-patterns', 'Refactoring ES6+']
-    ]
-  },
-  {
-    icon: '📈', name: 'Growth & Personal Brand',
-    skills: [
-      ['linkedin-profile-optimizer', 'growth/linkedin-profile-optimizer', 'Auditoría LinkedIn'],
-      ['social-post-writer-seo', 'growth/social-post-writer-seo', 'Contenido para redes']
-    ]
-  },
-  {
-    icon: '✍️', name: 'Skill Authoring',
-    skills: [
+      ['ai-agents-architect', 'ai-agents/ai-agents-architect', 'Loops maestros'],
+      ['agent-tool-builder', 'ai-agents/agent-tool-builder', 'Tools y JSON schemas'],
+      ['prompt-mastery', 'ai-agents/prompt-mastery', 'Prompting avanzado'],
+      ['prompt-engineer', 'ai-agents/prompt-engineer', 'Frameworks RTF, RISEN'],
+      ['rag-expert', 'ai-agents/rag-expert', 'RAG de alta precisión'],
+      ['mcp-builder', 'ai-agents/mcp-builder', 'MCP servers'],
+      ['meta-skill-antigravity', 'ai-agents/meta-skill-antigravity', 'Crear nuevas skills'],
       ['writing-great-skills', 'skill-authoring/writing-great-skills', 'Skills predecibles']
     ]
   }
 ];
 
 // ─── RENDER ──────────────────────────────────────────────────────────────────
-function renderPlaybooks() {
-  const grid = document.getElementById('pb-grid');
-  grid.innerHTML = PLAYBOOKS.map(p => `
-    <a href="${REPO}/tree/main/${p.folder}" target="_blank" class="pb">
-      <div class="pb-icon">${p.icon}</div>
+function renderWorkflows() {
+  const grid = document.getElementById('wf-grid');
+  grid.innerHTML = WORKFLOWS.map(w => `
+    <a href="${REPO}/tree/main/${w.folder}" target="_blank" class="pb">
+      <div class="pb-icon">${w.icon}</div>
       <div class="pb-body">
-        <div class="pb-name">${p.name}</div>
-        <div class="pb-desc">${p.desc}</div>
-        <div class="pb-count">${p.count} skills</div>
+        <div class="pb-name">${w.name}</div>
+        <div class="pb-desc">${w.desc}</div>
+        <div class="pb-count">${w.count} skills</div>
       </div>
     </a>
   `).join('');
@@ -813,7 +732,7 @@ statsObserver.observe(document.getElementById('stats'));
 })();
 
 // ─── BOOT ────────────────────────────────────────────────────────────────────
-renderPlaybooks();
+renderWorkflows();
 renderSkills();
 </script>
 </body>
