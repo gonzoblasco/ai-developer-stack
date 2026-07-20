@@ -1,9 +1,9 @@
-# 🚀 Antigravity Developer Stack (AGDS)
+# 🚀 AI Developer Stack
 
 **"La magia no está en la receta, está en el cocinero. Pero una buena receta ayuda."**
 
 > **El manual que faltaba para la Ingeniería con IA.**
-> Un stack curado de 30+ patrones, prompts y workflows battle-tested diseñados para operacionalizar ingeniería de alto nivel. Desde Arquitectura de Sistemas hasta Agentes Autónomos, este es el blueprint del Desarrollador AI-First.
+> Un stack curado de 100+ skills, prompts y workflows battle-tested diseñados para operacionalizar ingeniería de alto nivel. Desde Arquitectura de Sistemas hasta Agentes Autónomos, este es el blueprint del Desarrollador AI-First.
 
 ---
 
@@ -116,7 +116,7 @@ Si buscás una skill específica, acá está el índice completo por dominio.
 - **[`saas-multi-tenant`](strategy-architecture/saas-multi-tenant)**: Separación de base de datos por tenant.
 - **[`brainstorming`](strategy-architecture/brainstorming)**: Desbloquear creatividad y generar ideas de features.
 - **[`design-orchestration`](strategy-architecture/design-orchestration)**: Meta-skill para enrutamiento de workflows de diseño, revisiones y readiness de ejecución.
-- **[`antigravity-workflows`](strategy-architecture/antigravity-workflows)**: Orquestación guiada de múltiples skills (MVP, QA, seguridad, builds de agentes).
+- **[`ai-workflows`](strategy-architecture/antigravity-workflows)**: Orquestación guiada de múltiples skills (MVP, QA, seguridad, builds de agentes).
 - **[`app-builder`](strategy-architecture/app-builder)**: Guía de scaffolding de MVP.
 - **[`pricing-strategy`](strategy-architecture/pricing-strategy)**: Modelos de monetización.
 - **[`marketing-ideas`](strategy-architecture/marketing-ideas)**: Estrategia go-to-market.
@@ -148,7 +148,6 @@ Si buscás una skill específica, acá está el índice completo por dominio.
 - **[`dashboard-design`](frontend-ui/dashboard-design)**: Layouts centrados en analytics, visualización de datos y pantallas de overview modulares.
 - **[`material-design`](frontend-ui/material-design)**: Lineamientos Material Design 3 para Web, Android/Jetpack Compose, iOS/SwiftUI, Flutter y React Native.
 - **[`threejs-fundamentals`](frontend-ui/threejs-fundamentals)**: Setup de escenas 3D WebGL/WebGPU, configuración de cámara y optimización de rendering.
-- **[`react-migration-16-to-19`](frontend-ui/react-migration-16-to-19)**: Guías de upgrade.
 - **[`redux-migration-rtk-zustand`](frontend-ui/redux-migration-rtk-zustand)**: Gestión de estado moderna.
 - **[`react-state-management`](frontend-ui/react-state-management)**: Conceptos y patrones core (Zustand, RTK, Jotai, React Query).
 - **[`nextjs-best-practices`](frontend-ui/nextjs-best-practices)**: App Router y SSR.
@@ -157,14 +156,16 @@ Si buscás una skill específica, acá está el índice completo por dominio.
 - **[`web-design-guidelines`](frontend-ui/web-design-guidelines)**: Check de cumplimiento contra Vercel Web Interface Guidelines.
 - **[`ui-ux-pro-max`](frontend-ui/ui-ux-pro-max)**: Inteligencia de diseño UI/UX y matching de estilos.
 - **[`ui-ux-designer`](frontend-ui/ui-ux-designer)**: User research, wireframing sistemático y estrategia UX cross-platform.
-- **[`antigravity-design-expert`](frontend-ui/antigravity-design-expert)**: Transforms 3D espaciales sin peso y animaciones GSAP.
+- **[`design-expert`](frontend-ui/antigravity-design-expert)**: Transforms 3D espaciales sin peso y animaciones GSAP.
 - **[`design-spells`](frontend-ui/design-spells)**: Micro-interacciones curadas, Easter eggs y magia visual.
 - **[`tailwind-patterns`](frontend-ui/tailwind-patterns)**: CSS utility-first a escala.
 - **[`shadcn`](frontend-ui/shadcn)**: Componentes accesibles y componibles.
 - **[`tanstack-query-expert`](frontend-ui/tanstack-query-expert)**: Queries y mutaciones de server state.
 - **[`progressive-web-app`](frontend-ui/progressive-web-app)**: Patrones PWA.
 - **[`lovable-cleanup`](frontend-ui/lovable-cleanup)**: Limpieza de exports de Lovable Cloud.
-- **[`web-artifacts-builder`](frontend-ui/web-artifacts-builder)**: Empaquetado de UIs autocontenidas para docs interactivos de Antigravity.
+- **[`web-artifacts-builder`](frontend-ui/web-artifacts-builder)**: Empaquetado de UIs autocontenidas para docs interactivos.
+- **[`design-it`](frontend-ui/design-it)**: Diseño y prototipado de interfaces.
+- **[`react-nextjs-development`](frontend-ui/react-nextjs-development)**: Coordinación de fases de desarrollo en React/Next.js.
 
 ### 🌐 Full-Stack
 
@@ -208,6 +209,7 @@ Si buscás una skill específica, acá está el índice completo por dominio.
 - **[`product-manager`](product-building/product-manager)**: Agente PM Senior — 6 dominios de conocimiento, 30+ frameworks, 12 templates, 32 métricas SaaS.
 - **[`product-manager-toolkit`](product-building/product-manager-toolkit)**: Toolkit práctico de PM — priorizador RICE, analizador de entrevistas a clientes, templates de PRD y frameworks de discovery.
 - **[`copilot`](product-building/copilot)**: Orquestador universal de workflow y checklist pre-flight obligatorio.
+- **[`brainstorming`](product-building/brainstorming)**: Técnicas de ideación y resolución de bloqueos creativos.
 
 ### 📏 Languages & Standards
 
@@ -234,7 +236,7 @@ Si buscás una skill específica, acá está el índice completo por dominio.
 
 ## 🚀 Uso
 
-Estas skills están diseñadas para ser consumidas por Agentes de IA (como Antigravity/Cursor/Windsurf) o usadas como referencia por desarrolladores humanos. Cada carpeta contiene un `SKILL.md` (la lógica/prompt central) y frecuentemente archivos de soporte.
+Estas skills están diseñadas para ser consumidas por Agentes de IA (Cursor, Windsurf, Claude Code, Codex, OpenClaw) o usadas como referencia por desarrolladores humanos. Cada carpeta contiene un `SKILL.md` (la lógica/prompt central) y frecuentemente archivos de soporte.
 
 ## 📄 Licencia
 
